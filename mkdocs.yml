@@ -21,6 +21,9 @@ theme:
     - navigation.tabs
     - navigation.footer
     - content.action.edit
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate 
 plugins:
   - search
   - git-revision-date-localized:
@@ -35,3 +38,11 @@ extra:
       link: https://www.instagram.com/thepapillonapp/
     - icon: fontawesome/brands/discord
       link: https://discord.getpapillon.xyz/
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
