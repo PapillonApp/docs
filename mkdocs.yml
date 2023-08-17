@@ -5,11 +5,13 @@ repo_name: PapillonApp/docs
 nav:
   - Accueil: 'index.md'
   - Aide de Papillon: 'help/index.md'
+  - API Pronote :
+    - Connexion à Pronote : 'pronote-api/login.md'
+    - Endpoints : 'pronote-api/endpoints.md'
+    - Déploiement de l'API : 'pronote-api/deployment.md'
   - Documents :
     - Conditions de service : 'documents/terms-of-service.md'
     - Kit de communication : 'documents/communication-kit.md'
-  - API :
-    - Déploiement de l'API : 'api/deployment.md'
 theme:
   name: material
   palette:
@@ -17,6 +19,7 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default 
       primary: teal
+      accent: cyan
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -24,6 +27,7 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: teal
+      accent: cyan
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
@@ -59,3 +63,22 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - footnotes
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - abbr
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
