@@ -1,0 +1,33 @@
+site_name: Documentation Papillon
+site_url: https://docs.getpapillon.xyz
+repo_url: https://github.com/PapillonApp/docs
+repo_name: PapillonApp/docs
+theme:
+  name: material
+  palette:
+    primary: teal
+  language: fr
+  logo: assets/logo.svg
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.footer
+    - content.action.edit
+plugins:
+  - search
+  - git-revision-date-localized:
+      locale: fr
+      type: timeago
+      fallback_to_build_date: true
+  - git-committers:
+      enabled: false
+      repository: PapillonApp/docs
+      branch: main
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/PapillonApp/Papillon
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/thepapillonapp/
+    - icon: fontawesome/brands/discord
+      link: https://discord.getpapillon.xyz/
