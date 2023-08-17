@@ -1,6 +1,3 @@
-# Politique de confidentialité et mentions légales
-Découvrez comment Papillon et logi12 prennent soin de vos données.
-
 ## 1. - Services concernés
 Site web de présentation (https://getpapillon.xyz)
 Gestionnaire d’extensions de Papillon (https://extensions.getpapillon.xyz)

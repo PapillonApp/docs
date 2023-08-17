@@ -1,4 +1,4 @@
-## Déploiement
+# Déploiement
 ### Pré-requis
 
 Vous devez installer **Python 3.10 minimum** et **PiP**.<br/>

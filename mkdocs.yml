@@ -2,6 +2,14 @@ site_name: Documentation Papillon
 site_url: https://docs.getpapillon.xyz
 repo_url: https://github.com/PapillonApp/docs
 repo_name: PapillonApp/docs
+nav:
+  - Accueil: 'index.md'
+  - Aide de Papillon: 'help/index.md'
+  - Documents :
+    - Conditions de service : 'documents/terms-of-service.md'
+    - Kit de communication : 'documents/communication-kit.md'
+  - API :
+    - Déploiement de l'API : 'api/deployment.md'
 theme:
   name: material
   palette:
@@ -19,10 +27,6 @@ plugins:
       locale: fr
       type: timeago
       fallback_to_build_date: true
-  - git-committers:
-      enabled: false
-      repository: PapillonApp/docs
-      branch: main
 extra:
   social:
     - icon: fontawesome/brands/github
