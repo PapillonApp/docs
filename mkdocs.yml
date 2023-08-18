@@ -11,7 +11,7 @@ nav:
     - Endpoints : 'pronote-api/endpoints.md'
     - Déploiement de l'API : 'pronote-api/deployment.md'
   - Documents :
-    - Conditions de service : 'documents/terms-of-service.md'
+    - Politique de confidentialité : 'documents/privacy-policy.md'
     - Kit de communication : 'documents/communication-kit.md'
 theme:
   name: material
