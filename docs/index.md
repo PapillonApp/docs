@@ -9,4 +9,4 @@
 
 ## :material-file-document: Documents
 - [:material-image: Kit de communication](documents/communication-kit)
-- [:material-gavel: Conditions de service](documents/terms-of-service)
+- [:material-gavel: Politique de confidentialité](documents/privacy-policy)
