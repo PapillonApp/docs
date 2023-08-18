@@ -6,10 +6,12 @@ edit_uri: edit/main/docs/
 nav:
   - Accueil: 'index.md'
   - Aide de Papillon: 'help/index.md'
-  - API Pronote :
-    - Connexion à Pronote : 'pronote-api/login.md'
-    - Endpoints : 'pronote-api/endpoints.md'
-    - Déploiement de l'API : 'pronote-api/deployment.md'
+  - Développement :
+    - API Pronote pour Papillon :
+        - Introduction : 'devel/pronote-api/index.md'
+        - Connexion à Pronote : 'devel/pronote-api/login.md'
+        - Endpoints : 'devel/pronote-api/endpoints.md'
+        - Déploiement de l'API : 'devel/pronote-api/deployment.md'
   - Documents :
     - Conditions de service : 'documents/terms-of-service.md'
     - Kit de communication : 'documents/communication-kit.md'
