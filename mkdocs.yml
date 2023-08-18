@@ -2,6 +2,7 @@ site_name: Documentation Papillon
 site_url: https://docs.getpapillon.xyz
 repo_url: https://github.com/PapillonApp/docs
 repo_name: PapillonApp/docs
+edit_uri: edit/main/docs/
 nav:
   - Accueil: 'index.md'
   - Aide de Papillon: 'help/index.md'
