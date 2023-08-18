@@ -23,13 +23,16 @@ Des services tiers peuvent utiliser vos données dans le but du fonctionnement d
 index-education.com Obtient une liste d’établissements à proximité pour la connexion à partir de données approximatives de localisation Leurs conditions s’appliquent (https://www.index-education.com/fr/politique-confidentialite.php)
 
 ## 4. - Services supplémentaires
-https://logs.getpapillon.xyz
+- **https://logs.getpapillon.xyz**
 Permet la consultation des logs de l’application lorsque que vous décidez de les partager. Les logs ne sont conservés que 48h après l’envoi sur nos serveurs
-https://api.extensions.getpapillon.xyz
+
+- **https://api.extensions.getpapillon.xyz**
 Permet à l’application de récupérer les données sur les extensions disponibles dans cette dernière. Ne récupère aucune donnée personnelle.
-https://extensions.getpapillon.xyz
-Interface de gestion des extensions de Papillon. Vous pouvez y envoyer votre propre application en utilisant GitHub. Nous ne stockons pas de données personnelles, cependant nous récupérons, afin de vous authentifier, des données de GitHub. Nous vous prions de vous référer à la politique de confidentialité du service concerné.Si vous n’utiliser pas le service https://extensions.getpapillon.xyz vous n’êtes pas concerné.e.s par ce dernier.
-https://cors.api.getpapillon.xyz
+
+- **https://extensions.getpapillon.xyz**
+Interface de gestion des extensions de Papillon. Vous pouvez y envoyer votre propre application en utilisant GitHub. Nous ne stockons pas de données personnelles, cependant nous récupérons, afin de vous authentifier, des données de GitHub. Nous vous prions de vous référer à la politique de confidentialité du service concerné. *(Si vous n’utilisez pas le service https://extensions.getpapillon.xyz vous n’êtes pas concerné.e.s par ce dernier.)*
+
+- **https://cors.api.getpapillon.xyz**
 Permet de télécharger des données d’API inaccessibles par le navigateur votre appareil à l’aide d’un proxy.
 
 ## 5. - Client mobile Papillon
