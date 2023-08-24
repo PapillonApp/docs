@@ -8,10 +8,10 @@ nav:
   - Aide de Papillon: 'help/index.md'
   - Développement :
     - API Pronote pour Papillon :
-        - Introduction : 'devel/pronote-api/index.md'
-        - Connexion à Pronote : 'devel/pronote-api/login.md'
-        - Endpoints : 'devel/pronote-api/endpoints.md'
-        - Déploiement de l'API : 'devel/pronote-api/deployment.md'
+        - Introduction : 'development/pronote-api/index.md'
+        - Connexion à Pronote : 'development/pronote-api/login.md'
+        - Endpoints : 'development/pronote-api/endpoints.md'
+        - Déploiement de l'API : 'development/pronote-api/deployment.md'
   - Documents :
     - Politique de confidentialité : 'documents/privacy-policy.md'
     - Kit de communication : 'documents/communication-kit.md'
