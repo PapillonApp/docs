@@ -17,14 +17,12 @@ Pour tester vos changements sur votre ordinateur avant l'envoi:
 
 1. Installez [Python](https://python.org)
 	- Sur Windows, cochez l'option pour *ajouter Python au PATH* lors de l'installation
-1. Clonez le référentiel et ouvrez un terminal dans le dossier du clone
-1. Installez les outils nécessaires avec:
-
-	```shell
+2. Clonez le référentiel et ouvrez un terminal dans le dossier du clone
+3. Installez les outils nécessaires avec:
+```shell
 pip3 install -r requirements.txt
 ```
-1. Démarrez un serveur compilant automatiquement les modifications :
-
-	```shell
+4. Démarrez un serveur compilant automatiquement les modifications :
+```shell
 mkdocs serve
 ```
