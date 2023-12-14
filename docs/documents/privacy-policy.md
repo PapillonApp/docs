@@ -11,6 +11,8 @@ Responsable du traitement des données : Vince Linise (contact@vincelinise.com) 
 ### 3.1 - Données collectées
 Vos données d’identification à votre service scolaire (nécessaire à l’authentification mais conservé uniquement sur l’appareil) : Identifiant ENT/EduConnect ou service Mots de passe URL de service scolaire le cas échéant Académie concernée le cas échéant
 Vos données scolaires affichées dans l’application transitent par nos serveurs (ces données ne sont pas conservées de notre coté mais gardées sur votre appareil)
+#### 3.1.1 Logs et crash reports
+Les derniers évenements précédant un crash sont automatiquement collectés a des fins de développement. Des informations complémentaires sur votre appareil sont également collectées mais aucune information liée à votre identité est collectée.
 ### 3.2 - Données liées à l'identité
 Aucune donnée liée a votre identité ou à votre activité est conservée hormis les logs récents à des fins de développement et pour fixer les éventuels bugs et problèmes. Les données téléchargées sont supprimées aussitôt envoyées. En vous connectant à Papillon, il est mentionné que vous consentez à ce que ces données transitent de manière sécurisée sur nos serveurs.
 ### 3.3 - Accès extérieur aux données
