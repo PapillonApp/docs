@@ -5,16 +5,14 @@ repo_name: PapillonApp/docs
 edit_uri: edit/main/docs/
 nav:
   - Accueil: 'index.md'
-  - Aide de Papillon: 'help/index.md'
   - Développement :
     - API Pronote pour Papillon :
         - Introduction : 'development/pronote-api/index.md'
         - Connexion à Pronote : 'development/pronote-api/login.md'
         - Endpoints : 'development/pronote-api/endpoints.md'
         - Déploiement de l'API : 'development/pronote-api/deployment.md'
-  - Documents :
-    - Politique de confidentialité : 'documents/privacy-policy.md'
-    - Kit de communication : 'documents/communication-kit.md'
+  - Contribuer :
+    - Programme bêta : 'contribute/beta.md'
 theme:
   name: material
   palette:
@@ -22,7 +20,7 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default 
       primary: teal
-      accent: cyan
+      accent: teal
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -30,7 +28,7 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: teal
-      accent: cyan
+      accent: teal
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
