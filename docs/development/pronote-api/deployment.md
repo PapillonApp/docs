@@ -21,7 +21,7 @@ python -m hug -f server.py
 ```
 *Cela va lancer le serveur sur le port 8000.*
 
-### Docker
+### Docker 
 Une fois docker installé sur votre machine, vous pouvez pull l'image docker : 
 ```sh
 docker pull justtryon/papillonserver:latest
@@ -33,3 +33,25 @@ docker run -d -p 8000:8000 -e CRON="*/15 * * * *" justtryon/papillonserver:lates
 *Vous pouvez changer le temps de redémarrage automatique du serveur en changeant la variable d'environnement CRON*
 
 *Cela va lancer le serveur sur le port 8000.*
+
+### Docker Swarm
+Le déploiement de l'api avec docker swarm va vous permettre une redondance de l'api, si un de vos serveurs n'est plus disponible, la node manager de votre cluster swarm va automatiquement prendre le relai pour que l'api soit toujours disponible, et ce sans interruption de service pour les utilisateurs.<br/>
+Les commandes suivantes sont à executer sur la node manager.
+```sh
+docker pull justtryon/papillonserver:latest
+```
+Une fois cela fait, vous pouvez déployer l'api sur les différentes nodes en adaptant cette commande : 
+
+```sh
+docker service create \
+  --replicas 2 \
+  --constraint 'node.role==worker' \
+  -p 8000:8000 \
+  -e CRON="*/15 * * * *" \
+  justtryon/papillonserver:latest
+
+```
+Le paramètre "replicas" va définir le nombre de nodes sur lesquelles l'api va être déployée, vous pouvez le modifier en fonction de la taille de votre cluster.<br/>
+*Vous pouvez également changer le temps de redémarrage automatique du serveur en changeant la variable d'environnement CRON*
+
+*Cela va lancer le serveur sur le port 8000, en tant que service docker.*
