@@ -69,6 +69,18 @@ Une fois cela terminé, ouvrez Papillon dans Xcode en ouvrant le fichier *`/iOS/
 
 Vous n'avez plus qu'a démarrer l'app avec votre iPhone branché ou sur un simulateur iOS en sélectionnant un appareil et **en appuyant sur l'icône "Play" en haut de Xcode**.
 
+### Démarrer une session de développement
+Une fois la prébuild installée, démarrez le serveur de développement via la commande suivante :
+
+```
+npx expo start
+```
+
+*(Vous n'êtes pas obligé de développer sur la même machine que celle qui a compilé la prébuild)*
+Une fois la commande démarrée, ouvrez l'app de prebuild sur votre iPhone et indiquez l'adresse du serveur ou alors scannez le QR-Code affiché dans la console depuis l'app Appareil photo
+
+**(Vous devez avoir votre iPhone et votre ordinateur sur le même réseau local)**
+
 ## Les prébuilds
 La fonction ***`prebuild`*** permet de préparer l'app a être compilée en code natif pour iOS, cela indique :
 - Empaqueter les icônes, images, polices, et autres fichiers de l'app
