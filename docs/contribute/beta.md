@@ -31,7 +31,7 @@ Avant de commencer, n'oubliez pas que :
 
     Les instructions d'installation sont précisées sur le lien d'inscription.
 
-    [Rejoindre la bêta TestFlight](https://testflight.apple.com/join/BAKImggA){ .md-button .md-button--primary }
+    [S'inscrire à la bêta TestFlight](https://r.getpapillon.xyz/beta-ios){ .md-button .md-button--primary }
 === "Android (Google Play)"
     ### ⚠ Attention !
     Un compte Google Play valide est nécéssaire pour rejoindre la bêta. Autrement vous pouvez télécharger l'APK de l'app sur GitHub.

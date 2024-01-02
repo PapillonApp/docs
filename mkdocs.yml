@@ -6,6 +6,8 @@ edit_uri: edit/main/docs/
 nav:
   - Accueil: 'index.md'
   - Développement :
+    - Application mobile :
+      - Développement iOS : 'development/app/ios.md'
     - API Pronote pour Papillon :
         - Introduction : 'development/pronote-api/index.md'
         - Connexion à Pronote : 'development/pronote-api/login.md'
