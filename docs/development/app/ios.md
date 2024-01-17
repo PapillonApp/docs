@@ -52,6 +52,13 @@ Il sera aussi nécéssaire d'avoir [**Expo CLI**](https://docs.expo.dev/more/exp
 npm install -g expo-cli
 ```
 
+Vous devrez aussi installer les dépendances de [**Cocoapods**](https://cocoapods.org/) dans le dossier *`/ios`*:
+
+```
+pod install
+```
+
+
 ## Les devbuilds
 Pour modifier Papillon et voir vos modifications, un "devbuild" est nécéssaire.
 
