@@ -1,11 +1,11 @@
 # Développer Papillon sous Android
 
-## 🎓 Pré-requis
+## Pré-requis
 - Un ordinateur sous Windows 8 ou ultérieur
 - Des bases en JavaScript
 - Des connaissances du terminal de Windows
 
-## 🛠️ Installation des dépendances
+## Installation des dépendances
 
 ### Node.js
 [Node.js](https://nodejs.org/en) est nécéssaire pour installer le reste des outils nécessaires.
@@ -35,7 +35,7 @@ git clone https://github.com/PapillonApp/Papillon.git
 npm install
 ```
 
-## 💻 Développement
+## Développement
 
 Pour lancer l'application en mode développement, vous devez installer l'application prebuild (un mini Expo Go qui permet de charger l'application depuis votre PC avec un live reload)
 
@@ -67,8 +67,8 @@ npx expo prebuild
 
 7. Appuyer sur l'îcone "play" en haut à droite à côté du nom de votre appareil pour démarrer le build et l'installer automatiquement sur votre appareil.
 
-> [!NOTE]
-> Vous pouvez consulter le statut du build en vous rendant dans l'onglet "Build" en bas du logiciel, ou dans View > Tool Window > Build.
+!!! notes
+    Vous pouvez consulter le statut du build en vous rendant dans l'onglet "Build" en bas du logiciel, ou dans View > Tool Window > Build.
 
 8. Sur le PC, exécutez la commande suivante dans votre terminal :
 ```sh
