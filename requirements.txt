@@ -1,3 +1,4 @@
 mkdocs-material>=9.2.0b2
 mkdocs-git-committers-plugin-2>=1.1.2
 mkdocs-git-revision-date-localized-plugin>=1.2.0
+mkdocs-render-swagger-plugin>=0.1.1

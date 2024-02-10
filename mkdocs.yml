@@ -18,11 +18,12 @@ nav:
     - Introduction : 'development/intro.md'
     - Application mobile :
       - Développement iOS : 'development/app/ios.md'
-    - API Pronote pour Papillon : 
-        - Introduction : 'development/pronote-api/index.md'
-        - Connexion à Pronote : 'development/pronote-api/login.md'
-        - Endpoints : 'development/pronote-api/endpoints.md'
-        - Déploiement de l'API : 'development/pronote-api/deployment.md'
+    - API utilisées pour Papillon : 
+        - Turboself : 'development/api/turboself.md'
+        # - (OLD) Introduction : 'development/pronote-api/index.md'
+        # - (OLD) Connexion à Pronote : 'development/pronote-api/login.md'
+        # - (OLD) Endpoints : 'development/pronote-api/endpoints.md'
+        # - (OLS) Déploiement de l'API : 'development/pronote-api/deployment.md'
   - Contribuer :
     - Programme bêta : 'contribute/beta.md'
     - Soumettre vos modifications : 
@@ -64,6 +65,7 @@ plugins:
       locale: fr
       type: timeago
       fallback_to_build_date: true
+  - render_swagger
 extra:
   social:
     - icon: fontawesome/brands/github
