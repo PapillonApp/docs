@@ -1,20 +1,33 @@
-site_name: Documentation Papillon
+site_name: Documentation technique Papillon
 site_url: https://docs.getpapillon.xyz
 repo_url: https://github.com/PapillonApp/docs
 repo_name: PapillonApp/docs
 edit_uri: edit/main/docs/
 nav:
   - Accueil: 'index.md'
-  - Développement :
+  - Designer :
+    - Introduction : 'design/intro.md'
+    - Charte Graphique :
+      - Couleurs : 'design/color.md'
+      - Logotype : 'design/logotype.md'
+      - Polices d'écritures : 'design/font.md'
+    - Ressources externe :
+      - Charte grapique (PDF) : 'https://cdn.tryon-lab.fr/Charte%20Graphique%20-%20Papillon%20(sept.%202023).pdf'
+      - Figma (Public) : 'https://www.figma.com/file/BBRs6LrDJvKs79JIDk1h6M/Papillon-%F0%9F%A6%8B---v6-(PUBLIC)?type=design&node-id=291%3A766&mode=design&t=Asx54o7vvJwd1T7m-1'
+  - Développer :
+    - Introduction : 'development/intro.md'
     - Application mobile :
       - Développement iOS : 'development/app/ios.md'
-    - API Pronote pour Papillon :
+    - API Pronote pour Papillon : 
         - Introduction : 'development/pronote-api/index.md'
         - Connexion à Pronote : 'development/pronote-api/login.md'
         - Endpoints : 'development/pronote-api/endpoints.md'
         - Déploiement de l'API : 'development/pronote-api/deployment.md'
   - Contribuer :
     - Programme bêta : 'contribute/beta.md'
+    - Soumettre vos modifications : 
+      - Pull Request : 'contribute/pull-request.md'
+      - Parution dans l'app final : 'contribute/final-step.md'
 theme:
   name: material
   palette:
@@ -44,6 +57,7 @@ theme:
     - content.code.copy
     - content.code.select
     - content.code.annotate 
+    - navigation.sections
 plugins:
   - search
   - git-revision-date-localized:
@@ -63,6 +77,11 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
