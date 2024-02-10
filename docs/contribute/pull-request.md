@@ -16,7 +16,7 @@ Chez Papillon, nous avons une politique de pull request pour les branches de dé
 ``` mermaid
 stateDiagram-v2
     CE : Code évalué
-    RP : Respossable de la catéforie
+    RP : Responsable de la catégorie
     PCV : PC valide ?
     RPV : RP valide ?
     PC : Personne de la coordination
