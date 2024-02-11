@@ -16,16 +16,22 @@ nav:
       - Figma (Public) : 'https://www.figma.com/file/BBRs6LrDJvKs79JIDk1h6M/Papillon-%F0%9F%A6%8B---v6-(PUBLIC)?type=design&node-id=291%3A766&mode=design&t=Asx54o7vvJwd1T7m-1'
   - Développer :
     - Introduction : 'development/intro.md'
-    - Application mobile :
+    - Fonctionnement de l'app :
+      - ENT : 'development/ent.md'
+    - Environement de développement :
       - Développement iOS : 'development/app/ios.md'
-    - API utilisées pour Papillon : 
+    - API utilisées pour Papillon :
+        - Pawnote : 'development/api/pawnote.md'
         - Turboself : 'development/api/turboself.md'
         # - (OLD) Introduction : 'development/pronote-api/index.md'
         # - (OLD) Connexion à Pronote : 'development/pronote-api/login.md'
         # - (OLD) Endpoints : 'development/pronote-api/endpoints.md'
         # - (OLS) Déploiement de l'API : 'development/pronote-api/deployment.md'
   - Contribuer :
-    - Programme bêta : 'contribute/beta.md'
+    - Introduction : 'contribute/intro.md'
+    - Tester les nouveautés :
+      - Programme bêta : 'contribute/beta.md'
+      - Rapporter des problèmes : 'contribute/reporting-issues.md'
     - Soumettre vos modifications : 
       - Pull Request : 'contribute/pull-request.md'
       - Parution dans l'app final : 'contribute/final-step.md'
@@ -50,6 +56,7 @@ theme:
         name: Switch to system preference
   language: fr
   logo: assets/logo.svg
+  favicon: assets/beta.png
   features:
     - navigation.instant
     - navigation.tabs
@@ -106,3 +113,5 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+extra_css:
+  - stylesheets/extra.css
