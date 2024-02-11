@@ -64,6 +64,7 @@
 
 ## Mentions légales
 - [:material-gavel: Politique de confidentialité](documents/privacy-policy)
+- [:material-gavel: Conditions générales d'utilisation](documents/terms-of-service)
 
 !!! note ""
     Papillon n'est affilié à aucune entreprise ou organisation. Papillon est un projet open-source et communautaire.
