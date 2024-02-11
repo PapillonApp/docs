@@ -30,7 +30,7 @@ Exemple : San Francisco pour WatchOS.
 
 <div class="grid cards" markdown>
 
--    :material-format-font:{ .lg .middle } __Fixel Text__
+-    :octicons-typography-24:{ .lg .middle } __Fixel Text__
 
     ---
 
@@ -40,7 +40,7 @@ Exemple : San Francisco pour WatchOS.
 
     [:octicons-move-to-bottom-24: Télécharger](https://github.com/MacPaw/Fixel/tree/main/fonts/ttf){target="_blank"}
 
--   :material-format-font:{ .lg .middle } __Miriam Libre__
+-   :octicons-typography-24:{ .lg .middle } __Miriam Libre__
 
     ---
 

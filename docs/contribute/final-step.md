@@ -14,6 +14,8 @@ Lorsqu'une nouvelle fonctionnalité est prête à être publiée, elle est fusio
 
 Les nouvelles publications sont gérées par l'équipe de coordination. Lorsqu'une nouvelle publication est prête, elle est soumise à une demande de fusion dans la branche bêta. GitHub Actions est utilisé pour automatiser le processus de publication ainsi, la publier sur les stores de test. Une fois que la publication est testée et prête à être publiée, elle est fusionnée dans la branche stable. GitHub Actions est utilisé pour automatiser le processus de publication ainsi, la publier sur les stores.
 
+<center>
+
 ``` mermaid
 graph TD
     A(Development) -->|Test par les devs| B(Bêta)
@@ -22,3 +24,6 @@ graph TD
     C -->|Publié sur le store| S(App Store, Google Play)
     S -->|Téléchargé par le public| U(Utilisateurs final)
 ```
+
+</center>
+
