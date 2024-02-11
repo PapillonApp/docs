@@ -1,4 +1,5 @@
 # Introduction
+> Papillon est conçu pour être facile à utiliser tout en fournissant une expérience agréable aux utilisateurs. En tant que surcouche graphique aux clients scolaires habituels, Papillon se doit de fournir une expérience utilisateur optimisée pour son usage.
 
 !!! note warning "Un niveau de connaissance est requis"
     Cette section est destinée aux designers ayant un niveau de connaissance suffisant pour comprendre les concepts de base de la conception d'interface utilisateur et de l'expérience utilisateur.
