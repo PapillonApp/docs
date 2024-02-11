@@ -13,6 +13,6 @@ Une documentation complète du module est disponible sur [GitHub](https://github
 
 ## Swagger
 
-L'API à été documentée par des contributions de la communauté, et est accessible via Swagger.
+L'API a été documentée par des contributions de la communauté et est accessible via Swagger.
 
 !!swagger turboself.yml!!

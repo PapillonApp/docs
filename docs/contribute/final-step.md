@@ -17,8 +17,8 @@ Les nouvelles publications sont gérées par l'équipe de coordination. Lorsqu'u
 ``` mermaid
 graph TD
     A(Development) -->|Test par les devs| B(Bêta)
-    B -->|Publié sur le stores de test| ST(Testflight, Google Play Beta)
+    B -->|Publié sur les stores de test| ST(Testflight, Google Play Beta)
     ST -->|Test par le public| C(Stable)
-    C -->|Publié sur le store| S(App Store, Google Play)
+    C -->|Publié sur les store| S(App Store, Google Play)
     S -->|Téléchargé par le public| U(Utilisateurs final)
 ```

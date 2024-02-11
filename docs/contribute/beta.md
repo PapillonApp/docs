@@ -1,6 +1,6 @@
-Afin d'accéder aux fonctionnalités en développement et aider à rendre Papillon plus stable et accessible à tous, vous pouvez rejoindre le programme bêta.
+Afin d'accéder aux fonctionnalités en développement et d'aider à rendre Papillon plus stable et accessible à tous, vous pouvez rejoindre le programme bêta.
 
-## Qu'est ce qu'une bêta ?
+## Qu'est-ce qu'une bêta ?
 Une version bêta est une version en cours de développement et de test de l'app, prévue pour être corrigée et publiée à tous à l'avenir.
 
 ### Comment ça fonctionne sur Papillon
@@ -27,7 +27,7 @@ Avant de commencer, n'oubliez pas que :
 ## Obtenir la bêta
 === "iOS (TestFlight)"
     ### ⚠ Attention !
-    L'application **TestFlight** d'Apple et un compte iCloud valide sont nécéssaires pour télécharger des applications en bêta !
+    L'application **TestFlight** d'Apple et un compte iCloud valide sont nécessaires pour télécharger des applications en bêta !
 
     Les instructions d'installation sont précisées sur le lien d'inscription.
 

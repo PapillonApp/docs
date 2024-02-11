@@ -47,5 +47,5 @@ state join_state <<join>>
 !!! note ""
     Il est inutile de soumettre une pull request si votre code n'est pas prêt à être fusionné. Assurez-vous que votre code est prêt à être fusionné avant de soumettre une pull request.
 
-!!! failure "Harcelement interdit"
-    Il est interdit d'harceler les responsables de la catégorie ou la personne de la coordination pour qu'ils fusionnent votre pull request. Ils prendront le temps d'évaluer votre code et de vous donner des retours dèes qu'ils le pourront.
+!!! failure "Harcèlement interdit"
+    Il est interdit de harceler les responsables de la catégorie ou la personne de la coordination pour qu'ils fusionnent votre pull request. Ils prendront le temps d'évaluer votre code et de vous donner des retours dèes qu'ils le pourront.
