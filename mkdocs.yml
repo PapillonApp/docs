@@ -72,7 +72,6 @@ plugins:
       locale: fr
       type: timeago
       fallback_to_build_date: true
-  - render_swagger
 extra:
   social:
     - icon: fontawesome/brands/github
