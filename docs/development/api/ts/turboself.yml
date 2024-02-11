@@ -190,9 +190,6 @@ paths:
                   properties:
                     id:
                       type: integer (weekId) #week id
-                  
-          tags:
-            - "Acction"
           responses:
             '200':
               description: Information sur le solde

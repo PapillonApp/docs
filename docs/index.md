@@ -56,7 +56,7 @@
 <div class="grid cards" markdown>
 
 - :fontawesome-brands-discord: [discord.gg/__papillonapp__](https://discord.gg/papillonapp){target=_blank}
-- :fontawesome-brands-github-alt: [github.com/__PapallonApp__](https://github.com/PapallonApp){target=_blank}
+- :fontawesome-brands-github-alt: [github.com/__PapillonApp__](https://github.com/PapillonApp){target=_blank}
 - :fontawesome-brands-x-twitter: [twitter.com/__thepapillonapp__](https://twitter.com/thepapillonapp){target=_blank}
 - :fontawesome-brands-instagram: [instragram.com/__thepapillonapp__](https://instagram.com/thepapillonapp){target=_blank}
 

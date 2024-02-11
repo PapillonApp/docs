@@ -22,11 +22,12 @@ nav:
       - Développement iOS : 'development/app/ios.md'
     - API utilisées pour Papillon :
         - Pawnote : 'development/api/pawnote.md'
-        - Turboself : 'development/api/turboself.md'
-        # - (OLD) Introduction : 'development/pronote-api/index.md'
-        # - (OLD) Connexion à Pronote : 'development/pronote-api/login.md'
-        # - (OLD) Endpoints : 'development/pronote-api/endpoints.md'
-        # - (OLS) Déploiement de l'API : 'development/pronote-api/deployment.md'
+        - EcoleDirecte:
+          - API: 'development/api/ed/api.md'
+          - papillon-ed-core: 'development/api/ed/papillon.md'
+        - Turboself:
+          - API : 'development/api/ts/api.md'
+          - papillon-turboself-core : 'development/api/ts/papillon.md'
   - Contribuer :
     - Introduction : 'contribute/intro.md'
     - Tester les nouveautés :
@@ -68,6 +69,7 @@ theme:
     - navigation.sections
 plugins:
   - search
+  - render_swagger
   - git-revision-date-localized:
       locale: fr
       type: timeago

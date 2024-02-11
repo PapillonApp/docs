@@ -25,7 +25,7 @@ Papillon est conçu pour être **interopérable** avec plusieurs environnements 
 stateDiagram-v2
     
     skapi : Skolengo-API
-    EcoleDirecte : papillon-ed-core
+    EcoleDirecte : Papillon-ED-Core
     
 
     Pawnote --> IndexDataInstance
@@ -42,7 +42,7 @@ stateDiagram-v2
 
 Les environnements de travail numérique sont connectés à Papillon via des modules spécifiques. Ces modules permettent de récupérer les données de l'environnement de travail numérique. Ces données sont ensuite traitées par Papillon pour être affichées à l'utilisateur.
 
-!!! note ""
+!!! github "À consulter"
     Il est conseillé de consulter [index.ts:pawnote :octicons-link-external-24:](https://github.com/PapillonApp/Renard/blob/pawnote/fetch/index.ts){target='_blank'} sur Github pour comprendre comment les données sont traitées.
 
 ### Documentation
@@ -51,7 +51,7 @@ Pour chaque environnement de travail numérique, une documentation est disponibl
 
 - [Pawnote (compatible avec Pronote)](api/pawnote.md)
 
-## Mention Légale
+## Mentions Légales
 
 !!! info ""
     Pronote est une marque déposée de la société [Index Éducation :octicons-link-external-24:](https://www.index-education.com/){target='_blank'}. Papillon et Pawnote ne sont pas affiliés à Index Éducation.
