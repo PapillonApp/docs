@@ -12,7 +12,7 @@ Papillon est un projet open-source et nous encourageons les utilisateurs à sign
 !!! discord "Sur Discord"
     Sur le serveur discord dans le forum `#🧪┃・bug-report`
 
-### Ecriture d'un bon rapport de problème
+### Écriture d'un bon rapport de problème
 
 Si vous rencontrez des problèmes ou des bugs dans l'application Papillon, voici quelques conseils pour signaler des problèmes de manière efficace :
 
@@ -32,5 +32,5 @@ Si vous rencontrez des problèmes ou des bugs dans l'application Papillon, voici
     - Soyez patient et attendez une réponse.
     - N'envoyez pas de messages répétés ou de relances.
 
-!!! failure "Harcelement interdit"
+!!! failure "Harcèlement interdit"
     Il est interdit d'harceler les responsables de la catégorie ou la personne de la coordination pour qu'ils fusionnent votre pull request. Ils prendront le temps d'évaluer votre code et de vous donner des retours dès qu'ils le pourront.
