@@ -7,7 +7,7 @@
 ## 2. - Conditions
 En tant qu'utilisateur final, vous acceptez et comprenez que :
 
-- Papillon est un client alternatif non officiel
+- Papillon est un client alternatif non officiel.
 - Papillon n'est affilié à aucune entreprise ou organisation.
 - Vos données ne quittent pas votre appareil conformément à la [:material-gavel: politique de confidentialité](/documents/privacy-policy).
 - Papillon peut être modifié ou retiré de la vente à tout moment par le gestionnaire du service.

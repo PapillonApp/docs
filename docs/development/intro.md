@@ -1,12 +1,12 @@
 # Introduction à Papillon
 
 !!! note warning "Un niveau de connaissance est requis"
-    Cette sections est destinée aux développeurs ayant un niveau de connaissance suffisant pour comprendre les concepts de base de React Native et d'Expo.
+    Cette section est destinée aux développeurs ayant un niveau de connaissance suffisant pour comprendre les concepts de base de React Native et d'Expo.
 
 
 ## Avant de commencer
 
-Papillon est une application basée sur React Native Expo. Il est important de suivre une certaine rigueur lors de la programmation dans l'application.
+Papillon est une application basée sur React Native Expo. Il est important de suivre une certaine rigueur lors de la programmation de l'application.
 
 Voici quelques points importants à prendre en compte :
 
