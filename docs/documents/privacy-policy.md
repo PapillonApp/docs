@@ -18,13 +18,13 @@
   Ces données sont renvoyées par les services de vie scolaire correspondants. Ces données ne quitteront jamais votre appareil et seuls vous y avez accès.
 
 ### 2.1.1 Logs et crash reports
-Les derniers évenements précédant un crash peuvent être automatiquement collectés a des fins de développement.
-> Ces données contiennent des informations sur votre appreil et sur l'état de l'application.
+Les derniers événements précédant un crash peuvent être automatiquement collectés a des fins de développement.
+> Ces données contiennent des informations sur votre appareil et sur l'état de l'application.
 
 Aucune information personnelle ou scolaire n'est transmise pendant cette collecte.
 
 ### 2.2 - Données liées à l'identité
-Aucune donnée liée a votre identité ou à votre activité est conservée hormis les logs récents à des fins de développement pour fixer les éventuels bugs et problèmes.
+Aucune donnée liée à votre identité ou à votre activité est conservée hormis les logs récents à des fins de développement pour fixer les éventuels bugs et problèmes.
 
 ### 2.3 - Accès extérieur aux données
 Aucune personne ou logiciel automatisé n’utilise ou ne collecte vos données personnelles.
@@ -33,14 +33,14 @@ Aucune personne ou logiciel automatisé n’utilise ou ne collecte vos données 
 La suppression de l'application ou la déconnexion de celle-ci entraîne immédiatement la suppression de l'intégralité des données stockées sur votre appareil.
 
 ## 3. - Client mobile Papillon
-L’application “Papillon” est un logiciel open source, gratuit, et a but non lucratif conçu pour permettre d’accéder aux données des services scolaires transmises par des librairies tierces.
+L’application “Papillon” est un logiciel open source, gratuit, et à but non lucratif conçu pour permettre d’accéder aux données des services scolaires transmises par des librairies tierces.
 
 Papillon n'est pas responsable de la manière dont laquelle les données sont transmises par ces librairies tierces.
 
 ## 4. -  Modification de la politique de confidentialité
 
 ### 4.1 - Engagement concernant l'avenir du projet
-Nous nous engageons à ne pas collecter de données à l’avenir. Cependant des services tiers supplémentaires seront peut-être nécessaires au fonctionnement de l’app dans une prochaine mise à jour.
+Nous nous engageons à ne pas collecter de données à l’avenir. Cependant, des services tiers supplémentaires seront peut-être nécessaires au fonctionnement de l’app dans une prochaine mise à jour.
 
 ### 4.2 - Notification des changements
 Lorsque cette politique de confidentialité viendra à être modifiée, les utilisateurs finaux seront notifiés soit via l’app, soit via leurs coordonnées (dans le cas d’un bêta-test, ou sur une communauté en ligne par exemple).
