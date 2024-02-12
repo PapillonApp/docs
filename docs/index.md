@@ -31,7 +31,7 @@
 
     Modifier le code source de Papillon pour ajouter des fonctionnalités ou corriger des bugs.
 
-    [:octicons-arrow-right-24: Consulter](develop/intro.md)
+    [:octicons-arrow-right-24: Consulter](development/intro.md)
 
 -   :octicons-code-of-conduct-24:{ .lg .middle } __Contribuer__
 
