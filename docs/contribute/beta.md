@@ -1,6 +1,6 @@
-Afin d'accéder aux fonctionnalités en développement et aider à rendre Papillon plus stable et accessible à tous, vous pouvez rejoindre le programme bêta.
+Afin d'accéder aux fonctionnalités en développement et d'aider à rendre Papillon plus stable et accessible à tous, vous pouvez rejoindre le programme bêta.
 
-## Qu'est ce qu'une bêta ?
+## Qu'est-ce qu'une bêta ?
 Une version bêta est une version en cours de développement et de test de l'app, prévue pour être corrigée et publiée à tous à l'avenir.
 
 ### Comment ça fonctionne sur Papillon
@@ -27,14 +27,14 @@ Avant de commencer, n'oubliez pas que :
 ## Obtenir la bêta
 === "iOS (TestFlight)"
     ### ⚠ Attention !
-    L'application **TestFlight** d'Apple et un compte iCloud valide sont nécéssaires pour télécharger des applications en bêta !
+    L'application **TestFlight** d'Apple et un compte iCloud valide sont nécessaires pour télécharger des applications en bêta !
 
     Les instructions d'installation sont précisées sur le lien d'inscription.
 
     [S'inscrire à la bêta TestFlight](https://r.getpapillon.xyz/beta-ios){ .md-button .md-button--primary }
 === "Android (Google Play)"
     ### ⚠ Attention !
-    Un compte Google Play valide est nécéssaire pour rejoindre la bêta. Autrement vous pouvez télécharger l'APK de l'app sur GitHub.
+    Un compte Google Play valide est nécessaire pour rejoindre la bêta. Autrement vous pouvez télécharger l'APK de l'app sur GitHub.
 
     [Rejoindre la bêta Google Play](https://play.google.com/apps/testing/plus.pronote.app){ .md-button .md-button--primary }
     [Obtenir l'APK](https://github.com/PapillonApp/Papillon/releases){ .md-button }
