@@ -21,8 +21,8 @@ graph TD
     A(Development) -->|Test par les devs| B(Bêta)
     B -->|Publié sur les stores de test| ST(Testflight, Google Play Beta)
     ST -->|Test par le public| C(Stable)
-    C -->|Publié sur les store| S(App Store, Google Play)
-    S -->|Téléchargé par le public| U(Utilisateurs final)
+    C -->|Publié sur les stores| S(App Store, Google Play)
+    S -->|Téléchargé par le public| U(Utilisateurs finaux)
 ```
 
 </center>
