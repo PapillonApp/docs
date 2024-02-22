@@ -72,7 +72,7 @@ Une fois que ceci est fait, vous pouvez soit :
 
 8- Sur le PC, exécutez la commande suivante dans votre terminal :
 ```sh
-npm start --dev-client
+npm start
 ```
 
 Si ça ne marche pas, il est possible d'exécuter la commande suivante : 
