@@ -5,7 +5,7 @@ servers:
   - url: https://api-rest-prod.incb.fr
 tags:
   - name: Authentification
-  - name: Accisition d'informations (Fetch)
+  - name: Acquisition d'informations (Fetch)
   - name: Action
   
 components:
