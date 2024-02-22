@@ -20,6 +20,7 @@ nav:
       - ENT : 'development/ent.md'
     - Environement de développement :
       - Développement iOS : 'development/app/ios.md'
+      - Développemnet Android : 'development/app/android.md'
     - API utilisées pour Papillon :
         - Pawnote : 'development/api/pawnote.md'
         - EcoleDirecte:
