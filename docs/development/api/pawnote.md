@@ -1,4 +1,4 @@
-# Pawnote
+# Pawnote (compatible avec Pronote)
 
 !!! info
     Pronote est une marque déposée de la société [Index Éducation :octicons-link-external-24:](https://www.index-education.com/){target='_blank'}. Papillon et Pawnote ne sont pas affiliés à Index Éducation. 
@@ -9,3 +9,6 @@
     Le module est disponible sur [npmjs.com :octicons-link-external-24:](https://www.npmjs.com/package/pawnote){target='_blank'} sous le nom `pawnote`.
 
 Créé par [Vexcited :octicons-link-external-24:](https://github.com/Vexcited){target='_blank'}, ce module est utilisé massivement dans Papillon pour interagir avec l'API Pronote.
+
+!!! tip "Documentation disponible"
+    La documentation de Pawnote est disponible [pawnote.js.org :octicons-link-external-24:](https://pawnote.js.org){target='_blank'}.

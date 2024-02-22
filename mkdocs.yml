@@ -22,7 +22,7 @@ nav:
       - Développement iOS : 'development/app/ios.md'
       - Développemnet Android : 'development/app/android.md'
     - API utilisées pour Papillon :
-        - Pawnote : 'development/api/pawnote.md'
+        - Pawnote (compatible Pronote) : 'development/api/pawnote.md'
         - EcoleDirecte:
           - API: 'development/api/ed/api.md'
           - papillon-ed-core: 'development/api/ed/papillon.md'
