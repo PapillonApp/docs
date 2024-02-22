@@ -74,7 +74,7 @@ npx expo prebuild
 
 Une fois cela terminé, ouvrez Papillon dans Xcode en ouvrant le fichier *`/iOS/Papillon.xcworkspace`*.
 
-Vous n'avez plus qu'a démarrer l'app avec votre iPhone branché ou sur un simulateur iOS en sélectionnant un appareil et **en appuyant sur l'icône "Play" en haut de Xcode**.
+Vous n'avez plus qu'à démarrer l'app avec votre iPhone branché ou sur un simulateur iOS en sélectionnant un appareil et **en appuyant sur l'icône "Play" en haut de Xcode**.
 
 ### Démarrer une session de développement
 Une fois la prébuild installée, démarrez le serveur de développement via la commande suivante :
