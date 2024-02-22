@@ -5,10 +5,10 @@
 - Des bases en JavaScript
 - Des connaissances du terminal de Windows
 
-## Installation des dépendances
+## Installation des dépendancesxé
 
 ### Node.js
-[Node.js](https://nodejs.org/en) est nécéssaire pour installer le reste des outils nécessaires.
+[Node.js](https://nodejs.org/en) est nécessaire pour installer le reste des outils nécessaires.
 
 Vous pouvez le télécharger sur le site suivant :
 https://nodejs.org/
