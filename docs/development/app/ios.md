@@ -1,9 +1,9 @@
 # Développer Papillon sous iOS
 
 ## Pré-requis
-- [ ] Un ordinateur sous macOS 14 ou ultérieur
-- [ ] Des bases en JavaScript 
-- [ ] Une connaissance du terminal de macOS
+- [x] Un ordinateur sous macOS 14 ou ultérieur
+- [x] Des bases en JavaScript 
+- [x] Une connaissance du terminal de macOS
 
 ## Installation des dépendances
 ### Homebrew

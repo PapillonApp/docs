@@ -1,47 +1,60 @@
 # Développer Papillon sous Android
 
 ## **Pré-requis**
-- Un ordinateur sous :
+- [x] Un ordinateur sous :
     - Windows 8 ou ultérieur
-    - MacOS 10.14 Mojave ou ultérieur
+    - macOS 10.14 Mojave ou ultérieur
     - Linux 64 bit qui prend en charge GNU C Library (glibc) en version 2.31
-    - Des bases en JavaScript
-    - Des connaissances du terminal de Windows
+- [x] Des bases en JavaScript
+- [x] Des connaissances du terminal de Windows
 
 ## **Installation des dépendances**
 
 ### Node.js
-[Node.js](https://nodejs.org) est nécessaire pour installer le reste des outils nécessaires.
+[Node.js](https://nodejs.org){target=_blank} est nécessaire pour installer le reste des outils nécessaires.
 
-Vous pouvez le télécharger sur le site suivant : [https://nodejs.org](https://nodejs.org)
+Vous pouvez le télécharger sur le site suivant : [https://nodejs.org](https://nodejs.org){target=_blank}
 
-## **Installation**
+### Android Studio
 
-1. Clonez le repo
+[Android Studio](https://developer.android.com/studio) est nécessaire pour développer sous Android.
 
-```sh
-git clone https://github.com/PapillonApp/Papillon.git
+Vous pouvez le télécharger sur le site suivant : [https://developer.android.com/studio](https://developer.android.com/studio){target=_blank}
+
+!!! tip "macOS"
+
+    Si vous êtes sous macOS, vous pouvez aussi installer Android Studio via [Homebrew](https://brew.sh/){target=_blank}
+
+    ```sh
+    brew install --cask android-studio
+    ```
+
+## Environnement
+Commencez par cloner le  [repo de Papillon](https://github.com/PapillonApp/Papillon){target=_blank} et mettre en place votre environnement de développement.
+
+Une fois le repo cloné, installez simplement les packages npm liés :
+
+```
+npm i
 ```
 
-2. Installez les packages NPM
+Il sera aussi nécessaire d'avoir [**Expo CLI**](https://docs.expo.dev/more/expo-cli/){target=_blank} :
 
-```sh
-npm install
+```
+npm install -g expo-cli
 ```
 
 ## **Développement**
 
 Pour lancer l'application en mode développement, vous devez installer l'application de développement (un mini Expo Go qui permet de charger l'application depuis votre PC avec un live reload)
 
-Il vous faudra aussi télécharger [Android Studio](https://developer.android.com/studio)
-
 Pour commencer :
 
-1- Modifiez le fichier `app.json` afin de modifier le nom de l'application ainsi que son package, pour éviter de remplacer la vraie appli.
+1- Modifiez le fichier **`app.json`** afin de modifier le nom de l'application ainsi que son package, pour éviter de remplacer la vraie appli.
 
-- Ligne 3, variable `name`: remplacer par le nom de votre choix (exemple "Papillon Dev").
+- Ligne 3, variable **`name`**: remplacer par le nom de votre choix (exemple "Papillon Dev").
 
-- Ligne 67, variable `package`: remplacer par `plus.pronote.app.dev`. Ne pas changer cette variable entraînera une erreur à l'installation et un remplacement de l'appli officielle.
+- Ligne 67, variable **`package`**: remplacer par **`plus.pronote.app.dev`**. Ne pas changer cette variable entraînera une erreur à l'installation et un remplacement de l'appli officielle.
 
 2- Exécutez la commande suivante dans votre terminal :
 ```sh
@@ -57,13 +70,13 @@ npx expo prebuild
 
 5- Si le Gradle Sync ne s'est pas automatiquement exécuté, le faire manuellement via Files > Sync project with graddle Files ou en pressant les touches `Ctrl + Maj + O`.
 
-6- Configurer son téléphone pour le développement :  [Comment configurer son téléphone pour le développement](https://developer.android.com/studio/run/device?hl=fr#setting-up)
+6- Configurer son téléphone pour le développement :  [Comment configurer son téléphone pour le développement](https://developer.android.com/studio/run/device?hl=fr#setting-up){target=_blank}
 
 Une fois que ceci est fait, vous pouvez soit :
     
-- Connecter votre téléphone à votre PC via USB : [Comment connecter son téléphone via USB](https://developer.android.com/studio/run/device?hl=fr#connect)
-- Connecter votre téléphone via wifi : [Comment connecter son téléphone via wifi](https://developer.android.com/studio/run/device?hl=fr#wireless)
-- Créer un émulateur : [Comment créer un émulateur android](https://developer.android.com/studio/run/emulator?hl=fr#avd)
+- Connecter votre téléphone à votre PC via USB : [Comment connecter son téléphone via USB](https://developer.android.com/studio/run/device?hl=fr#connect){target=_blank}
+- Connecter votre téléphone via wifi : [Comment connecter son téléphone via wifi](https://developer.android.com/studio/run/device?hl=fr#wireless){target=_blank}
+- Créer un émulateur : [Comment créer un émulateur android](https://developer.android.com/studio/run/emulator?hl=fr#avd){target=_blank}
 
 7- Appuyer sur l'îcone "Run" en haut à droite à côté du nom de votre appareil pour démarrer le build et l'installer automatiquement sur votre appareil.
 
