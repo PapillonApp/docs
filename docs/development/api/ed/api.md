@@ -140,8 +140,8 @@ Solution: Vérifier que le body de la requete a bien été envoyé en raw (ou pl
 
 ### Servers.json
 
-EcoleDirecte n'utilise pas qu'un seul serveur, il est possible d'obtenir des informations sur les serveurs du site en une seule requete.
-La raison pour laquelle cette partie est dans la partie référence c'est car cela n'a pas trop d'utilitée a vraiment parler...
+EcoleDirecte n'utilise pas qu'un seul serveur, il est possible d'obtenir des informations sur les serveurs du site en une seule requête.
+La raison pour laquelle cette partie est incluse dans la section de référence réside dans le fait que cela n'a pas véritablement d'utilité à être abordé en profondeur.
 
 *Notes : Il semblerait que le fichier soit statique :c (les pings sont les mêmes depuis que j'ai commencé la doc)*
 
@@ -188,7 +188,7 @@ Voici le lien du fichier : [https://www.ecoledirecte.com/EDCluster/servers.json]
 
 ----
 
-Ici se trouve toute la documentation, assurez-vous d'avoir lu la référence avant de commencer
+Ici se trouve toute la documentation, assurez-vous d'avoir lu la référence avant de commencer.
 
 ## Login
 

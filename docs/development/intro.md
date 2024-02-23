@@ -1,8 +1,7 @@
 # Introduction à Papillon
 
 !!! note warning "Un niveau de connaissance est requis"
-    Cette section est destinée aux développeurs ayant un niveau de connaissance suffisant pour comprendre les concepts de base de React Native et d'Expo.
-
+    Cette section s'adresse aux développeurs ayant un niveau de connaissance suffisant pour comprendre les concepts de base de React Native et d'Expo.
 
 ## Avant de commencer
 
@@ -25,7 +24,7 @@ En suivant ces lignes directrices, vous pourrez développer efficacement dans l'
 Pour commencer à développer dans l'application Papillon, vous devez d'abord configurer votre environnement de développement. Voici les étapes à suivre pour installer les outils nécessaires :
 
 - [:fontawesome-brands-apple: Développement iOS](/development/app/ios)
-<!-- - Todo : [:fontawesome-brands-android: Développement Android](/development/app/android)  -->
+- [:fontawesome-brands-android: Développement Android](/development/app/android)
 
 Une fois votre environnement de développement configuré, vous pourrez commencer à développer dans l'application Papillon en utilisant les fonctionnalités et les composants fournis par l'équipe de design et de développement.
 

@@ -1,4 +1,4 @@
-# Envirement de Travail Numérique
+# Environnement de Travail Numérique
 
 ## Définition
 
@@ -10,15 +10,12 @@ Un environnement de travail numérique est un ensemble d'outils et de services n
 Actuellement, l'application Papillon est **compatible** avec les environnements de travail numérique suivants :
 
 - Pronote
-- Skolengo[^1]
-- EcoleDirecte[^2]
+- Skolengo
+- EcoleDirecte (en cours de développement)
 
-[^1]: Skolengo est en cours de développement. Il est prévu pour être compatible avec Papillon dans une prochaine version.
-[^2]: EcoleDirecte est en cours de développement. Il est prévu pour être compatible avec Papillon dans une prochaine version.
+### Interopérabilité
 
-### Interoptabilité
-
-Papillon est conçu pour être **interopérable** avec plusieurs environnements de travail numérique. Cela signifie que Papillon à une architecture modulaire qui permet d'ajouter facilement de nouveaux environnements de travail numérique.
+Papillon est conçu pour être **interopérable** avec plusieurs environnements de travail numérique. Cela signifie que Papillon a une architecture modulaire qui permet d'ajouter facilement de nouveaux environnements de travail numérique.
 
 #### Fonctionnement
 
@@ -53,7 +50,6 @@ Les environnements de travail numérique sont connectés à Papillon via des mod
 Pour chaque environnement de travail numérique, une documentation est disponible. Elle permet de comprendre comment fonctionne l'environnement de travail numérique et comment l'intégrer à Papillon.
 
 - [Pawnote (compatible avec Pronote)](api/pawnote.md)
-- [Papillon-ED-Core (compatible avec EcoleDirecte)](api/papillon-ed-core.md)
 
 ## Mentions Légales
 
