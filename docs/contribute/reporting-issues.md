@@ -10,7 +10,7 @@ Papillon est un projet open-source et nous encourageons les utilisateurs à sign
     Pour signaler un problème sur Github, [ouvrez une nouvelle issue](#) et suivez les instructions pour remplir le formulaire.
 
 !!! discord "Sur Discord"
-    Sur le serveur discord dans le forum `#🧪┃・bug-report`
+    Sur le serveur Discord, dans le forum `#🧪┃・bug-report`
 
 ### Écriture d'un bon rapport de problème
 
