@@ -62,7 +62,7 @@ pod install
 ## Les devbuilds
 Pour modifier Papillon et voir vos modifications, un "devbuild" est nécessaire.
 
-C'est une version spéciale de l'app qui se connecte à votre environnement de développement pour afficher vos changements en temps réel sans avoir a recompiler Papillon.
+C'est une version spéciale de l'app qui se connecte à votre environnement de développement pour afficher vos changements en temps réel sans avoir à recompiler Papillon.
 
 Pour installer une devbuild, rien de plus simple :
 
