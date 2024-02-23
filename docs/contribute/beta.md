@@ -5,7 +5,7 @@ Une version bêta est une version en cours de développement et de test de l'app
 
 ### Comment ça fonctionne sur Papillon
 Les versions de Papillon ont généralement 2 à 3 étapes de déploiement (Bêta-testing, correctifs, et déploiement).
-Il faut savoir que chaque version prend quelques jours pour parvenir à votre smartphone.
+Il faut savoir que chaque version peut prendre quelques jours pour parvenir à votre smartphone.
 
 !!! note
 
