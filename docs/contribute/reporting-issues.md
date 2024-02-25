@@ -7,7 +7,7 @@ Papillon est un projet open-source et nous encourageons les utilisateurs à sign
 ### Où signaler des problèmes
 
 !!! github "Sur Github"
-    Pour signaler un problème sur Github, [ouvrez une nouvelle issue](#) et suivez les instructions pour remplir le formulaire.
+    Pour signaler un problème sur Github, [ouvrez une nouvelle issue](https://github.com/PapillonApp/Renard/issues) et suivez les instructions pour remplir le formulaire.
 
 !!! discord "Sur Discord"
     Sur le serveur Discord, dans le forum `#🧪┃・bug-report`
