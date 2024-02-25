@@ -10,7 +10,7 @@
 
 !!! note warning "Documentation pour les développeurs et designers"
     Cette documentation est destinée aux développeurs et designers qui souhaitent contribuer à Papillon.
-    Pour les utilisateurs, veuillez vous référer à la [documentation utilisateur](https://getpapillon.xyz/).
+    Pour les utilisateurs, veuillez vous référer à la [documentation utilisateur](https://support.getpapillon.xyz/).
 
 !!! note warning "Documentation en construction"
     La documentation est en construction, revenez plus tard si quelque chose n'est pas disponible !
