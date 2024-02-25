@@ -30,4 +30,4 @@ Une fois votre environnement de développement configuré, vous pourrez commence
 
 ## Soumettre des modifications
 
-Si vous souhaitez contribuer à l'application Papillon, vous pouvez consulter la [documentation pour les contributeurs](/contribute/intro.md) pour obtenir des informations sur la manière de soumettre des modifications, de signaler des problèmes et de participer à la communauté de développement.
+Si vous souhaitez contribuer à l'application Papillon, vous pouvez consulter la [documentation pour les contributeurs](/contribute/intro) pour obtenir des informations sur la manière de soumettre des modifications, de signaler des problèmes et de participer à la communauté de développement.
