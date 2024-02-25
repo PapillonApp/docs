@@ -31,7 +31,7 @@ Avant de commencer, n'oubliez pas que :
 
     Les instructions d'installation sont précisées sur le lien d'inscription.
 
-    [S'inscrire à la bêta TestFlight](https://r.getpapillon.xyz/beta-ios){ .md-button .md-button--primary }
+    [S'inscrire à la bêta TestFlight](https://beta.getpapillon.xyz){ .md-button .md-button--primary }
 
 === "Android (Google Play)"
     ### ⚠ Attention !
