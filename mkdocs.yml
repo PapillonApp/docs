@@ -70,7 +70,7 @@ theme:
     - navigation.sections
 plugins:
   - search
-  - render_swagger
+  - swagger-ui-tag
   - git-revision-date-localized:
       locale: fr
       type: timeago
