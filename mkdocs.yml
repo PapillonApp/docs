@@ -12,7 +12,7 @@ nav:
       - Logotype : 'design/logotype.md'
       - Polices d'écritures : 'design/font.md'
     - Ressources externe :
-      - Charte grapique (PDF) : 'https://cdn.tryon-lab.fr/Charte%20Graphique%20-%20Papillon%20(sept.%202023).pdf'
+      - Charte grapique (PDF) : '../assets/design/Charte%20Graphique%20-%20Papillon%20(sept.%202023).pdf'
       - Figma (Public) : 'https://www.figma.com/file/BBRs6LrDJvKs79JIDk1h6M/Papillon-%F0%9F%A6%8B---v6-(PUBLIC)?type=design&node-id=291%3A766&mode=design&t=Asx54o7vvJwd1T7m-1'
   - Développer :
     - Introduction : 'development/intro.md'
