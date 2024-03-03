@@ -57,10 +57,13 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
   language: fr
-  logo: assets/logo.svg
+  logo: assets/beta.png
   favicon: assets/beta.png
+  font:
+    text: Noto Sans
   features:
     - navigation.instant
+    - navigation.instant.progress
     - navigation.tabs
     - navigation.footer
     - content.action.edit
@@ -70,7 +73,6 @@ theme:
     - navigation.sections
 plugins:
   - search
-  - swagger-ui-tag
   - git-revision-date-localized:
       locale: fr
       type: timeago
