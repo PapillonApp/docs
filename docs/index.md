@@ -1,8 +1,3 @@
----
-title: Accueil de la documentation
----
-
-#
 <div class="head_container">
   <img
     src="assets/beta.png"
@@ -97,8 +92,8 @@ Une bêta de Papillon est disponible pour les utilisateurs qui souhaitent tester
     direction: ltr;
   }
 
-  #_1 {
-    display: none;
+  #_1, h1 {
+    visibility: hidden;
   }
   .head_container {
     display: flex;
@@ -106,6 +101,7 @@ Une bêta de Papillon est disponible pour les utilisateurs qui souhaitent tester
     justify-content: flex-start;
     gap: 16px;
     margin-bottom: 24px;
+    margin-top: -78px;
   }
   .logo_main {
     width: 60px;
