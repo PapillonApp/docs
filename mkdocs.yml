@@ -36,7 +36,7 @@ nav:
       - Rapporter des problèmes : 'contribute/reporting-issues.md'
     - Soumettre vos modifications : 
       - Pull Request : 'contribute/pull-request.md'
-      - Parution dans l'app final : 'contribute/final-step.md'
+      - Parution dans l'app finale : 'contribute/final-step.md'
 theme:
   name: material
   palette:
