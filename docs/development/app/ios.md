@@ -64,6 +64,12 @@ Pour modifier Papillon et voir vos modifications, un "devbuild" est nécessaire.
 
 C'est une version spéciale de l'app qui se connecte à votre environnement de développement pour afficher vos changements en temps réel sans avoir à recompiler Papillon.
 
+Pour commencer, modifiez le fichier **`app.json`** afin de modifier le nom de l'application ainsi que son package, pour éviter de remplacer la vraie appli.
+
+- Ligne 3, variable **`name`**: remplacer par le nom de votre choix (exemple "Papillon Dev").
+
+- Ligne 71, variable **`package`**: remplacer par exemple par **`xyz.getpapillon.app.dev`**. Ne pas changer cette variable entraînera une erreur à l'installation et un remplacement de l'appli officielle.
+
 Pour installer une devbuild, rien de plus simple :
 
 Commencez par **prébuilder** Papillon. On expliquera en quoi cela consiste plus tard. Cette étape est nécessaire avant chaque compilation de l'app

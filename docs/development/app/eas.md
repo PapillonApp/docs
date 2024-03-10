@@ -1,7 +1,7 @@
 # Développer Papillon avec
 
 !!! warning ""
-    Ce tutoriel n'est pas complet. Il est en cours de rédaction. Si vous avez des questions, n'hésitez pas à demander sur le [Discord](https://discord.gg/papillonapp){target=\_blank}.
+    Ce tutoriel n'est pas complet. Il est en cours de rédaction. Si vous avez des questions, n'hésitez pas à demander sur le [Discord](https://discord.gg/ywkBZx2jFB){target=\_blank}.
 
     Il ne s'adresse pour l'instant qu'aux développeurs **Android**, mais un tutoriel pour **iOS** est en cours de rédaction.
 
@@ -16,7 +16,7 @@
 -   [x] Un compte Expo-EAS
 
 !!! info "Eas, c'est quoi ?"
-    EAS ou Expo Application Services est un service cloud qui permet de construire, déployer et gérer des applications Expo ou React Native. Créée par la team derière le framework Expo, EAS permet dans cette usage, de build une application Papillon gratuitement (même si il existe un plan payant pour des fonctionnalités avancées). Il est à utiliser notamment si vous avez peu de mémoire, de performance ou de stockage mais cela offre moins de flexibilité et de contrôle sur le build.
+    EAS ou Expo Application Services est un service cloud qui permet de construire, déployer et gérer des applications Expo ou React Native. Créé par la team derrière le framework Expo, EAS permet dans cette usage, de build une application Papillon gratuitement (même si il existe un plan payant pour des fonctionnalités avancées). Il est à utiliser notamment si vous avez peu de mémoire, de performance ou de stockage mais cela offre moins de flexibilité et de contrôle sur le build.
 
 ## **Installation des dépendances**
 
@@ -61,7 +61,7 @@ eas login
 
 -   Ligne 3, variable **`name`**: remplacer par le nom de votre choix (exemple "Papillon Dev").
 
--   Ligne 67, variable **`package`**: remplacer par **`xyz.getpapillon.app.dev`**. Ne pas changer cette variable entraînera une erreur à l'installation et un remplacement de l'appli officielle.
+-   Ligne 71, variable **`package`**: remplacer par exemple par **`xyz.getpapillon.app.dev`**. Ne pas changer cette variable entraînera une erreur à l'installation et un remplacement de l'appli officielle.
 
 Rendez-vous sur la page de votre projet EAS, vous y trouverez deux informations utiles, l'ID et l'Owner à recopier dans le fichier **`app.json`**:
 
