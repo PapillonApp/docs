@@ -69,6 +69,8 @@ Rendez-vous sur la page de votre projet EAS, vous y trouverez deux informations 
 
 -   Ligne 220, variable **`owner`**: remplacer par votre nom de compte EAS. (champ "_Owner_" sur la page EAS)
 
+!!! warning "Ne pas ajouter dans un commit git ce fichier si vous l'avez modifié de la sorte !"
+
 3- Exécutez la commande suivante dans votre terminal :
 
 ```sh
