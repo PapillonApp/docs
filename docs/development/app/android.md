@@ -54,7 +54,7 @@ Pour commencer :
 
 - Ligne 3, variable **`name`**: remplacer par le nom de votre choix (exemple "Papillon Dev").
 
-- Ligne 67, variable **`package`**: remplacer par **`plus.pronote.app.dev`**. Ne pas changer cette variable entraînera une erreur à l'installation et un remplacement de l'appli officielle.
+- Ligne 67, variable **`package`**: remplacer par **`xyz.getpapillon.app.dev`**. Ne pas changer cette variable entraînera une erreur à l'installation et un remplacement de l'appli officielle.
 
 2- Exécutez la commande suivante dans votre terminal :
 ```sh
