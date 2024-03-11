@@ -20,6 +20,7 @@ nav:
     - Environement de développement :
       - Développement iOS : 'development/app/ios.md'
       - Développement Android : 'development/app/android.md'
+      - Développement via EAS : 'development/app/eas.md'
     - API utilisées pour Papillon :
         - Pawnote (compatible Pronote) : 'development/api/pawnote.md'
         - EcoleDirecte:
@@ -84,7 +85,7 @@ extra:
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/thepapillonapp/
     - icon: fontawesome/brands/discord
-      link: https://discord.getpapillon.xyz/
+      link: https://discord.gg/ywkBZx2jFB/
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -110,8 +111,8 @@ markdown_extensions:
       custom_checkbox: true
   - abbr
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys

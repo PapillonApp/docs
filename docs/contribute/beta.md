@@ -37,5 +37,5 @@ Avant de commencer, n'oubliez pas que :
     ### ⚠ Attention !
     Un compte Google Play valide est nécessaire pour rejoindre la bêta. Autrement, vous pouvez télécharger l'APK de l'application sur GitHub.
 
-    [Rejoindre la bêta Google Play](https://play.google.com/apps/testing/plus.pronote.app){ .md-button .md-button--primary }
+    [Rejoindre la bêta Google Play](https://play.google.com/apps/testing/xyz.getpapillon.app){ .md-button .md-button--primary }
     [Obtenir l'APK](https://github.com/PapillonApp/Papillon/releases){ .md-button }
