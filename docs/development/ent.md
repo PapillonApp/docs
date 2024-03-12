@@ -43,7 +43,7 @@ stateDiagram-v2
 Les environnements de travail numérique sont connectés à Papillon via des modules spécifiques. Ces modules permettent de récupérer les données de l'environnement de travail numérique. Ces données sont ensuite traitées par Papillon pour être affichées à l'utilisateur.
 
 !!! github "À consulter"
-    Il est conseillé de consulter [index.ts:pawnote :octicons-link-external-24:](https://github.com/PapillonApp/Renard/blob/pawnote/fetch/index.ts){target='_blank'} sur Github pour comprendre comment les données sont traitées.
+    Il est conseillé de consulter [index.ts:development :octicons-link-external-24:](https://github.com/PapillonApp/Papillon/blob/development/fetch/index.ts){target='_blank'} sur Github pour comprendre comment les données sont traitées.
 
 ### Documentation
 
