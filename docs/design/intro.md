@@ -14,7 +14,7 @@ Merci de prendre en compte cette charte graphique lors de la création des élé
 
 Pour faciliter la conception du design de l'application, nous vous recommandons d'utiliser le fichier Figma suivant :
 
-- [Papillon 🦋 - v6 (PUBLIC) :octicons-link-external-24:](https://www.figma.com/file/BBRs6LrDJvKs79JIDk1h6M/Papillon-%F0%9F%A6%8B---v6-(PUBLIC)?type=design&node-id=291%3A766&mode=design&t=Asx54o7vvJwd1T7m-1){target="_blank"}
+- [Papillon 🦋 - v6 (PUBLIC) :octicons-link-external-24:](https://www.figma.com/file/EZ9HbmMmCywyCxp3OuvofF/Product-design-Papillon?type=design&node-id=316%3A470&mode=design&t=gEZXuZLlWRlCkLNn-1){target="_blank"}
 
 - [Charte graphique (PDF) :octicons-link-external-24:](../assets/design/Charte%20Graphique%20-%20Papillon%20(sept.%202023).pdf){target="_blank"}
 
