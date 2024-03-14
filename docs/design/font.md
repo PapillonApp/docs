@@ -36,9 +36,27 @@ Les polices d'écriture sont utilisées pour les titres, les sous-titres et les 
   </div>
 </div>
 
+<div class="font_preview">
+  <p class="font_preview_title opendyslexic">
+    Open Dyslexic
+  </p>
+  <p class="font_preview_sub opendyslexic">
+    Quand jadis, mon vaillant zéphyr explorait les cieux, papillon exquis, s'éveillant aux délices du jardin éternel, le parfum suave annonçait mille bonheurs.
+  </p>
+  <div class="font_bottom">
+    <p class="font_preview_exp">
+      Accessibilité
+    </p>
+    <a href="https://www.dafont.com/fr/open-dyslexic.font" class="font_download">
+      Télécharger
+    </a>
+  </div>
+</div>
+
 <style>
   @import url('https://fonts.macpaw.com/css?family=FixelText:400;500;600');
   @import url('https://fonts.googleapis.com/css2?family=Onest:wght@500..800&display=swap');
+  @import url('https://fonts.cdnfonts.com/css/open-dyslexic');
 
   .fixel_text {
     font-family: 'FixelText', sans-serif;
@@ -46,6 +64,10 @@ Les polices d'écriture sont utilisées pour les titres, les sous-titres et les 
 
   .onest {
     font-family: 'Onest', sans-serif;
+  }
+
+  .opendyslexic {
+    font-family: 'Open-Dyslexic', sans-serif;
   }
 
   .font_preview {
