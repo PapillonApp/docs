@@ -119,44 +119,22 @@ Les calques de transparence sont utilisés pour une monochromie des couleurs. Il
     <h3>"Le 10%"</h3>
     <p>#FFFFFF10</p>
   </div>
-  <div class="cards">
-    <div class="card">
-      <div
-        class="color_preview"
-        style="background-color: #FFFFFF50"
-      ></div>
-      <h3>"Le 50%"</h3>
-      <p>#FFFFF50</p>
+  <div class="card">
+    <div
+      class="color_preview"
+      style="background-color: #FFFFFF50"
+    ></div>
+    <h3>"Le 50%"</h3>
+    <p>#FFFFF50</p>
   </div>
 </div>
   
 ## Utilisations des couleurs
 
+
 !!! note warning "Utilisations des couleurs par rapport au support"
     **Papillon a deux moyens d'utilisés les couleurs et calques, nous faisons la différence entre communication publique & ouverte, et la communication officielle & privée**.
     Cela se fait par l'utilisation [des couleurs secondaire](#-Couleurs-secondaires) ou [des calques de transparence.](-Calques-de-transparences)
-
-Exemple :
-<div class="cards">
-  <div class="card">
-    <div
-      class="color_preview"
-      img="https://images-ext-2.discordapp.net/external/v3xKy3fUogkhvSyk9fqNkNfmLoxV6qv8M0em-eg5ePo/%3Fraw%3Dtrue/https/github.com/PapillonApp/ressources/blob/main/papillon_banner_color.png?format=webp&quality=lossless&width=1193&height=671"
-    ></div>
-    <h3>"Calques de couleurs"</h3>
-    <p>Les formes colorés de cette manière sont utilisés pour des supports publique et ouvert</p>
-  </div>
-<div class="cards">
-  <div class="card">
-    <div
-      class="color_preview"
-      img="https://images-ext-2.discordapp.net/external/vjlWdFPc93-ga4lWbgRu0-7Pco3hRi20qrj4kfVE3tI/%3Fraw%3Dtrue/https/github.com/PapillonApp/ressources/blob/main/papillon_banner_mono.png?format=webp&quality=lossless&width=1193&height=671"
-    ></div>
-    <h3>"Calques de transparence"</h3>
-    <p>Les formes transparentes de cette manière sont utilisés pour des supports officiel et privé</p>
-  </div>
-</div>
-
 
 ### Thème clair
 
@@ -277,6 +255,17 @@ Exemple :
     justify-content: center;
     color: #fff;
     font-size: 40px;
+  }
+
+    .card .img_preview {
+    padding: 10px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 40px;
+    background-image: url('https://raw.githubusercontent.com/PapillonApp/ressources/main/papillon_banner_color.png');
   }
 
   .card h3 {
