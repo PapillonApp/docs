@@ -25,6 +25,7 @@ Les couleurs principales sont utilisées pour les éléments visuels importants 
     <h3>Vert secondaire</h3>
     <p>#32AB8E</p>
   </div>
+</div>
 
 ### Couleurs secondaires
 
@@ -87,7 +88,6 @@ Les couleurs secondaires sont utilisées pour identifier et démarquer des élem
     <h3>Cyan</h3>
     <p>#77FFFF</p>
   </div>
-</div>
   <div class="card">
     <div
       class="color_preview"
@@ -96,8 +96,6 @@ Les couleurs secondaires sont utilisées pour identifier et démarquer des élem
     <h3>Néon</h3>
     <p>#0DFF8B</p>
   </div>
-</div>
-</div>
   <div class="card">
     <div
       class="color_preview"
@@ -121,15 +119,16 @@ Les calques de transparence sont utilisés pour une monochromie des couleurs. Il
     <h3>"Le 10%"</h3>
     <p>#FFFFFF10</p>
   </div>
-<div class="cards">
-  <div class="card">
-    <div
-      class="color_preview"
-      style="background-color: #FFFFFF50"
-    ></div>
-    <h3>"Le 50%"</h3>
-    <p>#FFFFF50</p>
+  <div class="cards">
+    <div class="card">
+      <div
+        class="color_preview"
+        style="background-color: #FFFFFF50"
+      ></div>
+      <h3>"Le 50%"</h3>
+      <p>#FFFFF50</p>
   </div>
+</div>
   
 ## Utilisations des couleurs
 
@@ -156,7 +155,7 @@ Exemple :
     <h3>"Calques de transparence"</h3>
     <p>Les formes transparentes de cette manière sont utilisés pour des supports officiel et privé</p>
   </div>
-
+</div>
 
 
 ### Thème clair
