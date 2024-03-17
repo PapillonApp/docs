@@ -1,5 +1,7 @@
 # Introduction à Papillon
 
+> Papillon repose sur une architecture de développement moderne et modulaire. Il est conçu pour être facile à utiliser tout en offrant une expérience agréable aux développeurs. En tant qu'agrégateur de données scolaires, Papillon se doit de fournir une expérience développeur optimisée pour son usage.
+
 !!! note warning "Un niveau de connaissance est requis"
     Cette section s'adresse aux développeurs ayant un niveau de connaissance suffisant pour comprendre les concepts de base de React Native et d'Expo.
 
