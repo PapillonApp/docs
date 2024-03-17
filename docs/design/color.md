@@ -193,20 +193,18 @@ Les calques de transparence sont utilisés pour une monochromie des couleurs. Il
   <div class="card">
     <div
       class="color_preview"
-      style="background-color: #0B0B0C"
+      style="background-color: #000000"
     ></div>
     <h3>Fond primaire</h3>
     <p>#000000</p>
-    <p>UIColors.background</p>
   </div>
   <div class="card">
     <div
       class="color_preview"
-      style="background-color: #161618"
+      style="background-color: #F00304"
     ></div>
     <h3>Couleur secondaire</h3>
     <p>#F00304</p>
-    <p>UIColors.modalBackground</p>
   </div>
 </div>
 
