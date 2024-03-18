@@ -102,7 +102,7 @@ Les couleurs secondaires sont utilisées pour identifier et démarquer des élem
       style="background-color: #FDC500"
     ></div>
     <h3>Jaune</h3>
-    <p>#0DFF8B</p>
+    <p>#FDC500</p>
   </div>
 </div>
 
