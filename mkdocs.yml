@@ -29,6 +29,7 @@ nav:
         - Turboself:
           - API : 'development/api/ts/api.md'
           - papillon-turboself-core : 'development/api/ts/papillon.md'
+        - API Papillon: 'development/api/papillon.md'
   - Contribuer :
     - Introduction : 'contribute/intro.md'
     - Tester les nouveautés :
