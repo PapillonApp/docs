@@ -24,11 +24,11 @@ En suivant ces lignes directrices, vous pourrez développer efficacement dans l'
 
 Pour commencer à développer dans l'application Papillon, vous devez d'abord configurer votre environnement de développement. Voici les étapes à suivre pour installer les outils nécessaires :
 
-- [:fontawesome-brands-apple: Développement iOS](/development/app/ios)
+- [:fontawesome-brands-apple: Développement iOS](../development/app/ios.md)
 <!-- - Todo : [:fontawesome-brands-android: Développement Android](/development/app/android)  -->
 
 Une fois votre environnement de développement configuré, vous pourrez commencer à développer dans l'application Papillon en utilisant les fonctionnalités et les composants fournis par l'équipe de design et de développement.
 
 ## Soumettre des modifications
 
-Si vous souhaitez contribuer à l'application Papillon, vous pouvez consulter la [documentation pour les contributeurs](/contribute/intro.md) pour obtenir des informations sur la manière de soumettre des modifications, de signaler des problèmes et de participer à la communauté de développement.
+Si vous souhaitez contribuer à l'application Papillon, vous pouvez consulter la [documentation pour les contributeurs](../contribute/intro.md) pour obtenir des informations sur la manière de soumettre des modifications, de signaler des problèmes et de participer à la communauté de développement.

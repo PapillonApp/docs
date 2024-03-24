@@ -31,7 +31,7 @@
 
     Modifier le code source de Papillon pour ajouter des fonctionnalités ou corriger des bugs.
 
-    [:octicons-arrow-right-24: Consulter](develop/intro.md)
+    [:octicons-arrow-right-24: Consulter](development/intro.md)
 
 -   :octicons-code-of-conduct-24:{ .lg .middle } __Contribuer__
 
@@ -47,7 +47,7 @@
 
     Une bêta de Papillon est disponible pour les utilisateurs qui souhaitent tester les nouvelles fonctionnalités.
 
-    [:octicons-arrow-right-24: Rejoindre la bêta de Papillon](contribute/beta)
+    [:octicons-arrow-right-24: Rejoindre la bêta de Papillon](contribute/beta.md)
 
 </div>
 
@@ -63,8 +63,8 @@
 </div>
 
 ## Mentions légales
-- [:material-gavel: Politique de confidentialité](documents/privacy-policy)
-- [:material-gavel: Conditions générales d'utilisation](documents/terms-of-service)
+- [:material-gavel: Politique de confidentialité](documents/privacy-policy.md)
+- [:material-gavel: Conditions générales d'utilisation](documents/terms-of-service.md)
 
 !!! note ""
     Papillon n'est affilié à aucune entreprise ou organisation. Papillon est un projet open-source et communautaire.
