@@ -9,25 +9,27 @@ nav:
     - Introduction : 'design/intro.md'
     - Charte Graphique :
       - Couleurs : 'design/color.md'
-      - Logotype : 'design/logotype.md'
-      - Polices d'écritures : 'design/font.md'
+      - Polices d'écriture : 'design/font.md'
     - Ressources externe :
-      - Charte grapique (PDF) : 'https://cdn.tryon-lab.fr/Charte%20Graphique%20-%20Papillon%20(sept.%202023).pdf'
-      - Figma (Public) : 'https://www.figma.com/file/BBRs6LrDJvKs79JIDk1h6M/Papillon-%F0%9F%A6%8B---v6-(PUBLIC)?type=design&node-id=291%3A766&mode=design&t=Asx54o7vvJwd1T7m-1'
+      - Charte grapique (PDF) : '../assets/design/Charte%20Graphique%20-%20Papillon%20(sept.%202023).pdf'
+      - Figma (Public) : 'https://www.figma.com/file/EZ9HbmMmCywyCxp3OuvofF/Product-design-Papillon?type=design&node-id=316%3A470&mode=design&t=gEZXuZLlWRlCkLNn-1'
   - Développer :
     - Introduction : 'development/intro.md'
     - Fonctionnement de l'app :
       - ENT : 'development/ent.md'
     - Environement de développement :
       - Développement iOS : 'development/app/ios.md'
+      - Développement Android : 'development/app/android.md'
+      - Développement via EAS : 'development/app/eas.md'
     - API utilisées pour Papillon :
-        - Pawnote : 'development/api/pawnote.md'
+        - Pawnote (compatible Pronote) : 'development/api/pawnote.md'
         - EcoleDirecte:
           - API: 'development/api/ed/api.md'
           - papillon-ed-core: 'development/api/ed/papillon.md'
         - Turboself:
           - API : 'development/api/ts/api.md'
           - papillon-turboself-core : 'development/api/ts/papillon.md'
+        - API Papillon: 'development/api/papillon.md'
   - Contribuer :
     - Introduction : 'contribute/intro.md'
     - Tester les nouveautés :
@@ -35,7 +37,7 @@ nav:
       - Rapporter des problèmes : 'contribute/reporting-issues.md'
     - Soumettre vos modifications : 
       - Pull Request : 'contribute/pull-request.md'
-      - Parution dans l'app final : 'contribute/final-step.md'
+      - Parution dans l'app finale : 'contribute/final-step.md'
 theme:
   name: material
   palette:
@@ -56,10 +58,13 @@ theme:
         icon: material/brightness-4
         name: Switch to system preference
   language: fr
-  logo: assets/logo.svg
+  logo: assets/beta.png
   favicon: assets/beta.png
+  font:
+    text: Noto Sans
   features:
     - navigation.instant
+    - navigation.instant.progress
     - navigation.tabs
     - navigation.footer
     - content.action.edit
@@ -69,7 +74,7 @@ theme:
     - navigation.sections
 plugins:
   - search
-  - render_swagger
+  - swagger-ui-tag
   - git-revision-date-localized:
       locale: fr
       type: timeago
@@ -81,7 +86,7 @@ extra:
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/thepapillonapp/
     - icon: fontawesome/brands/discord
-      link: https://discord.getpapillon.xyz/
+      link: https://discord.gg/ywkBZx2jFB/
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -107,8 +112,8 @@ markdown_extensions:
       custom_checkbox: true
   - abbr
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.critic
   - pymdownx.caret
   - pymdownx.keys

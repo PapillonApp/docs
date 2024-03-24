@@ -13,7 +13,7 @@
   Ces données d'identification ne sont pas stockées en dehors de votre appareil et sont utilisées uniquement pour vous identifier.
 
 - #### Vos données scolaires
-  > Emploi du temps, Travail à faire, Notes, Compétences, Actualités de l'établissement, Conversations et Évenements de vie scolaire
+  > Emploi du temps, Travail à faire, Notes, Compétences, Actualités de l'établissement, Conversations et Événements de vie scolaire
 
   Ces données sont renvoyées par les services de vie scolaire correspondants. Ces données ne quitteront jamais votre appareil et seuls vous y avez accès.
 
@@ -24,26 +24,26 @@ Les derniers événements précédant un crash peuvent être automatiquement col
 Aucune information personnelle ou scolaire n'est transmise pendant cette collecte.
 
 ### 2.2 - Données liées à l'identité
-Aucune donnée liée à votre identité ou à votre activité est conservée hormis les logs récents à des fins de développement pour fixer les éventuels bugs et problèmes.
+Aucune donnée liée à votre identité ou à votre activité n'est conservée, hormis les logs récents à des fins de développement pour corriger d'éventuels bugs et problèmes.
 
 ### 2.3 - Accès extérieur aux données
 Aucune personne ou logiciel automatisé n’utilise ou ne collecte vos données personnelles.
 
 ### 2.4 - Suppression des données
-La suppression de l'application ou la déconnexion de celle-ci entraîne immédiatement la suppression de l'intégralité des données stockées sur votre appareil.
+La suppression de l'application ou la déconnexion entraîne immédiatement la suppression de l'intégralité des données stockées sur votre appareil.
 
 ## 3. - Client mobile Papillon
-L’application “Papillon” est un logiciel open source, gratuit, et à but non lucratif conçu pour permettre d’accéder aux données des services scolaires transmises par des librairies tierces.
+L'application "Papillon" est un logiciel open source, gratuit et à but non lucratif conçu pour permettre l'accès aux données des services scolaires transmises par des librairies tierces.
 
-Papillon n'est pas responsable de la manière dont laquelle les données sont transmises par ces librairies tierces.
+Papillon n'est pas responsable de la manière dont les données sont transmises par ces librairies tierces.
 
-## 4. -  Modification de la politique de confidentialité
+## 4. - Modification de la politique de confidentialité
 
 ### 4.1 - Engagement concernant l'avenir du projet
-Nous nous engageons à ne pas collecter de données à l’avenir. Cependant, des services tiers supplémentaires seront peut-être nécessaires au fonctionnement de l’app dans une prochaine mise à jour.
+Nous nous engageons à ne pas collecter de données à l'avenir. Cependant, des services tiers supplémentaires seront peut-être nécessaires au fonctionnement de l'application dans une prochaine mise à jour.
 
 ### 4.2 - Notification des changements
-Lorsque cette politique de confidentialité viendra à être modifiée, les utilisateurs finaux seront notifiés soit via l’app, soit via leurs coordonnées (dans le cas d’un bêta-test, ou sur une communauté en ligne par exemple).
+Lorsque cette politique de confidentialité sera modifiée, les utilisateurs finaux seront notifiés soit via l'application, soit via leurs coordonnées (dans le cas d'une bêta-test, ou sur une communauté en ligne, par exemple).
 
 ## 5. - En cas de problème
 En cas de problème avec l'application ou son traitement des données, merci de nous contacter à l'adresse suivante : [support@getpapillon.xyz](mailto:support@getpapillon.xyz).

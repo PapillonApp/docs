@@ -12,7 +12,7 @@ pip3 install lxml
 
 ## Installation
 ### Bare-metal
-Une fois les pré-requis en place vous pouvez executer le serveur avec la commande suivante :
+Une fois les pré-requis en place vous pouvez exécuter le serveur avec la commande suivante :
 Veuillez noter que le serveur est prévu pour fonctionner sur notre infrastructure, il est donc possible que vous deviez modifier le code pour qu'il fonctionne sur votre propre serveur. De plus, il est **nécessaire** de modifier le fichier `server.py` et de supprimer les fonctions `get_client_on_instances()` et `token_get_client()` ainsi que les appels à ces fonctions *(si présent dans la branche téléchargée)*.
 ```sh
 git clone -b main https://github.com/PapillonApp/papillon-python
@@ -36,7 +36,7 @@ docker run -d -p 8000:8000 -e CRON="*/15 * * * *" justtryon/papillonserver:lates
 
 ### Docker Swarm
 Le déploiement de l'api avec docker swarm va vous permettre une redondance de l'api, si un de vos serveurs n'est plus disponible, la node manager de votre cluster swarm va automatiquement prendre le relai pour que l'api soit toujours disponible, et ce sans interruption de service pour les utilisateurs.<br/>
-Les commandes suivantes sont à executer sur la node manager.
+Les commandes suivantes sont à exécuter sur la node manager.
 ```sh
 docker pull justtryon/papillonserver:latest
 ```

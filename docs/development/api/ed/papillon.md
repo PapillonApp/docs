@@ -1,11 +1,11 @@
 # papillon-ed-core
 
-`papillon-ed-core` est un module de base pour l'application Papillon. Il contient des classes et des fonctions qui sont utilisées pour récuperer des données, les envoyer à `IndexDataInstance` pour les afficher.
+`papillon-ed-core` est un module de base pour l'application Papillon. Il contient des classes et des fonctions qui sont utilisées pour récupérer des données, les envoyer à `IndexDataInstance` pour les afficher.
 
 ## Installation
 
 !!! npm "Node Package Manager"
-     Le module est disponible sur [npmjs.com :octicons-link-external-24:](https://www.npmjs.com/package/papillon-ed-core){target='_blank'} sous le nom `papillon-ed-core`.
+     Le module est disponible sur [npmjs.com :octicons-link-external-24:](https://www.npmjs.com/package/papillon-ed-core){target='_blank'} sous le nom de `papillon-ed-core`.
 
 Le répo du module est disponible sur [Github :octicons-link-external-24:](https://github.com/PapillonApp/Papillon-ED-Core/){target='_blank'}.
 

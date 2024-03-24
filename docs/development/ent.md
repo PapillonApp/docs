@@ -1,4 +1,4 @@
-# Envirement de Travail Numérique
+# Environnement de Travail Numérique
 
 ## Définition
 
@@ -13,9 +13,9 @@ Actuellement, l'application Papillon est **compatible** avec les environnements 
 - Skolengo
 - EcoleDirecte (en cours de développement)
 
-### Interoptabilité
+### Interopérabilité
 
-Papillon est conçu pour être **interopérable** avec plusieurs environnements de travail numérique. Cela signifie que Papillon à une architecture modulaire qui permet d'ajouter facilement de nouveaux environnements de travail numérique.
+Papillon est conçu pour être **interopérable** avec plusieurs environnements de travail numérique. Cela signifie que Papillon a une architecture modulaire qui permet d'ajouter facilement de nouveaux environnements de travail numérique.
 
 #### Fonctionnement
 
@@ -43,7 +43,7 @@ stateDiagram-v2
 Les environnements de travail numérique sont connectés à Papillon via des modules spécifiques. Ces modules permettent de récupérer les données de l'environnement de travail numérique. Ces données sont ensuite traitées par Papillon pour être affichées à l'utilisateur.
 
 !!! github "À consulter"
-    Il est conseillé de consulter [index.ts:pawnote :octicons-link-external-24:](https://github.com/PapillonApp/Renard/blob/pawnote/fetch/index.ts){target='_blank'} sur Github pour comprendre comment les données sont traitées.
+    Il est conseillé de consulter [index.ts:development :octicons-link-external-24:](https://github.com/PapillonApp/Papillon/blob/development/fetch/index.ts){target='_blank'} sur Github pour comprendre comment les données sont traitées.
 
 ### Documentation
 
