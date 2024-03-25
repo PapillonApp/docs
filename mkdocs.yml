@@ -86,7 +86,7 @@ extra:
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/thepapillonapp/
     - icon: fontawesome/brands/discord
-      link: https://discord.gg/ywkBZx2jFB/
+      link: https://discord.gg/jnnpZXkcVZ
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
