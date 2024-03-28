@@ -1,0 +1,59 @@
+openapi: 3.0.0
+info:
+  title: EcoleDirect API
+  version: 3.0.0
+servers:
+  - url: https://api.ecoledirecte.com
+tags:
+  - name: Authentification
+  - name: Accisition d'informations (Fetch)
+  - name: Action
+  
+components:
+  securitySchemes:
+    bearerAuth:            # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+paths:
+  /v3/login.awp:
+    post:
+      summary: Se connecter à son compte EcodeDirecte
+      tags:
+        - Authentification
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                data:
+                  type: string
+                  example: '{"identifiant": "string",  "motdepasse": "string","isReLogin": false, "uuid": ""}'
+                  
+                
+      responses:
+        '505':
+          description: "Erreur (Mot de passe invalide)"
+          content:
+            application/json:
+              schema:
+                type: "object"
+                properties:
+                  code:
+                    type: "integer"
+                    example: 505
+                  token:
+                    type: "string"
+                    example: ""
+                  message:
+                    type: "string"
+                    example: "Mot de passe invalide !"
+                  data:
+                    type: "object"
+                    properties:
+                      accounts:
+                        type: "array"
+                        items: {}
