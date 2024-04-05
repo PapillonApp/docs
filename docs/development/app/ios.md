@@ -20,6 +20,7 @@ Si ce n'est pas déjà fait, installez Node.js et Watchmen
 ```sh
 brew install node
 brew install watchman
+brew install rbenv
 ```
 ### Xcode
 [Xcode](https://developer.apple.com/xcode/) est nécessaire pour développer sous iOS. Installez le depuis le [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
@@ -28,6 +29,14 @@ brew install watchman
 Vous devez aussi installer les "Command Line Tools".
 Ouvrez Xcode, puis dans **Préférences > Locations**, Sélectionnez la version la plus récente de Xcode dans l'onglet "Command Line Tools"
 ![Screenshot de Xcode](https://reactnative.dev/assets/images/GettingStartedXcodeCommandLineTools-8259be8d3ab8575bec2b71988163c850.png)
+
+### Ruby
+
+Pour installer la dernière version de Ruby disponible avec rbenv, vous pouvez utiliser la commande suivante :
+
+```sh
+rbenv install $(rbenv install -l | grep -v - | tail -1)
+```
 
 ### CocoaPods
 Pour terminer, il est nécessaire d'avoir CocoaPods d'installé pour les dépendances de l'app.
