@@ -42,6 +42,9 @@ state join_state <<join>>
     join_state --> BD : Fusion de la demande
 ```
 
+!!! info "Comment nommer les pull requests"
+    Nous recommandons au développeur d'utiliser les noms de commit conventionnel. Plus d'informations à [cette adresse](https://www.conventionalcommits.org/fr/v1.0.0/).
+
 !!! info ""
     Les pull requests peuvent être refusées si elles ne respectent pas les normes de codage ou si elles ne sont pas valides.
 

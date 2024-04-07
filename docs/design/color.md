@@ -102,7 +102,7 @@ Les couleurs secondaires sont utilisées pour identifier et démarquer des élem
       style="background-color: #FDC500"
     ></div>
     <h3>Jaune</h3>
-    <p>#0DFF8B</p>
+    <p>#FDC500</p>
   </div>
 </div>
 
@@ -134,7 +134,7 @@ Les calques de transparence sont utilisés pour une monochromie des couleurs. Il
 
 !!! note warning "Utilisations des couleurs par rapport au support"
     **Papillon a deux moyens d'utilisés les couleurs et calques, nous faisons la différence entre communication publique & ouverte, et la communication officielle & privée**.
-    Cela se fait par l'utilisation [des couleurs secondaires](#-Couleurs-secondaires) ou [des calques de transparence.](-Calques-de-transparences)
+    Cela se fait par l'utilisation [des couleurs secondaires](#couleurs-secondaires) ou [des calques de transparence.](#calques-de-transparences)
 
 ### Thème clair
 
