@@ -5,117 +5,112 @@
 - [x] Des bases en JavaScript 
 - [x] Une connaissance du terminal de macOS
 
-## Installation des dépendances
-### Homebrew
-[Homebrew](https://brew.sh/) est nécessaire pour installer le reste des outils nécessaires.
+=== "Documentation"
+    ## Installation des dépendances
+    ### Homebrew
+    [Homebrew](https://brew.sh/) est nécessaire pour installer le reste des outils nécessaires.
 
-Vous pouvez l'installer simplement en indiquant cette commande dans un terminal macOS :
+    Vous pouvez l'installer simplement en indiquant cette commande dans un terminal macOS :
 
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-### Node & Watchman
-Si ce n'est pas déjà fait, installez Node.js et Watchmen
+    ```sh
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
 
-```sh
-brew install node
-brew install watchman
-brew install rbenv
-```
-### Xcode
-[Xcode](https://developer.apple.com/xcode/) est nécessaire pour développer sous iOS. Installez le depuis le [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
+    ### Node & Watchman
+    Si ce n'est pas déjà fait, installez Node.js et Watchman
 
-#### Outils de ligne de commande
-Vous devez aussi installer les "Command Line Tools".
-Ouvrez Xcode, puis dans **Préférences > Locations**, Sélectionnez la version la plus récente de Xcode dans l'onglet "Command Line Tools"
-![Screenshot de Xcode](https://reactnative.dev/assets/images/GettingStartedXcodeCommandLineTools-8259be8d3ab8575bec2b71988163c850.png)
+    ```sh
+    brew install node
+    brew install watchman
+    ```
+    ### Xcode
+    [Xcode](https://developer.apple.com/xcode/) est nécessaire pour développer sous iOS. Installez le depuis le [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
 
-### Ruby
+    #### Outils de ligne de commande
+    Vous devez aussi installer les "Command Line Tools".
+    Ouvrez Xcode, puis dans **Préférences > Locations**, Sélectionnez la version la plus récente de Xcode dans l'onglet "Command Line Tools"
+    ![Screenshot de Xcode](https://reactnative.dev/assets/images/GettingStartedXcodeCommandLineTools-8259be8d3ab8575bec2b71988163c850.png)
 
-Pour installer la dernière version de Ruby disponible avec rbenv, vous pouvez utiliser la commande suivante :
+    ### CocoaPods
+    Pour terminer, il est nécessaire d'avoir CocoaPods d'installé pour les dépendances de l'app.
 
-```sh
-rbenv install $(rbenv install -l | grep -v - | tail -1)
-```
+    ```sh
+    sudo gem install cocoapods
+    ```
 
-### CocoaPods
-Pour terminer, il est nécessaire d'avoir CocoaPods d'installé pour les dépendances de l'app.
+    ## Environnement
+    Commencez par cloner le  [repo de Papillon](https://github.com/PapillonApp/Papillon) et mettre en place votre environnement de développement.
 
-```sh
-sudo gem install cocoapods
-```
+    Une fois le repo cloné, installez simplement les packages npm liés :
 
+    ```
+    npm i
+    ```
 
-## Environnement
-Commencez par cloner le  [repo de Papillon](https://github.com/PapillonApp/Papillon) et mettre en place votre environnement de développement.
+    Il sera aussi nécessaire d'avoir [**Expo CLI**](https://docs.expo.dev/more/expo-cli/) :
 
-Une fois le repo cloné, installez simplement les packages npm liés :
+    ```
+    npm install -g expo-cli
+    ```
 
-```
-npm i
-```
+    Vous devrez aussi installer les dépendances de [**Cocoapods**](https://cocoapods.org/) dans le dossier *`/ios`*:
 
-Il sera aussi nécessaire d'avoir [**Expo CLI**](https://docs.expo.dev/more/expo-cli/) :
+    ```
+    pod install
+    ```
 
-```
-npm install -g expo-cli
-```
+    ## Les devbuilds
+    Pour modifier Papillon et voir vos modifications, un "devbuild" est nécessaire.
 
-Vous devrez aussi installer les dépendances de [**Cocoapods**](https://cocoapods.org/) dans le dossier *`/ios`*:
+    C'est une version spéciale de l'app qui se connecte à votre environnement de développement pour afficher vos changements en temps réel sans avoir à recompiler Papillon.
 
-```
-pod install
-```
+    Pour commencer, modifiez le fichier **`app.json`** afin de modifier le nom de l'application ainsi que son package, pour éviter de remplacer la vraie appli.
 
+    - Ligne 3, variable **`name`**: remplacer par le nom de votre choix (exemple "Papillon Dev").
 
-## Les devbuilds
-Pour modifier Papillon et voir vos modifications, un "devbuild" est nécessaire.
+    - Ligne 71, variable **`package`**: remplacer par exemple par **`xyz.getpapillon.app.dev`**. Ne pas changer cette variable entraînera une erreur à l'installation et un remplacement de l'appli officielle.
 
-C'est une version spéciale de l'app qui se connecte à votre environnement de développement pour afficher vos changements en temps réel sans avoir à recompiler Papillon.
+    Pour installer une devbuild, rien de plus simple :
 
-Pour commencer, modifiez le fichier **`app.json`** afin de modifier le nom de l'application ainsi que son package, pour éviter de remplacer la vraie appli.
+    Commencez par **prébuilder** Papillon. On expliquera en quoi cela consiste plus tard. Cette étape est nécessaire avant chaque compilation de l'app
 
-- Ligne 3, variable **`name`**: remplacer par le nom de votre choix (exemple "Papillon Dev").
+    ```
+    npx expo prebuild
+    ```
 
-- Ligne 71, variable **`package`**: remplacer par exemple par **`xyz.getpapillon.app.dev`**. Ne pas changer cette variable entraînera une erreur à l'installation et un remplacement de l'appli officielle.
+    Une fois cela terminé, ouvrez Papillon dans Xcode en ouvrant le fichier *`/iOS/Papillon.xcworkspace`*.
 
-Pour installer une devbuild, rien de plus simple :
+    Vous n'avez plus qu'à démarrer l'app avec votre iPhone branché ou sur un simulateur iOS en sélectionnant un appareil et **en appuyant sur l'icône "Play" en haut de Xcode**.
 
-Commencez par **prébuilder** Papillon. On expliquera en quoi cela consiste plus tard. Cette étape est nécessaire avant chaque compilation de l'app
+    ### Démarrer une session de développement
+    Une fois la prébuild installée, démarrez le serveur de développement via la commande suivante :
+    
+    ```
+    npx expo start
+    ```
 
-```
-npx expo prebuild
-```
+    *(Vous n'êtes pas obligé de développer sur la même machine que celle qui a compilé la prébuild)*
+    Une fois la commande démarrée, ouvrez l'app de prebuild sur votre iPhone et indiquez l'adresse du serveur ou alors, scannez le QR-Code affiché dans la console depuis l'app Appareil photo
 
-Une fois cela terminé, ouvrez Papillon dans Xcode en ouvrant le fichier *`/iOS/Papillon.xcworkspace`*.
+    **(Vous devez avoir votre iPhone et votre ordinateur sur le même réseau local)**
 
-Vous n'avez plus qu'à démarrer l'app avec votre iPhone branché ou sur un simulateur iOS en sélectionnant un appareil et **en appuyant sur l'icône "Play" en haut de Xcode**.
+    ## Les prébuilds
+    La fonction ***`prebuild`*** permet de préparer l'app a être compilée en code natif pour iOS, cela indique :
+    - Empaqueter les icônes, images, polices, et autres fichiers de l'app
+    - Installer automatiquement les pods et modules de Papillon
+    - Mettre a jour certaines parties natives de l'app.
 
-### Démarrer une session de développement
-Une fois la prébuild installée, démarrez le serveur de développement via la commande suivante :
+    Tout cela se fait simplement et automatiquement avec une commande : 
 
-```
-npx expo start
-```
+    ```
+    npx expo prebuild
+    ```
 
-*(Vous n'êtes pas obligé de développer sur la même machine que celle qui a compilé la prébuild)*
-Une fois la commande démarrée, ouvrez l'app de prebuild sur votre iPhone et indiquez l'adresse du serveur ou alors, scannez le QR-Code affiché dans la console depuis l'app Appareil photo
+    Une fois effectuée, vous pouvez archiver ou démarrer l'app comme d'habitude.
 
-**(Vous devez avoir votre iPhone et votre ordinateur sur le même réseau local)**
+    ## Compiler une version "release"
+    Normalement, cela n'est pas nécessaire, mais vous pouvez créer une version release (donc indépendante) telle que vous l'obtiendrez sur l'App Store en utilisant l'option **Archive** sur Xcode.
 
-## Les prébuilds
-La fonction ***`prebuild`*** permet de préparer l'app a être compilée en code natif pour iOS, cela indique :
-- Empaqueter les icônes, images, polices, et autres fichiers de l'app
-- Installer automatiquement les pods et modules de Papillon
-- Mettre a jour certaines parties natives de l'app.
+=== "Tutoriel vidéo"
 
-Tout cela se fait simplement et automatiquement avec une commande : 
-
-```
-npx expo prebuild
-```
-
-Une fois effectuée, vous pouvez archiver ou démarrer l'app comme d'habitude.
-
-## Compiler une version "release"
-Normalement, cela n'est pas nécessaire, mais vous pouvez créer une version release (donc indépendante) telle que vous l'obtiendrez sur l'App Store en utilisant l'option **Archive** sur Xcode.
+    <div style="position:relative; width:100%; height:0px; padding-bottom:64.982%"><iframe allow="fullscreen" allowfullscreen height="100%" src="https://streamable.com/e/mxsb22?muted=1" width="100%" style="border:none; width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden;"></iframe></div>
