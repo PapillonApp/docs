@@ -255,36 +255,36 @@ Les références sont données ainsi:
 
 La classe principale du module.
 
-| Propriété         | Type                                                                                                                                                                                                                               | Commentaire                         |
-|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
-| homeworks         | [`GetHomeworks`](#GetHomeworks)                                                                                                                                                                                                    | Gestion des devoirs                 |
-| grades            | [`GetGrades`](#GetGrades)                                                                                                                                                                                                          | Gestion des notes                   |
-| timetable         | [`GetTimetable`](#GetTimetable)                                                                                                                                                                                                    | Gestion de l'EDT                    |
-| schoolLife        | [`GetSchoolLife`](#GetSchoolLife)                                                                                                                                                                                                  | Gestion de la vie scolaire          |
-| cantine           | [`GetCantine`](#GetCantine)                                                                                                                                                                                                        | Gestion de la cantine               |
-| digitalManuals    | [`GetDigitalManuals`](#GetDigitalManuals)                                                                                                                                                                                          | Gestion des manuels numériques      |
-| messaging         | [`GetMessaging`](#GetMessaging)                                                                                                                                                                                                    | Gestion des messages                |
-| timeline          | [`GetTimeline`](#GetTimeline)                                                                                                                                                                                                      | Gestion des timeline                |
-| documents         | [`GetDocuments`](#GetDocuments)                                                                                                                                                                                                    | Gestion des document administratifs |
-| forms             | [`GetForms`](#GetForms)                                                                                                                                                                                                            | Gestion des formulaires             |
-| workspaces        | [`GetWorkspaces`](#GetWorkspaces)                                                                                                                                                                                                  | Gestion des espaces de travail      |
-| communicationBook | [`GetCommunicationBook`](#GetCommunicationBook)                                                                                                                                                                                    | Gestion du carnet de correspondance |
-| cloud             | [`GetCloud`](#GetCloud)                                                                                                                                                                                                            | Gestion du cloud                    |
-| orders            | [`GetOrders`](#GetOrders)                                                                                                                                                                                                          | Gestion des commandes               |
-| esidoc            | [`GetOrders`](#GetEsidoc)                                                                                                                                                                                                          | Gestion du module Esidoc            |
-| downloads         | [`GetDownloads`](#GetDownloads)                                                                                                                                                                                                    | Gestion des téléchargements         |
-|                   |                                                                                                                                                                                                                                    |                                     |
-| auth              | [`Auth`](#Auth)                                                                                                                                                                                                                    | Gestion de l'authentification       |
-| request           | [`Request`](#Request)                                                                                                                                                                                                              | Gestion du requêtage                |
-|                   |                                                                                                                                                                                                                                    |                                     |
-| _token            | `string` \| `undefined`                                                                                                                                                                                                            | Token                               |
-| isLoggedIn        | `boolean`                                                                                                                                                                                                                          | L'utilisateur est-il connecté       |
-| settings?         | [`accountParameters`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/utils/types/accounts.ts#L3) \| `undefined`                                                                                                      | Paramètres de l'utilisateur         |
-| student           | [`account`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/login/accounts/index.ts#L11) \| [`BlankAccount`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/utils/types/accounts.ts#L16) | Profil de l'utilisateur             |
-| school?           | [`EstablishmentInfo`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/utils/types/establishments.ts#L1)                                                                                                               | Informations de l'établissement     |
-| modules?          | `Array<`[`accountModule`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/login/accounts/index.ts#L19))`>`                                                                                             | Modules activés                     |
+| Propriété         | Type                                                                                                                                                                      | Commentaire                         |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------|
+| homeworks         | [`GetHomeworks`](#GetHomeworks)                                                                                                                                           | Gestion des devoirs                 |
+| grades            | [`GetGrades`](#GetGrades)                                                                                                                                                 | Gestion des notes                   |
+| timetable         | [`GetTimetable`](#GetTimetable)                                                                                                                                           | Gestion de l'EDT                    |
+| schoolLife        | [`GetSchoolLife`](#GetSchoolLife)                                                                                                                                         | Gestion de la vie scolaire          |
+| cantine           | [`GetCantine`](#GetCantine)                                                                                                                                               | Gestion de la cantine               |
+| digitalManuals    | [`GetDigitalManuals`](#GetDigitalManuals)                                                                                                                                 | Gestion des manuels numériques      |
+| messaging         | [`GetMessaging`](#GetMessaging)                                                                                                                                           | Gestion des messages                |
+| timeline          | [`GetTimeline`](#GetTimeline)                                                                                                                                             | Gestion des timeline                |
+| documents         | [`GetDocuments`](#GetDocuments)                                                                                                                                           | Gestion des document administratifs |
+| forms             | [`GetForms`](#GetForms)                                                                                                                                                   | Gestion des formulaires             |
+| workspaces        | [`GetWorkspaces`](#GetWorkspaces)                                                                                                                                         | Gestion des espaces de travail      |
+| communicationBook | [`GetCommunicationBook`](#GetCommunicationBook)                                                                                                                           | Gestion du carnet de correspondance |
+| cloud             | [`GetCloud`](#GetCloud)                                                                                                                                                   | Gestion du cloud                    |
+| orders            | [`GetOrders`](#GetOrders)                                                                                                                                                 | Gestion des commandes               |
+| esidoc            | [`GetOrders`](#GetEsidoc)                                                                                                                                                 | Gestion du module Esidoc            |
+| downloads         | [`GetDownloads`](#GetDownloads)                                                                                                                                           | Gestion des téléchargements         |
+|                   |                                                                                                                                                                           |                                     |
+| auth              | [`Auth`](#Auth)                                                                                                                                                           | Gestion de l'authentification       |
+| request           | [`Request`](#Request)                                                                                                                                                     | Gestion du requêtage                |
+|                   |                                                                                                                                                                           |                                     |
+| _token            | `string` \| `undefined`                                                                                                                                                   | Token                               |
+| isLoggedIn        | `boolean`                                                                                                                                                                 | L'utilisateur est-il connecté       |
+| settings?         | [`accountParameters`](src/utils/types/accounts.ts#L3) \| `undefined`                                                                                                      | Paramètres de l'utilisateur         |
+| student           | [`account`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/login/accounts/index.ts#L11) \| [`BlankAccount`](src/utils/types/accounts.ts#L16) | Profil de l'utilisateur             |
+| school?           | [`EstablishmentInfo`](src/utils/types/establishments.ts#L1)                                                                                                               | Informations de l'établissement     |
+| modules?          | `Array<`[`accountModule`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/login/accounts/index.ts#L19))`>`                                    | Modules activés                     |
 
-_Ouvrir [`src/session.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/session.ts)_
+_Ouvrir [`src/session.ts`](src/session.ts)_
 
 ### GetHomeworks
 
@@ -295,7 +295,7 @@ La classe de gestion des devoirs.
 | fetch()    | `async () =>`[`textbookResData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/textbook.ts#L77)                                         | Récupérer les devoirs                                                                                                                             |
 | getByDay() | `async (day: string, removeHTMLTags: boolean) =>`[`textbookResDateData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/textbook.ts#L14) | Récupérer les devoirs du jout `day` (day est formaté `YYYY-MM-DD`). `removeHTMLTags` permet de renvoyer le contenu des devoirs sans balises HTML. |
 
-_Ouvrir [`src/fetch/getHomeworks.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getHomeworks.ts)_
+_Ouvrir [`src/fetch/getHomeworks.ts`](src/fetch/getHomeworks.ts)_
 
 ### GetGrades
 
@@ -305,19 +305,19 @@ La classe de gestion des notes.
 |-----------|------------------------------------------------------------------------------------------------------------------------------------|---------------------|
 | fetch()   | `async () =>`[`gradesResData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/grades.ts#L37) | Récupérer les notes |
 
-_Ouvrir [`src/fetch/getGrades.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getGrades.ts)_
+_Ouvrir [`src/fetch/getGrades.ts`](src/fetch/getGrades.ts)_
 
 
 ### GetTimetable
 
 La classe de gestion de l'EDT. Les jours sont formatés `YYYY-MM-DD`.
 
-| Propriété     | Type                                                                                                                                                              | Commentaire                                      |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| fetchByDay()  | `async (day: string) =>`[`timetableCourseList`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/utils/types/timetable.ts#L3)                         | Récupérer l'EDT du jour `day`                    |
-| fetchByDate() | `async (starteDate: string, endDate: string) =>`[`timetableCourseList`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/utils/types/timetable.ts#L3) | Récupérer l'EDT des jour `startDate` à `endDate` |
+| Propriété     | Type                                                                                                     | Commentaire                                      |
+|---------------|----------------------------------------------------------------------------------------------------------|--------------------------------------------------|
+| fetchByDay()  | `async (day: string) =>`[`timetableCourseList`](src/utils/types/timetable.ts#L3)                         | Récupérer l'EDT du jour `day`                    |
+| fetchByDate() | `async (starteDate: string, endDate: string) =>`[`timetableCourseList`](src/utils/types/timetable.ts#L3) | Récupérer l'EDT des jour `startDate` à `endDate` |
 
-_Ouvrir [`src/fetch/getTimetable.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getTimetable.ts)_
+_Ouvrir [`src/fetch/getTimetable.ts`](src/fetch/getTimetable.ts)_
 
 
 ### GetSchoolLife
@@ -328,7 +328,7 @@ La classe de gestion de la vie scolaire
 |-----------|---------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
 | fetch()   | `async () =>`[`schoolLifeRes`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/schoolLife.ts#L5) | Récupérer tous les évenements de vie scolaire |
 
-_Ouvrir [`src/fetch/getSchoolLife.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getSchoolLife.ts)_
+_Ouvrir [`src/fetch/getSchoolLife.ts`](src/fetch/getSchoolLife.ts)_
 
 
 ### GetCantine
@@ -339,9 +339,9 @@ La classe de gestion des modules de cantine.
 |-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
 | getBarcode()      | `() => string`                                                                                                                                             | Renvoie la valeur du code-barre du badge     |
 | getReservations() | `() =>` [`modStudReservations.params`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/login/accounts/student/modules.ts#L179) | Renvoie les paramètres module de réservation |
-| fetchSchoolMenu() | `() => Array<`[`Menu`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getCantine.ts#L7)`>`                                             | Renvoie la liste des menus                   |
+| fetchSchoolMenu() | `() => Array<`[`Menu`](src/fetch/getCantine.ts#L7)`>`                                                                                                      | Renvoie la liste des menus                   |
 
-_Ouvrir [`src/fetch/getCantine.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getCantine.ts)_
+_Ouvrir [`src/fetch/getCantine.ts`](src/fetch/getCantine.ts)_
 
 
 ### GetDigitalManuals
@@ -352,7 +352,7 @@ La classe de gestion des manuels scolaires.
 |-----------|----------------------------------------------------------------------------------------------------------------------------------|---------------------------------|
 | fetch()   | `async () =>` [`manualsRes`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/manuals.ts#L5) | Récupérer les manuels scolaires |
 
-_Ouvrir [`src/fetch/getDigitalManuals.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getDigitalManuals.ts)_
+_Ouvrir [`src/fetch/getDigitalManuals.ts`](src/fetch/getDigitalManuals.ts)_
 
 
 ### GetMessaging
@@ -364,7 +364,7 @@ La classe de gestion de la messagerie.
 | fetchReceivedMessages() | `async () =>` [`mailboxResData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/global/mailbox.ts#L13) | Récupérer les messages reçus (`data.messages.received` sera rempli, les autres vides) |
 | fetchSentMessages()     | `async () =>` [`mailboxResData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/global/mailbox.ts#L13) | Récupérer les messages envoyés (`data.messages.sent` sera rempli, les autres vides)   |
 
-_Ouvrir [`src/fetch/getMessaging.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getMessaging.ts)_
+_Ouvrir [`src/fetch/getMessaging.ts`](src/fetch/getMessaging.ts)_
 
 
 ### GetTimeline
@@ -376,7 +376,7 @@ La classe de gestion des timeline.
 | fetch()               | `async () => Array<`[`studTlElem`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/timeline.ts#L13)`>` | Récupérer la timeline personnelle. |
 | fetchCommonTimeline() | `async () =>` [`studCommonTlResData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/timeline.ts#L34) | Récupérer la timeline commune      |
 
-_Ouvrir [`src/fetch/getTimeline.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getTimeline.ts)_
+_Ouvrir [`src/fetch/getTimeline.ts`](src/fetch/getTimeline.ts)_
 
 
 ### GetDocuments
@@ -389,7 +389,7 @@ La classe de gestion des documents administratifs.
 |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|
 | fetch()   | `async (archive: string) =>`[`studentDocsResData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/documents.ts#L13) | Récupérer les documents administratifs. `archive` est une année scolaire `YYYY-YYY` (eg. `2023-2024`). |
 
-_Ouvrir [`src/fetch/getDocuments.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getDocuments.ts)_
+_Ouvrir [`src/fetch/getDocuments.ts`](src/fetch/getDocuments.ts)_
 
 
 ### GetForms
@@ -402,7 +402,7 @@ La classe de gestion des formulaires.
 |-----------|-------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
 | fetch()   | `async (annee: string) => Array<`[`form`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/forms.ts#L14)`>` | Récupérer les formulaires de l'année. `annee` est une année scolaire `YYYY-YYY` (eg. `2023-2024`). |
 
-_Ouvrir [`src/fetch/getForms.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getForms.ts)_
+_Ouvrir [`src/fetch/getForms.ts`](src/fetch/getForms.ts)_
 
 
 ### GetWorkspaces
@@ -421,7 +421,7 @@ La classe de gestion des espaces de travail.
 | join()       | `async (espace: `[`workspace`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/workspaces.ts#L23)`) =>`[`membersResData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/failure.ts#L11) | Rejoindre l'espace de travail `espace`.                                                   |
 | leave()      | `async (espace: number) =>`[`emptyRes`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/failure.ts#L11)                                                                                                                        | Quitter l'espace de travail avec l'identifiant `id`.                                      |
 
-_Ouvrir [`src/fetch/getWorkspaces.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getWorkspaces.ts)_
+_Ouvrir [`src/fetch/getWorkspaces.ts`](src/fetch/getWorkspaces.ts)_
 
 
 ### GetCommunicationBook
@@ -434,7 +434,7 @@ La classe de gestion du carnet de liaison.
 |-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
 | fetch()   | `async () => Array<`[`communicationBookResData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/communicationBook.ts#L13)`>` | Récupérer les évenements do carnet de liaison. |
 
-_Ouvrir [`src/fetch/getCommunicationBook.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getCommunicationBook.ts)_
+_Ouvrir [`src/fetch/getCommunicationBook.ts`](src/fetch/getCommunicationBook.ts)_
 
 
 ### GetCloud
@@ -447,7 +447,7 @@ La classe de gestion du cloud.
 |-----------|--------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------|
 | fetch()   | `async () => Array<`[`cloudResFolder`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/global/cloud.ts#L13)`>` | Récupérer les fichiers du cloud. |
 
-_Ouvrir [`src/fetch/getCloud.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getCloud.ts)_
+_Ouvrir [`src/fetch/getCloud.ts`](src/fetch/getCloud.ts)_
 
 
 ### GetOrders
@@ -466,7 +466,7 @@ La classe de gestion des commandes.
 | order()       | `async (articles: Array<`[`detailedArticle`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/orders.ts#L101)`>, hour: string, date: string, placeId: number) => `[`orderPlacedResData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/orders.ts#L150) | Passe une commande des article `articles`, pour `date`, `heure` au point de passage `placeId`. |
 | deleteOrder() | `async (orderId: number) =>`[`emptyRes`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/failure.ts#L11)                                                                                                                                                                                              | Annule la commande à l'identifiant `orderId`.                                                  |
 
-_Ouvrir [`src/fetch/getOrders.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getOrders.ts)_
+_Ouvrir [`src/fetch/getOrders.ts`](src/fetch/getOrders.ts)_
 
 ### GetEsidoc
 
@@ -477,7 +477,7 @@ La classe de gestion du module Esidoc.
 | isEnabled() | `() => boolean`                                                                                                                                                                    | Permet de savoir si le module est activé. |
 | getParams() | `async () => `[`modStudEsidoc.params.tabParams`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/login/accounts/student/modules.ts#L215)`\| undefined` | Récupérer les paramètres d'Esidoc.        |
 
-_Ouvrir [`src/fetch/getEsidoc.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getEsidoc.ts)_
+_Ouvrir [`src/fetch/getEsidoc.ts`](src/fetch/getEsidoc.ts)_
 
 ### GetDownloads
 
@@ -493,7 +493,7 @@ type fileType = "CLOUD" | "FICHIER_CDT" | "PIECE_JOINTE" | "FICHIER_MENU_RESTAUR
 | getFileBlob()   | `async (fileId: number \| string, fileType: `[`fileType`](#filetype)`) => Blob`   | Récupère le blob du fichier `fileId` (voir [Télécharger des fichiers](#téléchargements)).           |
 | getFileBase64() | `async (fileId: number \| string, fileType: `[`fileType`](#filetype)`) => string` | Récupère le fichier `fileId` (voir [Télécharger des fichiers](#téléchargements)) sous forme base64. |
 
-_Ouvrir [`src/fetch/getDownloads.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/fetch/getDownloads.ts)_
+_Ouvrir [`src/fetch/getDownloads.ts`](src/fetch/getDownloads.ts)_
 
 
 ### Auth
@@ -511,22 +511,23 @@ _Voir [s'authentifier avec ed-core](#authentification)_
 | get2FA()      | `async (token: string) => `[`doubleauthResData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/login/doubleauth.ts#L12)            | Récupère le questionnaire 2FA avec le token de `get2FAToken()`.                                                                                                                                                                                                |
 | resolve2FA()  | `async (answer: string) => `[`doubleauthValidationResData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/login/doubleauth.ts#L19) | Renvoie les facteurs permettant l'uthentification.                                                                                                                                                                                                             |
 
-_Ouvrir [`src/auth.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/auth.ts)_
+_Ouvrir [`src/auth.ts`](src/auth.ts)_
 
 
 ### Request
 
 La classe de gestion des requêtes.
 
-| Propriété | Type                                                                                          | Commentaire                                                                                                                                                                                                                                                                                                                              |
-|-----------|-----------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| post()    | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object` | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles trasnférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=get**. Renvoie la réponse sous forme d'un object **JSON**    |
-| get()     | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object` | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles trasnférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=post**. Renvoie la réponse sous forme d'un object **JSON**   |
-| delete()  | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object` | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles trasnférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=delete**. Renvoie la réponse sous forme d'un object **JSON** |
-| put()     | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object` | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles trasnférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=put**. Renvoie la réponse sous forme d'un object **JSON**    |
-| request() | `async (url: string, body: string, ignoreErrors: boolean = false) => object`                  | Exécute une requête (url: `url`, body: `body` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`). Renvoie la réponse sous forme d'un object **JSON**                                                                                                                                      |
+| Propriété | Type                                                                                                        | Commentaire                                                                                                                                                                                                                                                                                                                              |
+|-----------|-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| post()    | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object`               | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles trasnférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=get**. Renvoie la réponse sous forme d'un object **JSON**    |
+| get()     | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object`               | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles trasnférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=post**. Renvoie la réponse sous forme d'un object **JSON**   |
+| delete()  | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object`               | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles trasnférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=delete**. Renvoie la réponse sous forme d'un object **JSON** |
+| put()     | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object`               | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles trasnférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=put**. Renvoie la réponse sous forme d'un object **JSON**    |
+| request() | `async (url: string, body: string, ignoreErrors: boolean = false) => object`                                | Exécute une requête (url: `url`, body: `body` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`). Renvoie la réponse sous forme d'un object **JSON**                                                                                                                                      |
+| blob()    | `async (url: string, body: string, completeUrl: boolean = false, method: "GET"  \| "POST" = "GET") => Blob` | Exécute la requête et renvoie un objet Blob. `completeUrl` sur `true` indiquera que `url` est la cible complète, pas un chemin de `https://api.ecoledirecte.com`                                                                                                                                                                         |
 
-_Ouvrir [`src/Request.ts`](https://github.com/PapillonApp/Papillon-ED-Core/tree/dev/src/Request.ts)_
+_Ouvrir [`src/Request.ts`](src/Request.ts)_
 
 ---
 
