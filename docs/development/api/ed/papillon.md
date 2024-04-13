@@ -3,11 +3,12 @@
 `papillon-ed-core` est le module qui permet la connexion entre _Ecoledirecte_ et Papillon.
 Il contient des morceaux de code réutilisable qui permettent de récupérer les données scolaires. C'est l'intermédiaire entre _Ecoledirecte_ et `IndexDataInstance`, qui permet l'affichage des données dans Papillon.
 
-Le répo du module est disponible sur [Github :octicons-link-external-24:](https://github.com/PapillonApp/Papillon-ED-Core/){target='_blank'}.
+!!! github "Github"
+    Le répo du module est disponible sur [Github :octicons-link-external-24:](https://github.com/PapillonApp/Papillon-ED-Core/){target='_blank'}.
 
 
 !!! info ""
-EcoleDirecte est une marque déposée de la société [Aplim :octicons-link-external-24:](https://www.ecoledirecte.com/){target='_blank'}. Papillon n'est pas affilié à EcoleDirecte.
+    EcoleDirecte est une marque déposée de la société [Aplim :octicons-link-external-24:](https://www.ecoledirecte.com/){target='_blank'}. Papillon n'est pas affilié à EcoleDirecte.
 
 
 ## Sommaire
@@ -30,7 +31,7 @@ Ce projet est développé en _**Typescript**_, il est compatible avec toutes les
 ## Installation
 
 !!! npm "Node Package Manager"
-Le module est disponible sur [npmjs.com :octicons-link-external-24:](https://www.npmjs.com/package/@papillonapp/ed-core){target='_blank'} sous le nom de `@papillonapp/ed-core`.
+    Le module est disponible sur [npmjs.com :octicons-link-external-24:](https://www.npmjs.com/package/@papillonapp/ed-core){target='_blank'} sous le nom de `@papillonapp/ed-core`.
 
 ```sh
 npm i @papillonapp/ed-core
