@@ -26,7 +26,7 @@ Il contient des morceaux de code réutilisable qui permettent de récupérer les
 
 Ce guide vous permet de comprendre comment fonctionne ce module et comment vous pouvez l'utiliser.
 
-Ce projet est développé en _**Typescript**_, il est compatible avec toutes les technologies **Javascript**. Fonctionne avec **npm 18** !
+Ce projet est développé en _**Typescript**_, il est compatible avec toutes les technologies **Javascript** et fonctionne avec **npm 18** !
 
 ## Installation
 
@@ -98,7 +98,7 @@ Vous pouvez vous authentifier de plusieurs manières :
 
 Depuis la version `0.2.7`, la connexion **permanante**, permettant de renouveler le token est utilisée par défaut par `ed-core`.
 
-Elle correspond à une authentification depuis l'application Ecoledirecte mobile. Vous aurez besoin de générer un **UUIDv4**, qui ser l'identifiant unique de votre "session" et permettra le renouvellement du token.
+Elle correspond à une authentification depuis l'application Ecoledirecte mobile. Vous aurez besoin de générer un **UUIDv4**, qui sera l'identifiant unique de votre "session" et permettra le renouvellement du token.
 
 ```typescript
 import { v4 as uuidv4 } from 'uuid';
@@ -158,7 +158,7 @@ ED.orders
 
 Une commande s'effectue ainsi:
 1. Séléction du point de passage
-2. Séléction des articles et envoie de la commande
+2. Séléction des articles et envoi de la commande
 
 - Pour récupérer les anciennes commandes et les "points de passage" (lieux ; cafétéria, food truck);
 ```typescript
@@ -202,7 +202,7 @@ _Renvoie une réponse vide_
 
 ## Téléchargements
 
-À plusieurs endroits vous pourrez être amenés à devoir télécharger des documents (exemple: documents administratifs renvoyés par `ED.documents`).
+À plusieurs endroits vous pourrez être amené à devoir télécharger des documents (exemple: documents administratifs renvoyés par `ED.documents`).
 
 Le module `ED.downloads` vous permet donc de récupérer des objets de ces documents:
 ```typescript
@@ -230,7 +230,7 @@ type fileType = "CLOUD" | "FICHIER_CDT" | "PIECE_JOINTE" | "FICHIER_MENU_RESTAUR
 ```
 - "CLOUD"; l'argument `fileId` sera **le chemin complet** du document dans le cloud.
 - "FICHIER_CDT"; télécharger un fichier du Cahier De Texte.
-- "PIECE_JOINTE"; télécharger une pièce joint (si le message provient d'une année antérieur, l'argument `year` devra contenir l'année).
+- "PIECE_JOINTE"; télécharger une pièce jointe (si le message provient d'une année antérieur, l'argument `year` devra contenir l'année).
 - "FICHIER_MENU_RESTAURATION"; télécharger un menu (voir **`Menu`** dans [`getCantine.ts`](#getcantine)).
 - "ADMINISTRATIF"; télécharger un fichier administratif (si le document provient d'une année antérieur, l'argument `year` devra contenir l'année).
 
@@ -293,7 +293,7 @@ La classe de gestion des devoirs.
 | Propriété  | Type                                                                                                                                                                           | Commentaire                                                                                                                                       |
 |------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | fetch()    | `async () =>`[`textbookResData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/textbook.ts#L77)                                         | Récupérer les devoirs                                                                                                                             |
-| getByDay() | `async (day: string, removeHTMLTags: boolean) =>`[`textbookResDateData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/textbook.ts#L14) | Récupérer les devoirs du jout `day` (day est formaté `YYYY-MM-DD`). `removeHTMLTags` permet de renvoyer le contenu des devoirs sans balises HTML. |
+| getByDay() | `async (day: string, removeHTMLTags: boolean) =>`[`textbookResDateData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/textbook.ts#L14) | Récupérer les devoirs du jour `day` (day est formaté `YYYY-MM-DD`). `removeHTMLTags` permet de renvoyer le contenu des devoirs sans balises HTML. |
 
 _Ouvrir [`src/fetch/getHomeworks.ts`](src/fetch/getHomeworks.ts)_
 
@@ -312,10 +312,10 @@ _Ouvrir [`src/fetch/getGrades.ts`](src/fetch/getGrades.ts)_
 
 La classe de gestion de l'EDT. Les jours sont formatés `YYYY-MM-DD`.
 
-| Propriété     | Type                                                                                                     | Commentaire                                      |
-|---------------|----------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| fetchByDay()  | `async (day: string) =>`[`timetableCourseList`](src/utils/types/timetable.ts#L3)                         | Récupérer l'EDT du jour `day`                    |
-| fetchByDate() | `async (starteDate: string, endDate: string) =>`[`timetableCourseList`](src/utils/types/timetable.ts#L3) | Récupérer l'EDT des jour `startDate` à `endDate` |
+| Propriété     | Type                                                                                                     | Commentaire                                       |
+|---------------|----------------------------------------------------------------------------------------------------------|---------------------------------------------------|
+| fetchByDay()  | `async (day: string) =>`[`timetableCourseList`](src/utils/types/timetable.ts#L3)                         | Récupérer l'EDT du jour `day`                     |
+| fetchByDate() | `async (starteDate: string, endDate: string) =>`[`timetableCourseList`](src/utils/types/timetable.ts#L3) | Récupérer l'EDT des jours `startDate` à `endDate` |
 
 _Ouvrir [`src/fetch/getTimetable.ts`](src/fetch/getTimetable.ts)_
 
@@ -432,7 +432,7 @@ La classe de gestion du carnet de liaison.
 
 | Propriété | Type                                                                                                                                                               | Commentaire                                    |
 |-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
-| fetch()   | `async () => Array<`[`communicationBookResData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/communicationBook.ts#L13)`>` | Récupérer les évenements do carnet de liaison. |
+| fetch()   | `async () => Array<`[`communicationBookResData`](https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/communicationBook.ts#L13)`>` | Récupérer les événements du carnet de liaison. |
 
 _Ouvrir [`src/fetch/getCommunicationBook.ts`](src/fetch/getCommunicationBook.ts)_
 
@@ -520,10 +520,10 @@ La classe de gestion des requêtes.
 
 | Propriété | Type                                                                                                        | Commentaire                                                                                                                                                                                                                                                                                                                              |
 |-----------|-------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| post()    | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object`               | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles trasnférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=get**. Renvoie la réponse sous forme d'un object **JSON**    |
-| get()     | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object`               | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles trasnférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=post**. Renvoie la réponse sous forme d'un object **JSON**   |
-| delete()  | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object`               | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles trasnférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=delete**. Renvoie la réponse sous forme d'un object **JSON** |
-| put()     | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object`               | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles trasnférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=put**. Renvoie la réponse sous forme d'un object **JSON**    |
+| post()    | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object`               | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles transférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=get**. Renvoie la réponse sous forme d'un object **JSON**    |
+| get()     | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object`               | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles transférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=post**. Renvoie la réponse sous forme d'un object **JSON**   |
+| delete()  | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object`               | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles transférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=delete**. Renvoie la réponse sous forme d'un object **JSON** |
+| put()     | `async (url: string, body: string, params?: string, ignoreErrors: boolean = false) => object`               | Exécute la requête à l'API ecoledirect (path: `url`, body: `body`, les données utiles transférées à Ecoledirecte , paramètres d'url `params` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`) avec comme paramètre **verbe=put**. Renvoie la réponse sous forme d'un object **JSON**    |
 | request() | `async (url: string, body: string, ignoreErrors: boolean = false) => object`                                | Exécute une requête (url: `url`, body: `body` et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer `ignoreErrors` à `true`). Renvoie la réponse sous forme d'un object **JSON**                                                                                                                                      |
 | blob()    | `async (url: string, body: string, completeUrl: boolean = false, method: "GET"  \| "POST" = "GET") => Blob` | Exécute la requête et renvoie un objet Blob. `completeUrl` sur `true` indiquera que `url` est la cible complète, pas un chemin de `https://api.ecoledirecte.com`                                                                                                                                                                         |
 
