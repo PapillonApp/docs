@@ -8,7 +8,7 @@ Il contient des morceaux de code réutilisable qui permettent de récupérer les
 
 
 !!! info ""
-    EcoleDirecte est une marque déposée de la société [Aplim :octicons-link-external-24:](https://www.ecoledirecte.com/){target='_blank'}. Papillon n'est pas affilié à EcoleDirecte.
+    EcoleDirecte est une marque déposée de la société [Aplim :octicons-link-external-24:](https://www.aplim.fr/){target='_blank'}. Papillon n'est pas affilié à EcoleDirecte et à Aplim.
 
 
 ## Sommaire
