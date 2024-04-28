@@ -57,7 +57,7 @@ Pour chaque environnement de travail numérique, une documentation est disponibl
     Pronote est une marque déposée de la société [Index Éducation :octicons-link-external-24:](https://www.index-education.com/){target='_blank'}. Papillon et Pawnote ne sont pas affiliés à Index Éducation.
 
 !!! info ""
-    EcoleDirecte est une marque déposée de la société [EcoleDirecte :octicons-link-external-24:](https://www.ecoledirecte.com/){target='_blank'}. Papillon n'est pas affilié à EcoleDirecte.
+    EcoleDirecte est une marque déposée de la société [Aplim :octicons-link-external-24:](https://www.aplim.fr/){target='_blank'}. Papillon n'est pas affilié à EcoleDirecte et à Aplim.
 
 !!! info ""
     Skolengo est une marque déposée de la société [Komos :octicons-link-external-24:](https://www.skolengo.com/fr/mentions-legales){target='_blank'}. Papillon n'est pas affilié à Skolengo.
