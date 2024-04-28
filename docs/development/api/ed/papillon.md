@@ -69,7 +69,7 @@ await ED.auth.login("username", "password", "uuidv4")
 
 **4. Visitez la documentation**
 
-Désormais connectés, il vous faudra lire la [documentation des références](#références) pour comprendre et utiliser chaque fonctionnalité.
+Désormais connecté, il vous faudra lire la [documentation des références](#références) pour comprendre et utiliser chaque fonctionnalité.
 
 Des exemples sont aussi écrits dans `examples/`. Ajoutez vos identifiants dans `examples/login.ts` et tester les fonctionnalités avec `ts-node examples/<fichier>.ts`
 
