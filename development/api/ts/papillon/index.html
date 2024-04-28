@@ -1,0 +1,1360 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://docs.getpapillon.xyz/development/api/ts/papillon/" rel="canonical"/>
+<link href="../api/" rel="prev"/>
+<link href="../../papillon/" rel="next"/>
+<link href="../../../../assets/beta.png" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.19" name="generator"/>
+<title>papillon-turboself-core - Documentation technique Papillon</title>
+<link href="../../../../assets/stylesheets/main.66ac8b77.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Noto Sans";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../../css/timeago.css" rel="stylesheet"/>
+<link href="../../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="teal" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#nodejs">
+          Aller au contenu
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="En-tête" class="md-header__inner md-grid">
+<a aria-label="Documentation technique Papillon" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Documentation technique Papillon">
+<img alt="logo" src="../../../../assets/beta.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Documentation technique Papillon
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              papillon-turboself-core
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="teal" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="teal" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to system preference" class="md-option" data-md-color-accent="teal" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="teal" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to system preference">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Rechercher" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Rechercher" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Recherche" class="md-search__options">
+<button aria-label="Effacer" class="md-search__icon md-icon" tabindex="-1" title="Effacer" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/PapillonApp/docs" title="Aller au dépôt">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    PapillonApp/docs
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Onglets" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../..">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../design/intro/">
+          
+  
+  Designer
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../../intro/">
+          
+  
+  Développer
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../contribute/intro/">
+          
+  
+  Contribuer
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Documentation technique Papillon" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Documentation technique Papillon">
+<img alt="logo" src="../../../../assets/beta.png"/>
+</a>
+    Documentation technique Papillon
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/PapillonApp/docs" title="Aller au dépôt">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    PapillonApp/docs
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    Accueil
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Designer
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Designer
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../design/intro/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Charte Graphique
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Charte Graphique
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../design/color/">
+<span class="md-ellipsis">
+    Couleurs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../design/font/">
+<span class="md-ellipsis">
+    Polices d'écriture
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Ressources externe
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Ressources externe
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../assets/design/Charte%20Graphique%20-%20Papillon%20(sept.%202023).pdf">
+<span class="md-ellipsis">
+    Charte grapique (PDF)
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://www.figma.com/file/EZ9HbmMmCywyCxp3OuvofF/Product-design-Papillon?type=design&amp;node-id=316%3A470&amp;mode=design&amp;t=gEZXuZLlWRlCkLNn-1">
+<span class="md-ellipsis">
+    Figma (Public)
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<span class="md-ellipsis">
+    Développer
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Développer
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../intro/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+<span class="md-ellipsis">
+    Fonctionnement de l'app
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            Fonctionnement de l'app
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ent/">
+<span class="md-ellipsis">
+    ENT
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+<span class="md-ellipsis">
+    Environement de développement
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            Environement de développement
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../app/ios/">
+<span class="md-ellipsis">
+    Développement iOS
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../app/android/">
+<span class="md-ellipsis">
+    Développement Android
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../app/eas/">
+<span class="md-ellipsis">
+    Développement via EAS
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+<span class="md-ellipsis">
+    API utilisées pour Papillon
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+            API utilisées pour Papillon
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pawnote/">
+<span class="md-ellipsis">
+    Pawnote (compatible Pronote)
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    EcoleDirecte
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_4_2">
+<span class="md-nav__icon md-icon"></span>
+            EcoleDirecte
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ed/api/">
+<span class="md-ellipsis">
+    API
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ed/papillon/">
+<span class="md-ellipsis">
+    papillon-ed-core
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Turboself
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_4_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Turboself
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/">
+<span class="md-ellipsis">
+    API
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    papillon-turboself-core
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    papillon-turboself-core
+  </span>
+</a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nodejs">
+<span class="md-ellipsis">
+      Node.js
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation">
+<span class="md-ellipsis">
+      Documentation
+    </span>
+</a>
+<nav aria-label="Documentation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sommaire">
+<span class="md-ellipsis">
+      Sommaire
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation">
+<span class="md-ellipsis">
+      Installation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gestion-des-erreurs">
+<span class="md-ellipsis">
+      Gestion des erreurs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fonctions">
+<span class="md-ellipsis">
+      Fonctions
+    </span>
+</a>
+<nav aria-label="Fonctions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#login">
+<span class="md-ellipsis">
+      login()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getuserinfo">
+<span class="md-ellipsis">
+      getUserInfo()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gethome">
+<span class="md-ellipsis">
+      getHome()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getbooking">
+<span class="md-ellipsis">
+      getBooking()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setbooking">
+<span class="md-ellipsis">
+      setBooking()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gethistory">
+<span class="md-ellipsis">
+      getHistory()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getbalance">
+<span class="md-ellipsis">
+      getBalance()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#canbookevening">
+<span class="md-ellipsis">
+      canBookEvening()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getetabinfo">
+<span class="md-ellipsis">
+      getEtabInfo()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getlastpayment">
+<span class="md-ellipsis">
+      getLastPayment()
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../papillon/">
+<span class="md-ellipsis">
+    API Papillon
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Contribuer
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Contribuer
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../contribute/intro/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Tester les nouveautés
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+            Tester les nouveautés
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../contribute/beta/">
+<span class="md-ellipsis">
+    Programme bêta
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../contribute/reporting-issues/">
+<span class="md-ellipsis">
+    Rapporter des problèmes
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Soumettre vos modifications
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Soumettre vos modifications
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../contribute/pull-request/">
+<span class="md-ellipsis">
+    Pull Request
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../contribute/final-step/">
+<span class="md-ellipsis">
+    Parution dans l'app finale
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nodejs">
+<span class="md-ellipsis">
+      Node.js
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#documentation">
+<span class="md-ellipsis">
+      Documentation
+    </span>
+</a>
+<nav aria-label="Documentation" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sommaire">
+<span class="md-ellipsis">
+      Sommaire
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#installation">
+<span class="md-ellipsis">
+      Installation
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gestion-des-erreurs">
+<span class="md-ellipsis">
+      Gestion des erreurs
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fonctions">
+<span class="md-ellipsis">
+      Fonctions
+    </span>
+</a>
+<nav aria-label="Fonctions" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#login">
+<span class="md-ellipsis">
+      login()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getuserinfo">
+<span class="md-ellipsis">
+      getUserInfo()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gethome">
+<span class="md-ellipsis">
+      getHome()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getbooking">
+<span class="md-ellipsis">
+      getBooking()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#setbooking">
+<span class="md-ellipsis">
+      setBooking()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#gethistory">
+<span class="md-ellipsis">
+      getHistory()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getbalance">
+<span class="md-ellipsis">
+      getBalance()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#canbookevening">
+<span class="md-ellipsis">
+      canBookEvening()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getetabinfo">
+<span class="md-ellipsis">
+      getEtabInfo()
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#getlastpayment">
+<span class="md-ellipsis">
+      getLastPayment()
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/PapillonApp/docs/edit/main/docs/development/api/ts/papillon.md" title="Editer cette page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+</a>
+<h1>papillon-turboself-core</h1>
+<h2 id="nodejs">Node.js</h2>
+<div class="admonition npm">
+<p class="admonition-title">Node Package Manager</p>
+<p>Pour utiliser l'API, vous pouvez utiliser le package npm <code>papillon-turboself-core</code> disponible sur <a href="https://www.npmjs.com/package/papillon-turboself-core" target="_blank">npmjs.com <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"></path><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"></path></svg></span></a>.</p>
+</div>
+<p>Le répo du module est disponible sur <a href="https://github.com/PapillonApp/Papillon-Turboself-Core/" target="_blank">Github <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"></path><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"></path></svg></span></a>.</p>
+<h2 id="documentation">Documentation</h2>
+<h3 id="sommaire">Sommaire</h3>
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#erreurs">Gestion des erreurs</a></li>
+<li><a href="#fonctions">Fonctions</a><ul>
+<li><a href="#login()">login()</a></li>
+<li><a href="#getUserInfo()">getUserInfo()</a></li>
+<li><a href="#getHome()">getHome()</a></li>
+<li><a href="#getBooking()">getBooking()</a></li>
+<li><a href="#setBooking()">setBooking()</a></li>
+<li><a href="#getHistory()">getHistory()</a></li>
+<li><a href="#getBalance()">getBalance()</a></li>
+<li><a href="#canBookEvening()">canBookEvening()</a></li>
+<li><a href="#getEtabInfo()">getEtabInfo()</a></li>
+</ul>
+</li>
+</ul>
+<p><a name="installation"></a></p>
+<h3 id="installation">Installation</h3>
+<p>With NPM :</p>
+<p><div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>npm<span class="w"> </span>install<span class="w"> </span>papillon-turboself-core
+</span></code></pre></div>
+<a name="erreurs"></a></p>
+<h3 id="gestion-des-erreurs">Gestion des erreurs</h3>
+<p>Chaque réponse retourner de ce package retourne la même forme de réponse.
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a href="#__codelineno-1-2" id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">//BOOL : Y'a t'il une erreur</span>
+</span><span id="__span-1-3"><a href="#__codelineno-1-3" id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nx">errorMessage</span><span class="o">:</span><span class="w"> </span><span class="s1">''</span><span class="p">,</span><span class="w"> </span><span class="c1">//STRING : Raison de l'erreur (vide si il y a pas d'erreur)</span>
+</span><span id="__span-1-4"><a href="#__codelineno-1-4" id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-5"><a href="#__codelineno-1-5" id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="p">...</span>
+</span><span id="__span-1-6"><a href="#__codelineno-1-6" id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-7"><a href="#__codelineno-1-7" id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="p">}</span>
+</span></code></pre></div>
+<a name="fonctions"></a></p>
+<h3 id="fonctions">Fonctions</h3>
+<p><a name="login()"></a></p>
+<h5 id="login">login()</h5>
+<p><strong>Description:</strong><br/>
+Permet de se connecter au service MyTurboself
+<br/><br/><strong>Paramètres:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nx">login</span><span class="p">(</span><span class="nx">username</span><span class="p">,</span><span class="w"> </span><span class="nx">password</span><span class="p">)</span>
+</span></code></pre></div>
+<strong>Exemple:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">TurboSelf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'papillon-turboself-core'</span><span class="p">)</span>
+</span><span id="__span-3-2"><a href="#__codelineno-3-2" id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">ts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TurboSelf</span><span class="p">();</span>
+</span><span id="__span-3-3"><a href="#__codelineno-3-3" id="__codelineno-3-3" name="__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a href="#__codelineno-3-4" id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-5"><a href="#__codelineno-3-5" id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">ts</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s1">'username@mail.com'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Password1234'</span><span class="p">)</span>
+</span><span id="__span-3-6"><a href="#__codelineno-3-6" id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+</span><span id="__span-3-7"><a href="#__codelineno-3-7" id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="p">}</span>
+</span><span id="__span-3-8"><a href="#__codelineno-3-8" id="__codelineno-3-8" name="__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a href="#__codelineno-3-9" id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="nx">main</span><span class="p">()</span>
+</span></code></pre></div>
+<strong>Retour:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">{</span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="nx">errorMessage</span><span class="o">:</span><span class="w"> </span><span class="s1">''</span><span class="p">,</span>
+</span><span id="__span-4-4"><a href="#__codelineno-4-4" id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-5"><a href="#__codelineno-4-5" id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="nx">token</span><span class="o">:</span><span class="w"> </span><span class="s1">'XXXXXXXXXXXX...'</span><span class="p">,</span>
+</span><span id="__span-4-6"><a href="#__codelineno-4-6" id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="nx">userId</span><span class="o">:</span><span class="w"> </span><span class="nx">XXXXXXX</span><span class="p">,</span>
+</span><span id="__span-4-7"><a href="#__codelineno-4-7" id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="nx">etabId</span><span class="o">:</span><span class="w"> </span><span class="nx">XXXXXX</span>
+</span><span id="__span-4-8"><a href="#__codelineno-4-8" id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-9"><a href="#__codelineno-4-9" id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<a name="getUserInfo()"></a></p>
+<h5 id="getuserinfo">getUserInfo()</h5>
+<p><strong>Description:</strong><br/>
+Obtient les informations de l'utilisateur connecté
+<br/><br/><strong>Paramètres:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nx">getUserInfo</span><span class="p">()</span>
+</span></code></pre></div>
+<strong>Exemple:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">TurboSelf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'papillon-turboself-core'</span><span class="p">)</span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">ts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TurboSelf</span><span class="p">();</span>
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">ts</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s1">'username@mail.com'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Password1234'</span><span class="p">)</span>
+</span><span id="__span-6-6"><a href="#__codelineno-6-6" id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ts</span><span class="p">.</span><span class="nx">getUserInfo</span><span class="p">()</span>
+</span><span id="__span-6-7"><a href="#__codelineno-6-7" id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+</span><span id="__span-6-8"><a href="#__codelineno-6-8" id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="p">}</span>
+</span><span id="__span-6-9"><a href="#__codelineno-6-9" id="__codelineno-6-9" name="__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a href="#__codelineno-6-10" id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="nx">main</span><span class="p">()</span>
+</span></code></pre></div>
+<strong>Retour:</strong><br/>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="p">{</span>
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">  </span><span class="err">error</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-7-3"><a href="#__codelineno-7-3" id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">  </span><span class="err">errorMessage</span><span class="p">:</span><span class="w"> </span><span class="err">''</span><span class="p">,</span>
+</span><span id="__span-7-4"><a href="#__codelineno-7-4" id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">  </span><span class="err">da</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-5"><a href="#__codelineno-7-5" id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="err">XXXXXX</span><span class="p">,</span>
+</span><span id="__span-7-6"><a href="#__codelineno-7-6" id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="err">origId</span><span class="p">:</span><span class="w"> </span><span class="err">XXXXX</span><span class="p">,</span>
+</span><span id="__span-7-7"><a href="#__codelineno-7-7" id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="kc">t</span><span class="err">ype</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-7-8"><a href="#__codelineno-7-8" id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">    </span><span class="err">las</span><span class="kc">t</span><span class="err">Name</span><span class="p">:</span><span class="w"> </span><span class="err">'Doe'</span><span class="p">,</span>
+</span><span id="__span-7-9"><a href="#__codelineno-7-9" id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">    </span><span class="kc">f</span><span class="err">irs</span><span class="kc">t</span><span class="err">Name</span><span class="p">:</span><span class="w"> </span><span class="err">'Jo</span><span class="kc">n</span><span class="err">h'</span><span class="p">,</span>
+</span><span id="__span-7-10"><a href="#__codelineno-7-10" id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">    </span><span class="err">class</span><span class="p">:</span><span class="w"> </span><span class="err">'CE</span><span class="mi">1</span><span class="err">'</span><span class="p">,</span>
+</span><span id="__span-7-11"><a href="#__codelineno-7-11" id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="err">me</span><span class="kc">t</span><span class="err">hod</span><span class="p">:</span><span class="w"> </span><span class="err">'Arge</span><span class="kc">nt</span><span class="err">'</span><span class="p">,</span>
+</span><span id="__span-7-12"><a href="#__codelineno-7-12" id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">    </span><span class="err">quali</span><span class="kc">t</span><span class="err">y</span><span class="p">:</span><span class="w"> </span><span class="err">'TICKET'</span><span class="p">,</span>
+</span><span id="__span-7-13"><a href="#__codelineno-7-13" id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">    </span><span class="err">au</span><span class="kc">t</span><span class="err">horiza</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-14"><a href="#__codelineno-7-14" id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">        </span><span class="err">pay</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-7-15"><a href="#__codelineno-7-15" id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">        </span><span class="err">book</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-7-16"><a href="#__codelineno-7-16" id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">        </span><span class="err">ca</span><span class="kc">feter</span><span class="err">ia</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-7-17"><a href="#__codelineno-7-17" id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-7-18"><a href="#__codelineno-7-18" id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">    </span><span class="err">las</span><span class="kc">t</span><span class="err">Sy</span><span class="kc">n</span><span class="err">c</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">20</span><span class="err">XX</span><span class="mi">-</span><span class="err">XX</span><span class="mi">-</span><span class="err">XXTXX</span><span class="p">:</span><span class="err">XX</span><span class="p">:</span><span class="err">XX.XXXZ'</span><span class="p">,</span>
+</span><span id="__span-7-19"><a href="#__codelineno-7-19" id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">    </span><span class="err">disabled</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-7-20"><a href="#__codelineno-7-20" id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">    </span><span class="err">isPasswordSecure</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-7-21"><a href="#__codelineno-7-21" id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">    </span><span class="err">cardDa</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span>
+</span><span id="__span-7-22"><a href="#__codelineno-7-22" id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-7-23"><a href="#__codelineno-7-23" id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="p">}</span>
+</span></code></pre></div>
+<a name="getHome()"></a></p>
+<h5 id="gethome">getHome()</h5>
+<p><strong>Description:</strong><br/>
+Obtient l'écran d'acceuil de l'utilisateur connecté
+<br/><br/><strong>Paramètres:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nx">getHome</span><span class="p">()</span>
+</span></code></pre></div>
+<strong>Exemple:</strong><br/>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="err">co</span><span class="kc">nst</span><span class="w"> </span><span class="err">TurboSel</span><span class="kc">f</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">require('papillo</span><span class="kc">n</span><span class="mi">-</span><span class="kc">tur</span><span class="err">bosel</span><span class="kc">f</span><span class="mi">-</span><span class="err">core')</span>
+</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="err">le</span><span class="kc">t</span><span class="w"> </span><span class="kc">ts</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="kc">ne</span><span class="err">w</span><span class="w"> </span><span class="err">TurboSel</span><span class="kc">f</span><span class="err">();</span>
+</span><span id="__span-9-3"><a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a>
+</span><span id="__span-9-4"><a href="#__codelineno-9-4" id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="err">asy</span><span class="kc">n</span><span class="err">c</span><span class="w"> </span><span class="kc">fun</span><span class="err">c</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">mai</span><span class="kc">n</span><span class="err">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-5"><a href="#__codelineno-9-5" id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="err">awai</span><span class="kc">t</span><span class="w"> </span><span class="kc">ts</span><span class="err">.logi</span><span class="kc">n</span><span class="err">('user</span><span class="kc">na</span><span class="err">me@mail.com'</span><span class="p">,</span><span class="w"> </span><span class="err">'Password</span><span class="mi">1234</span><span class="err">')</span>
+</span><span id="__span-9-6"><a href="#__codelineno-9-6" id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="err">le</span><span class="kc">t</span><span class="w"> </span><span class="err">resul</span><span class="kc">t</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="kc">ts</span><span class="err">.ge</span><span class="kc">t</span><span class="err">Home()</span>
+</span><span id="__span-9-7"><a href="#__codelineno-9-7" id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="err">co</span><span class="kc">ns</span><span class="err">ole.log(resul</span><span class="kc">t</span><span class="err">)</span>
+</span><span id="__span-9-8"><a href="#__codelineno-9-8" id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="p">}</span>
+</span><span id="__span-9-9"><a href="#__codelineno-9-9" id="__codelineno-9-9" name="__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a href="#__codelineno-9-10" id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="err">mai</span><span class="kc">n</span><span class="err">()</span>
+</span></code></pre></div>
+<strong>Retour:</strong><br/>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="p">{</span>
+</span><span id="__span-10-2"><a href="#__codelineno-10-2" id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">  </span><span class="err">error</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-10-3"><a href="#__codelineno-10-3" id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">  </span><span class="err">errorMessage</span><span class="p">:</span><span class="w"> </span><span class="err">''</span><span class="p">,</span>
+</span><span id="__span-10-4"><a href="#__codelineno-10-4" id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">  </span><span class="err">da</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-5"><a href="#__codelineno-10-5" id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">    </span><span class="err">userI</span><span class="kc">nf</span><span class="err">o</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-6"><a href="#__codelineno-10-6" id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">      </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="err">'XXXXXXXXXX'</span><span class="p">,</span>
+</span><span id="__span-10-7"><a href="#__codelineno-10-7" id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">      </span><span class="err">bala</span><span class="kc">n</span><span class="err">ce</span><span class="p">:</span><span class="w"> </span><span class="mf">-10.5</span><span class="p">,</span>
+</span><span id="__span-10-8"><a href="#__codelineno-10-8" id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">      </span><span class="err">es</span><span class="kc">t</span><span class="err">ima</span><span class="kc">te</span><span class="err">dBala</span><span class="kc">n</span><span class="err">ce</span><span class="p">:</span><span class="w"> </span><span class="mf">-150.10</span><span class="p">,</span>
+</span><span id="__span-10-9"><a href="#__codelineno-10-9" id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">      </span><span class="err">es</span><span class="kc">t</span><span class="err">ima</span><span class="kc">te</span><span class="err">dFor</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">20</span><span class="err">XX</span><span class="mi">-</span><span class="err">XX</span><span class="mi">-</span><span class="err">XX'</span>
+</span><span id="__span-10-10"><a href="#__codelineno-10-10" id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-10-11"><a href="#__codelineno-10-11" id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">    </span><span class="err">his</span><span class="kc">t</span><span class="err">ory</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-10-12"><a href="#__codelineno-10-12" id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">      </span><span class="p">{</span>
+</span><span id="__span-10-13"><a href="#__codelineno-10-13" id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">        </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="err">XXXXXXXXX</span><span class="p">,</span>
+</span><span id="__span-10-14"><a href="#__codelineno-10-14" id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">        </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="err">'Sel</span><span class="kc">f</span><span class="err">'</span><span class="p">,</span>
+</span><span id="__span-10-15"><a href="#__codelineno-10-15" id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">        </span><span class="err">da</span><span class="kc">te</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">20</span><span class="err">XX</span><span class="mi">-</span><span class="err">XX</span><span class="mi">-</span><span class="err">XXTXX</span><span class="p">:</span><span class="err">XX</span><span class="p">:</span><span class="err">XX.</span><span class="mi">000</span><span class="err">Z'</span><span class="p">,</span>
+</span><span id="__span-10-16"><a href="#__codelineno-10-16" id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">        </span><span class="err">cos</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="mf">-40.8</span>
+</span><span id="__span-10-17"><a href="#__codelineno-10-17" id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">      </span><span class="p">},</span>
+</span><span id="__span-10-18"><a href="#__codelineno-10-18" id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">      </span><span class="err">...</span>
+</span><span id="__span-10-19"><a href="#__codelineno-10-19" id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">    </span><span class="p">]</span>
+</span><span id="__span-10-20"><a href="#__codelineno-10-20" id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-10-21"><a href="#__codelineno-10-21" id="__codelineno-10-21" name="__codelineno-10-21"></a><span class="p">}</span>
+</span></code></pre></div>
+<a name="getBooking()"></a></p>
+<h5 id="getbooking">getBooking()</h5>
+<p><strong>Description:</strong><br/>
+Obtient les réservations d'une semaine de l'utilisateur connecté
+<br/><br/><strong>Paramètres:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="nx">getBooking</span><span class="p">(</span><span class="nx">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">())</span>
+</span></code></pre></div>
+<strong>Exemple:</strong><br/>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-12-1"><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="err">co</span><span class="kc">nst</span><span class="w"> </span><span class="err">TurboSel</span><span class="kc">f</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">require('papillo</span><span class="kc">n</span><span class="mi">-</span><span class="kc">tur</span><span class="err">bosel</span><span class="kc">f</span><span class="mi">-</span><span class="err">core')</span>
+</span><span id="__span-12-2"><a href="#__codelineno-12-2" id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="err">le</span><span class="kc">t</span><span class="w"> </span><span class="kc">ts</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="kc">ne</span><span class="err">w</span><span class="w"> </span><span class="err">TurboSel</span><span class="kc">f</span><span class="err">();</span>
+</span><span id="__span-12-3"><a href="#__codelineno-12-3" id="__codelineno-12-3" name="__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a href="#__codelineno-12-4" id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="err">asy</span><span class="kc">n</span><span class="err">c</span><span class="w"> </span><span class="kc">fun</span><span class="err">c</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">mai</span><span class="kc">n</span><span class="err">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-5"><a href="#__codelineno-12-5" id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="err">awai</span><span class="kc">t</span><span class="w"> </span><span class="kc">ts</span><span class="err">.logi</span><span class="kc">n</span><span class="err">('user</span><span class="kc">na</span><span class="err">me@mail.com'</span><span class="p">,</span><span class="w"> </span><span class="err">'Password</span><span class="mi">1234</span><span class="err">')</span>
+</span><span id="__span-12-6"><a href="#__codelineno-12-6" id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">    </span><span class="err">le</span><span class="kc">t</span><span class="w"> </span><span class="err">resul</span><span class="kc">t</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="kc">ts</span><span class="err">.ge</span><span class="kc">t</span><span class="err">Booki</span><span class="kc">n</span><span class="err">g()</span>
+</span><span id="__span-12-7"><a href="#__codelineno-12-7" id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">    </span><span class="err">co</span><span class="kc">ns</span><span class="err">ole.log(resul</span><span class="kc">t</span><span class="err">)</span>
+</span><span id="__span-12-8"><a href="#__codelineno-12-8" id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="p">}</span>
+</span><span id="__span-12-9"><a href="#__codelineno-12-9" id="__codelineno-12-9" name="__codelineno-12-9"></a>
+</span><span id="__span-12-10"><a href="#__codelineno-12-10" id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="err">mai</span><span class="kc">n</span><span class="err">()</span>
+</span></code></pre></div>
+<strong>Retour:</strong><br/>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-13-1"><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="p">{</span>
+</span><span id="__span-13-2"><a href="#__codelineno-13-2" id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">  </span><span class="err">error</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-13-3"><a href="#__codelineno-13-3" id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">  </span><span class="err">errorMessage</span><span class="p">:</span><span class="w"> </span><span class="err">''</span><span class="p">,</span>
+</span><span id="__span-13-4"><a href="#__codelineno-13-4" id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">  </span><span class="err">da</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-5"><a href="#__codelineno-13-5" id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">    </span><span class="err">weekId</span><span class="p">:</span><span class="w"> </span><span class="err">'XXXXXXXXXXX'</span><span class="p">,</span>
+</span><span id="__span-13-6"><a href="#__codelineno-13-6" id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="err">days</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-13-7"><a href="#__codelineno-13-7" id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">      </span><span class="p">{</span>
+</span><span id="__span-13-8"><a href="#__codelineno-13-8" id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">        </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="err">'XXXXXXXXXXX'</span><span class="p">,</span>
+</span><span id="__span-13-9"><a href="#__codelineno-13-9" id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">        </span><span class="err">dayNumber</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="c1">//(1: Lundi, 5: Vendredi)</span>
+</span><span id="__span-13-10"><a href="#__codelineno-13-10" id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">        </span><span class="err">booked</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+</span><span id="__span-13-11"><a href="#__codelineno-13-11" id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">        </span><span class="err">las</span><span class="kc">t</span><span class="err">Sy</span><span class="kc">n</span><span class="err">cBooked</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-13-12"><a href="#__codelineno-13-12" id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">        </span><span class="err">ca</span><span class="kc">n</span><span class="err">Edi</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-13-13"><a href="#__codelineno-13-13" id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">        </span><span class="err">label</span><span class="p">:</span><span class="w"> </span><span class="err">'Lu</span><span class="kc">n</span><span class="err">di</span><span class="w"> </span><span class="mi">11</span><span class="w"> </span><span class="err">Déc.'</span><span class="p">,</span>
+</span><span id="__span-13-14"><a href="#__codelineno-13-14" id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">        </span><span class="err">da</span><span class="kc">te</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">11-12-2023</span><span class="err">'</span>
+</span><span id="__span-13-15"><a href="#__codelineno-13-15" id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">      </span><span class="p">},</span>
+</span><span id="__span-13-16"><a href="#__codelineno-13-16" id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">      </span><span class="err">...</span>
+</span><span id="__span-13-17"><a href="#__codelineno-13-17" id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">    </span><span class="p">]</span>
+</span><span id="__span-13-18"><a href="#__codelineno-13-18" id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-13-19"><a href="#__codelineno-13-19" id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="p">}</span>
+</span></code></pre></div>
+<a name="setBooking()"></a></p>
+<h5 id="setbooking">setBooking()</h5>
+<p><strong>Description:</strong><br/>
+Défini une réservation de l'utilisateur connecté
+<br/><br/><strong>Paramètres:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-14-1"><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="nx">setBooking</span><span class="p">(</span><span class="nx">weekId</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">Int</span><span class="p">,</span><span class="w"> </span><span class="nx">dayNumber</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">Int</span><span class="p">,</span><span class="w"> </span><span class="nx">booked</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">Bool</span><span class="p">)</span>
+</span></code></pre></div>
+<strong>Exemple:</strong><br/>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-15-1"><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="err">co</span><span class="kc">nst</span><span class="w"> </span><span class="err">TurboSel</span><span class="kc">f</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">require('papillo</span><span class="kc">n</span><span class="mi">-</span><span class="kc">tur</span><span class="err">bosel</span><span class="kc">f</span><span class="mi">-</span><span class="err">core')</span>
+</span><span id="__span-15-2"><a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="err">le</span><span class="kc">t</span><span class="w"> </span><span class="kc">ts</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="kc">ne</span><span class="err">w</span><span class="w"> </span><span class="err">TurboSel</span><span class="kc">f</span><span class="err">();</span>
+</span><span id="__span-15-3"><a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a>
+</span><span id="__span-15-4"><a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="err">asy</span><span class="kc">n</span><span class="err">c</span><span class="w"> </span><span class="kc">fun</span><span class="err">c</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">mai</span><span class="kc">n</span><span class="err">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-5"><a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">    </span><span class="err">awai</span><span class="kc">t</span><span class="w"> </span><span class="kc">ts</span><span class="err">.logi</span><span class="kc">n</span><span class="err">('user</span><span class="kc">na</span><span class="err">me@mail.com'</span><span class="p">,</span><span class="w"> </span><span class="err">'Password</span><span class="mi">1234</span><span class="err">')</span>
+</span><span id="__span-15-6"><a href="#__codelineno-15-6" id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">    </span><span class="err">le</span><span class="kc">t</span><span class="w"> </span><span class="err">resul</span><span class="kc">t</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="kc">ts</span><span class="err">.se</span><span class="kc">t</span><span class="err">Booki</span><span class="kc">n</span><span class="err">g(XXXXXXXXXXX</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="err">(Mercredi)</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="err">)</span>
+</span><span id="__span-15-7"><a href="#__codelineno-15-7" id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">    </span><span class="err">co</span><span class="kc">ns</span><span class="err">ole.log(resul</span><span class="kc">t</span><span class="err">)</span>
+</span><span id="__span-15-8"><a href="#__codelineno-15-8" id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="p">}</span>
+</span><span id="__span-15-9"><a href="#__codelineno-15-9" id="__codelineno-15-9" name="__codelineno-15-9"></a>
+</span><span id="__span-15-10"><a href="#__codelineno-15-10" id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="err">mai</span><span class="kc">n</span><span class="err">()</span>
+</span></code></pre></div>
+<strong>Retour:</strong><br/>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-16-1"><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="p">{</span>
+</span><span id="__span-16-2"><a href="#__codelineno-16-2" id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">  </span><span class="err">error</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-16-3"><a href="#__codelineno-16-3" id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">  </span><span class="err">errorMessage</span><span class="p">:</span><span class="w"> </span><span class="err">''</span><span class="p">,</span>
+</span><span id="__span-16-4"><a href="#__codelineno-16-4" id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">  </span><span class="err">da</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-5"><a href="#__codelineno-16-5" id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">    </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="err">'XXXXXXXXXXX'</span><span class="p">,</span>
+</span><span id="__span-16-6"><a href="#__codelineno-16-6" id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">    </span><span class="err">dayNumber</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+</span><span id="__span-16-7"><a href="#__codelineno-16-7" id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">    </span><span class="err">booked</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-16-8"><a href="#__codelineno-16-8" id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-16-9"><a href="#__codelineno-16-9" id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<a name="getHistory()"></a></p>
+<h5 id="gethistory">getHistory()</h5>
+<p><strong>Description:</strong><br/>
+Obtient l'historique complet de l'utilisateur connecté
+<br/><br/><strong>Paramètres:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-17-1"><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="nx">getHistory</span><span class="p">()</span>
+</span></code></pre></div>
+<strong>Exemple:</strong><br/>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-18-1"><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="err">co</span><span class="kc">nst</span><span class="w"> </span><span class="err">TurboSel</span><span class="kc">f</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">require('papillo</span><span class="kc">n</span><span class="mi">-</span><span class="kc">tur</span><span class="err">bosel</span><span class="kc">f</span><span class="mi">-</span><span class="err">core')</span>
+</span><span id="__span-18-2"><a href="#__codelineno-18-2" id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="err">le</span><span class="kc">t</span><span class="w"> </span><span class="kc">ts</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="kc">ne</span><span class="err">w</span><span class="w"> </span><span class="err">TurboSel</span><span class="kc">f</span><span class="err">();</span>
+</span><span id="__span-18-3"><a href="#__codelineno-18-3" id="__codelineno-18-3" name="__codelineno-18-3"></a>
+</span><span id="__span-18-4"><a href="#__codelineno-18-4" id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="err">asy</span><span class="kc">n</span><span class="err">c</span><span class="w"> </span><span class="kc">fun</span><span class="err">c</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="w"> </span><span class="err">mai</span><span class="kc">n</span><span class="err">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-5"><a href="#__codelineno-18-5" id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="w">    </span><span class="err">awai</span><span class="kc">t</span><span class="w"> </span><span class="kc">ts</span><span class="err">.logi</span><span class="kc">n</span><span class="err">('user</span><span class="kc">na</span><span class="err">me@mail.com'</span><span class="p">,</span><span class="w"> </span><span class="err">'Password</span><span class="mi">1234</span><span class="err">')</span>
+</span><span id="__span-18-6"><a href="#__codelineno-18-6" id="__codelineno-18-6" name="__codelineno-18-6"></a><span class="w">    </span><span class="err">le</span><span class="kc">t</span><span class="w"> </span><span class="err">resul</span><span class="kc">t</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="kc">ts</span><span class="err">.ge</span><span class="kc">t</span><span class="err">His</span><span class="kc">t</span><span class="err">ory()</span>
+</span><span id="__span-18-7"><a href="#__codelineno-18-7" id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="w">    </span><span class="err">co</span><span class="kc">ns</span><span class="err">ole.log(resul</span><span class="kc">t</span><span class="err">)</span>
+</span><span id="__span-18-8"><a href="#__codelineno-18-8" id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="p">}</span>
+</span><span id="__span-18-9"><a href="#__codelineno-18-9" id="__codelineno-18-9" name="__codelineno-18-9"></a>
+</span><span id="__span-18-10"><a href="#__codelineno-18-10" id="__codelineno-18-10" name="__codelineno-18-10"></a><span class="err">mai</span><span class="kc">n</span><span class="err">()</span>
+</span></code></pre></div>
+<strong>Retour:</strong><br/>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-19-1"><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="p">{</span>
+</span><span id="__span-19-2"><a href="#__codelineno-19-2" id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">  </span><span class="err">error</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-19-3"><a href="#__codelineno-19-3" id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">  </span><span class="err">errorMessage</span><span class="p">:</span><span class="w"> </span><span class="err">''</span><span class="p">,</span>
+</span><span id="__span-19-4"><a href="#__codelineno-19-4" id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">  </span><span class="err">da</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-19-5"><a href="#__codelineno-19-5" id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">    </span><span class="p">{</span>
+</span><span id="__span-19-6"><a href="#__codelineno-19-6" id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">      </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="err">XXXXXXXXX</span><span class="p">,</span>
+</span><span id="__span-19-7"><a href="#__codelineno-19-7" id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="w">      </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="err">'Sel</span><span class="kc">f</span><span class="err">'</span><span class="p">,</span>
+</span><span id="__span-19-8"><a href="#__codelineno-19-8" id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="w">      </span><span class="err">cos</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="mf">-40.70</span><span class="p">,</span>
+</span><span id="__span-19-9"><a href="#__codelineno-19-9" id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="w">      </span><span class="err">da</span><span class="kc">te</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">20</span><span class="err">XX</span><span class="mi">-</span><span class="err">XX</span><span class="mi">-</span><span class="err">XXTXX</span><span class="p">:</span><span class="err">XX</span><span class="p">:</span><span class="err">XX.XXXZ'</span>
+</span><span id="__span-19-10"><a href="#__codelineno-19-10" id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-19-11"><a href="#__codelineno-19-11" id="__codelineno-19-11" name="__codelineno-19-11"></a><span class="w">    </span><span class="err">...</span>
+</span><span id="__span-19-12"><a href="#__codelineno-19-12" id="__codelineno-19-12" name="__codelineno-19-12"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-19-13"><a href="#__codelineno-19-13" id="__codelineno-19-13" name="__codelineno-19-13"></a><span class="p">]</span>
+</span><span id="__span-19-14"><a href="#__codelineno-19-14" id="__codelineno-19-14" name="__codelineno-19-14"></a><span class="p">}</span>
+</span></code></pre></div>
+<a name="getBalance()"></a></p>
+<h4 id="getbalance">getBalance()</h4>
+<p><strong>Description:</strong><br/>
+Obtient le solde de l'utilisateur connecté
+<br/><br/><strong>Paramètres:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-20-1"><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="nx">getBalance</span><span class="p">()</span>
+</span></code></pre></div>
+<strong>Exemple:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-21-1"><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">TurboSelf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'papillon-turboself-core'</span><span class="p">)</span>
+</span><span id="__span-21-2"><a href="#__codelineno-21-2" id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">ts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TurboSelf</span><span class="p">();</span>
+</span><span id="__span-21-3"><a href="#__codelineno-21-3" id="__codelineno-21-3" name="__codelineno-21-3"></a>
+</span><span id="__span-21-4"><a href="#__codelineno-21-4" id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-21-5"><a href="#__codelineno-21-5" id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">ts</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s1">'username@mail.com'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Password1234'</span><span class="p">)</span>
+</span><span id="__span-21-6"><a href="#__codelineno-21-6" id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ts</span><span class="p">.</span><span class="nx">getBalance</span><span class="p">()</span>
+</span><span id="__span-21-7"><a href="#__codelineno-21-7" id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+</span><span id="__span-21-8"><a href="#__codelineno-21-8" id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="p">}</span>
+</span><span id="__span-21-9"><a href="#__codelineno-21-9" id="__codelineno-21-9" name="__codelineno-21-9"></a>
+</span><span id="__span-21-10"><a href="#__codelineno-21-10" id="__codelineno-21-10" name="__codelineno-21-10"></a><span class="nx">main</span><span class="p">()</span>
+</span></code></pre></div>
+<strong>Retour:</strong><br/>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-22-1"><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="p">{</span>
+</span><span id="__span-22-2"><a href="#__codelineno-22-2" id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">  </span><span class="err">error</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-22-3"><a href="#__codelineno-22-3" id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">  </span><span class="err">errorMessage</span><span class="p">:</span><span class="w"> </span><span class="err">''</span><span class="p">,</span>
+</span><span id="__span-22-4"><a href="#__codelineno-22-4" id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">  </span><span class="err">da</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-22-5"><a href="#__codelineno-22-5" id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">    </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="err">'XXXXXXXXXX'</span><span class="p">,</span>
+</span><span id="__span-22-6"><a href="#__codelineno-22-6" id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">    </span><span class="err">bala</span><span class="kc">n</span><span class="err">ce</span><span class="p">:</span><span class="w"> </span><span class="mf">10.0</span><span class="p">,</span>
+</span><span id="__span-22-7"><a href="#__codelineno-22-7" id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">    </span><span class="err">es</span><span class="kc">t</span><span class="err">ima</span><span class="kc">te</span><span class="err">dBala</span><span class="kc">n</span><span class="err">ce</span><span class="p">:</span><span class="w"> </span><span class="mf">-45.13</span><span class="p">,</span>
+</span><span id="__span-22-8"><a href="#__codelineno-22-8" id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="w">    </span><span class="err">es</span><span class="kc">t</span><span class="err">ima</span><span class="kc">te</span><span class="err">dFor</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">20</span><span class="err">XX</span><span class="mi">-</span><span class="err">XX</span><span class="mi">-</span><span class="err">XX'</span>
+</span><span id="__span-22-9"><a href="#__codelineno-22-9" id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-22-10"><a href="#__codelineno-22-10" id="__codelineno-22-10" name="__codelineno-22-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<a name="canBookEvening()"></a></p>
+<h4 id="canbookevening">canBookEvening()</h4>
+<p><strong>Description:</strong><br/>
+Retourne si l'utilisateur connecté peut réserver le soir
+<br/><br/><strong>Paramètres:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-23-1"><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="nx">canBookEvening</span><span class="p">()</span>
+</span></code></pre></div>
+<strong>Exemple:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-24-1"><a href="#__codelineno-24-1" id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">TurboSelf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'papillon-turboself-core'</span><span class="p">)</span>
+</span><span id="__span-24-2"><a href="#__codelineno-24-2" id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">ts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TurboSelf</span><span class="p">();</span>
+</span><span id="__span-24-3"><a href="#__codelineno-24-3" id="__codelineno-24-3" name="__codelineno-24-3"></a>
+</span><span id="__span-24-4"><a href="#__codelineno-24-4" id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-5"><a href="#__codelineno-24-5" id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">ts</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s1">'username@mail.com'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Password1234'</span><span class="p">)</span>
+</span><span id="__span-24-6"><a href="#__codelineno-24-6" id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ts</span><span class="p">.</span><span class="nx">canBookEvening</span><span class="p">()</span>
+</span><span id="__span-24-7"><a href="#__codelineno-24-7" id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+</span><span id="__span-24-8"><a href="#__codelineno-24-8" id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="p">}</span>
+</span><span id="__span-24-9"><a href="#__codelineno-24-9" id="__codelineno-24-9" name="__codelineno-24-9"></a>
+</span><span id="__span-24-10"><a href="#__codelineno-24-10" id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="nx">main</span><span class="p">()</span>
+</span></code></pre></div>
+<strong>Retour:</strong><br/>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-25-1"><a href="#__codelineno-25-1" id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="p">{</span>
+</span><span id="__span-25-2"><a href="#__codelineno-25-2" id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="w">  </span><span class="err">error</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-25-3"><a href="#__codelineno-25-3" id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="w">  </span><span class="err">errorMessage</span><span class="p">:</span><span class="w"> </span><span class="err">''</span><span class="p">,</span>
+</span><span id="__span-25-4"><a href="#__codelineno-25-4" id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="w">  </span><span class="err">da</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-25-5"><a href="#__codelineno-25-5" id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<a name="getEtabInfo()"></a></p>
+<h4 id="getetabinfo">getEtabInfo()</h4>
+<p><strong>Description:</strong><br/>
+Obtient les informations de l'établissement de l'utilisateur connecté
+<br/><br/><strong>Paramètres:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-26-1"><a href="#__codelineno-26-1" id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="nx">getEtabInfo</span><span class="p">()</span>
+</span></code></pre></div>
+<strong>Exemple:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-27-1"><a href="#__codelineno-27-1" id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">TurboSelf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'papillon-turboself-core'</span><span class="p">)</span>
+</span><span id="__span-27-2"><a href="#__codelineno-27-2" id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">ts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TurboSelf</span><span class="p">();</span>
+</span><span id="__span-27-3"><a href="#__codelineno-27-3" id="__codelineno-27-3" name="__codelineno-27-3"></a>
+</span><span id="__span-27-4"><a href="#__codelineno-27-4" id="__codelineno-27-4" name="__codelineno-27-4"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-27-5"><a href="#__codelineno-27-5" id="__codelineno-27-5" name="__codelineno-27-5"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">ts</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s1">'username@mail.com'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Password1234'</span><span class="p">)</span>
+</span><span id="__span-27-6"><a href="#__codelineno-27-6" id="__codelineno-27-6" name="__codelineno-27-6"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ts</span><span class="p">.</span><span class="w"> </span><span class="nx">getEtabInfo</span><span class="p">()</span>
+</span><span id="__span-27-7"><a href="#__codelineno-27-7" id="__codelineno-27-7" name="__codelineno-27-7"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+</span><span id="__span-27-8"><a href="#__codelineno-27-8" id="__codelineno-27-8" name="__codelineno-27-8"></a><span class="p">}</span>
+</span><span id="__span-27-9"><a href="#__codelineno-27-9" id="__codelineno-27-9" name="__codelineno-27-9"></a>
+</span><span id="__span-27-10"><a href="#__codelineno-27-10" id="__codelineno-27-10" name="__codelineno-27-10"></a><span class="nx">main</span><span class="p">()</span>
+</span></code></pre></div>
+<strong>Retour:</strong><br/>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-28-1"><a href="#__codelineno-28-1" id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="p">{</span>
+</span><span id="__span-28-2"><a href="#__codelineno-28-2" id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="w">  </span><span class="err">error</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-28-3"><a href="#__codelineno-28-3" id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="w">  </span><span class="err">errorMessage</span><span class="p">:</span><span class="w"> </span><span class="err">''</span><span class="p">,</span>
+</span><span id="__span-28-4"><a href="#__codelineno-28-4" id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="w">  </span><span class="err">da</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-28-5"><a href="#__codelineno-28-5" id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="w">    </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="err">XXXX</span><span class="p">,</span>
+</span><span id="__span-28-6"><a href="#__codelineno-28-6" id="__codelineno-28-6" name="__codelineno-28-6"></a><span class="w">    </span><span class="err">TSid</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-28-7"><a href="#__codelineno-28-7" id="__codelineno-28-7" name="__codelineno-28-7"></a><span class="w">    </span><span class="err">code</span><span class="mi">2</span><span class="err">p</span><span class="mi">5</span><span class="p">:</span><span class="w"> </span><span class="err">XXXX</span><span class="p">,</span>
+</span><span id="__span-28-8"><a href="#__codelineno-28-8" id="__codelineno-28-8" name="__codelineno-28-8"></a><span class="w">    </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="err">'Lycée/Collège</span><span class="w"> </span><span class="err">XXX'</span><span class="p">,</span>
+</span><span id="__span-28-9"><a href="#__codelineno-28-9" id="__codelineno-28-9" name="__codelineno-28-9"></a><span class="w">    </span><span class="err">versio</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">'XXX'</span><span class="p">,</span>
+</span><span id="__span-28-10"><a href="#__codelineno-28-10" id="__codelineno-28-10" name="__codelineno-28-10"></a><span class="w">    </span><span class="err">disabled</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-28-11"><a href="#__codelineno-28-11" id="__codelineno-28-11" name="__codelineno-28-11"></a><span class="w">    </span><span class="err">symbol</span><span class="p">:</span><span class="w"> </span><span class="err">'€'</span><span class="p">,</span>
+</span><span id="__span-28-12"><a href="#__codelineno-28-12" id="__codelineno-28-12" name="__codelineno-28-12"></a><span class="w">    </span><span class="err">mi</span><span class="kc">n</span><span class="err">Credi</span><span class="kc">t</span><span class="err">Add</span><span class="p">:</span><span class="w"> </span><span class="mf">15.5</span><span class="p">,</span>
+</span><span id="__span-28-13"><a href="#__codelineno-28-13" id="__codelineno-28-13" name="__codelineno-28-13"></a><span class="w">    </span><span class="err">prixDej</span><span class="p">:</span><span class="w"> </span><span class="mf">2.87</span><span class="p">,</span>
+</span><span id="__span-28-14"><a href="#__codelineno-28-14" id="__codelineno-28-14" name="__codelineno-28-14"></a><span class="w">    </span><span class="err">address</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-28-15"><a href="#__codelineno-28-15" id="__codelineno-28-15" name="__codelineno-28-15"></a><span class="w">      </span><span class="err">li</span><span class="kc">ne</span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">1</span><span class="w"> </span><span class="err">Rue</span><span class="w"> </span><span class="err">Doe</span><span class="w"> </span><span class="err">Jo</span><span class="kc">n</span><span class="err">h'</span><span class="p">,</span>
+</span><span id="__span-28-16"><a href="#__codelineno-28-16" id="__codelineno-28-16" name="__codelineno-28-16"></a><span class="w">      </span><span class="err">li</span><span class="kc">ne</span><span class="mi">2</span><span class="p">:</span><span class="w"> </span><span class="err">''</span><span class="p">,</span>
+</span><span id="__span-28-17"><a href="#__codelineno-28-17" id="__codelineno-28-17" name="__codelineno-28-17"></a><span class="w">      </span><span class="err">pos</span><span class="kc">tal</span><span class="err">Code</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">10000</span><span class="err">'</span><span class="p">,</span>
+</span><span id="__span-28-18"><a href="#__codelineno-28-18" id="__codelineno-28-18" name="__codelineno-28-18"></a><span class="w">      </span><span class="err">ci</span><span class="kc">t</span><span class="err">y</span><span class="p">:</span><span class="w"> </span><span class="err">'Ville</span><span class="w"> </span><span class="err">co</span><span class="kc">nnu</span><span class="err">'</span>
+</span><span id="__span-28-19"><a href="#__codelineno-28-19" id="__codelineno-28-19" name="__codelineno-28-19"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-28-20"><a href="#__codelineno-28-20" id="__codelineno-28-20" name="__codelineno-28-20"></a><span class="w">    </span><span class="err">co</span><span class="kc">nta</span><span class="err">c</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-28-21"><a href="#__codelineno-28-21" id="__codelineno-28-21" name="__codelineno-28-21"></a><span class="w">      </span><span class="err">url</span><span class="p">:</span><span class="w"> </span><span class="err">'h</span><span class="kc">tt</span><span class="err">p</span><span class="p">:</span><span class="c1">//mon.lycee-ou-college.com/',</span>
+</span><span id="__span-28-22"><a href="#__codelineno-28-22" id="__codelineno-28-22" name="__codelineno-28-22"></a><span class="w">      </span><span class="err">email</span><span class="p">:</span><span class="w"> </span><span class="err">'mail@college</span><span class="mi">-</span><span class="err">lycee.com'</span><span class="p">,</span>
+</span><span id="__span-28-23"><a href="#__codelineno-28-23" id="__codelineno-28-23" name="__codelineno-28-23"></a><span class="w">      </span><span class="kc">tel</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">0606060606</span><span class="err">'</span>
+</span><span id="__span-28-24"><a href="#__codelineno-28-24" id="__codelineno-28-24" name="__codelineno-28-24"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-28-25"><a href="#__codelineno-28-25" id="__codelineno-28-25" name="__codelineno-28-25"></a><span class="w">    </span><span class="err">sy</span><span class="kc">n</span><span class="err">c</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-28-26"><a href="#__codelineno-28-26" id="__codelineno-28-26" name="__codelineno-28-26"></a><span class="w">      </span><span class="kc">f</span><span class="err">irs</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">20</span><span class="err">XX</span><span class="mi">-</span><span class="err">XX</span><span class="mi">-</span><span class="err">XXTXX</span><span class="p">:</span><span class="err">XX</span><span class="p">:</span><span class="err">XX.XXXZ'</span><span class="p">,</span>
+</span><span id="__span-28-27"><a href="#__codelineno-28-27" id="__codelineno-28-27" name="__codelineno-28-27"></a><span class="w">      </span><span class="err">las</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">20</span><span class="err">XX</span><span class="mi">-</span><span class="err">XX</span><span class="mi">-</span><span class="err">XXTXX</span><span class="p">:</span><span class="err">XX</span><span class="p">:</span><span class="err">XX.XXXZ'</span>
+</span><span id="__span-28-28"><a href="#__codelineno-28-28" id="__codelineno-28-28" name="__codelineno-28-28"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-28-29"><a href="#__codelineno-28-29" id="__codelineno-28-29" name="__codelineno-28-29"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-28-30"><a href="#__codelineno-28-30" id="__codelineno-28-30" name="__codelineno-28-30"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p><a name="getLastPayment()"></a></p>
+<h4 id="getlastpayment">getLastPayment()</h4>
+<p><strong>Description:</strong><br/>
+Obtient le dernier paiments de l'utilisateur connecté
+<br/><br/><strong>Paramètres:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-29-1"><a href="#__codelineno-29-1" id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="nx">getLastPayment</span><span class="p">()</span>
+</span></code></pre></div>
+<strong>Exemple:</strong><br/>
+<div class="language-javascript highlight"><pre><span></span><code><span id="__span-30-1"><a href="#__codelineno-30-1" id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">TurboSelf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">'papillon-turboself-core'</span><span class="p">)</span>
+</span><span id="__span-30-2"><a href="#__codelineno-30-2" id="__codelineno-30-2" name="__codelineno-30-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">ts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">TurboSelf</span><span class="p">();</span>
+</span><span id="__span-30-3"><a href="#__codelineno-30-3" id="__codelineno-30-3" name="__codelineno-30-3"></a>
+</span><span id="__span-30-4"><a href="#__codelineno-30-4" id="__codelineno-30-4" name="__codelineno-30-4"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-30-5"><a href="#__codelineno-30-5" id="__codelineno-30-5" name="__codelineno-30-5"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">ts</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s1">'username@mail.com'</span><span class="p">,</span><span class="w"> </span><span class="s1">'Password1234'</span><span class="p">)</span>
+</span><span id="__span-30-6"><a href="#__codelineno-30-6" id="__codelineno-30-6" name="__codelineno-30-6"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ts</span><span class="p">.</span><span class="nx">getLastPayment</span><span class="p">()</span>
+</span><span id="__span-30-7"><a href="#__codelineno-30-7" id="__codelineno-30-7" name="__codelineno-30-7"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+</span><span id="__span-30-8"><a href="#__codelineno-30-8" id="__codelineno-30-8" name="__codelineno-30-8"></a><span class="p">}</span>
+</span><span id="__span-30-9"><a href="#__codelineno-30-9" id="__codelineno-30-9" name="__codelineno-30-9"></a>
+</span><span id="__span-30-10"><a href="#__codelineno-30-10" id="__codelineno-30-10" name="__codelineno-30-10"></a><span class="nx">main</span><span class="p">()</span>
+</span></code></pre></div>
+<strong>Retour:</strong><br/>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-31-1"><a href="#__codelineno-31-1" id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="p">{</span>
+</span><span id="__span-31-2"><a href="#__codelineno-31-2" id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="w">    </span><span class="err">error</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+</span><span id="__span-31-3"><a href="#__codelineno-31-3" id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="w">    </span><span class="err">errorMessage</span><span class="p">:</span><span class="err">''</span><span class="p">,</span>
+</span><span id="__span-31-4"><a href="#__codelineno-31-4" id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="w">    </span><span class="err">da</span><span class="kc">ta</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-31-5"><a href="#__codelineno-31-5" id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="w">        </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="mi">0000000</span><span class="p">,</span>
+</span><span id="__span-31-6"><a href="#__codelineno-31-6" id="__codelineno-31-6" name="__codelineno-31-6"></a><span class="w">        </span><span class="err">e</span><span class="kc">ta</span><span class="err">bId</span><span class="p">:</span><span class="w"> </span><span class="mi">0000000</span><span class="p">,</span>
+</span><span id="__span-31-7"><a href="#__codelineno-31-7" id="__codelineno-31-7" name="__codelineno-31-7"></a><span class="w">        </span><span class="err">da</span><span class="kc">te</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">20</span><span class="err">XX</span><span class="mi">-</span><span class="err">XX</span><span class="mi">-</span><span class="err">XXTXX</span><span class="p">:</span><span class="err">XX</span><span class="p">:</span><span class="err">XX.XXXZ'</span><span class="p">,</span>
+</span><span id="__span-31-8"><a href="#__codelineno-31-8" id="__codelineno-31-8" name="__codelineno-31-8"></a><span class="w">        </span><span class="err">amou</span><span class="kc">nt</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
+</span><span id="__span-31-9"><a href="#__codelineno-31-9" id="__codelineno-31-9" name="__codelineno-31-9"></a><span class="w">        </span><span class="err">me</span><span class="kc">t</span><span class="err">hod</span><span class="p">:</span><span class="w"> </span><span class="err">'CB'</span><span class="p">,</span>
+</span><span id="__span-31-10"><a href="#__codelineno-31-10" id="__codelineno-31-10" name="__codelineno-31-10"></a><span class="w">        </span><span class="err">upda</span><span class="kc">te</span><span class="err">Da</span><span class="kc">te</span><span class="p">:</span><span class="w"> </span><span class="err">'</span><span class="mi">20</span><span class="err">XX</span><span class="mi">-</span><span class="err">XX</span><span class="mi">-</span><span class="err">XXTXX</span><span class="p">:</span><span class="err">XX</span><span class="p">:</span><span class="err">XX.XXXZ'</span><span class="p">,</span>
+</span><span id="__span-31-11"><a href="#__codelineno-31-11" id="__codelineno-31-11" name="__codelineno-31-11"></a><span class="w">        </span><span class="err">s</span><span class="kc">tatus</span><span class="p">:</span><span class="w"> </span><span class="err">'OK'</span><span class="p">,</span>
+</span><span id="__span-31-12"><a href="#__codelineno-31-12" id="__codelineno-31-12" name="__codelineno-31-12"></a><span class="w">        </span><span class="kc">transa</span><span class="err">c</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="err">Id</span><span class="p">:</span><span class="w"> </span><span class="err">'XXXXXXXXXXXXXX'</span><span class="p">,</span>
+</span><span id="__span-31-13"><a href="#__codelineno-31-13" id="__codelineno-31-13" name="__codelineno-31-13"></a><span class="w">        </span><span class="kc">t</span><span class="err">oke</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="err">'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'</span><span class="p">,</span>
+</span><span id="__span-31-14"><a href="#__codelineno-31-14" id="__codelineno-31-14" name="__codelineno-31-14"></a><span class="w">        </span><span class="err">message</span><span class="p">:</span><span class="w"> </span><span class="err">'Paieme</span><span class="kc">nt</span><span class="w"> </span><span class="err">accep</span><span class="kc">t</span><span class="err">é'</span>
+</span><span id="__span-31-15"><a href="#__codelineno-31-15" id="__codelineno-31-15" name="__codelineno-31-15"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-31-16"><a href="#__codelineno-31-16" id="__codelineno-31-16" name="__codelineno-31-16"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="Dernière mise à jour">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-04-28T17:53:39+00:00" locale="fr"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-04-28</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Pied de page" class="md-footer__inner md-grid">
+<a aria-label="Précédent: API" class="md-footer__link md-footer__link--prev" href="../api/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Précédent
+              </span>
+<div class="md-ellipsis">
+                API
+              </div>
+</div>
+</a>
+<a aria-label="Suivant: API Papillon" class="md-footer__link md-footer__link--next" href="../../papillon/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Suivant
+              </span>
+<div class="md-ellipsis">
+                API Papillon
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/PapillonApp/Papillon" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.instagram.com/thepapillonapp/" rel="noopener" target="_blank" title="www.instagram.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+</a>
+<a class="md-social__link" href="https://discord.com/invite/ywkBZx2jFB" rel="noopener" target="_blank" title="discord.com">
+<svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-progress" data-md-component="progress" role="progressbar"></div>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.footer", "content.action.edit", "content.code.copy", "content.code.select", "content.code.annotate", "navigation.sections"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+<script src="../../../../assets/javascripts/bundle.dd8806f2.min.js"></script>
+<script src="../../../../js/timeago.min.js"></script>
+<script src="../../../../js/timeago_mkdocs_material.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>

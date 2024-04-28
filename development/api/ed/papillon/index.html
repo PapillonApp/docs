@@ -1,0 +1,1635 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://docs.getpapillon.xyz/development/api/ed/papillon/" rel="canonical"/>
+<link href="../api/" rel="prev"/>
+<link href="../../ts/api/" rel="next"/>
+<link href="../../../../assets/beta.png" rel="icon"/>
+<meta content="mkdocs-1.6.0, mkdocs-material-9.5.19" name="generator"/>
+<title>papillon-ed-core - Documentation technique Papillon</title>
+<link href="../../../../assets/stylesheets/main.66ac8b77.min.css" rel="stylesheet"/>
+<link href="../../../../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Noto Sans";--md-code-font:"Roboto Mono"}</style>
+<link href="../../../../css/timeago.css" rel="stylesheet"/>
+<link href="../../../../stylesheets/extra.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="teal" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#papillon-ed-core-documentation">
+          Aller au contenu
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="En-tête" class="md-header__inner md-grid">
+<a aria-label="Documentation technique Papillon" class="md-header__button md-logo" data-md-component="logo" href="../../../.." title="Documentation technique Papillon">
+<img alt="logo" src="../../../../assets/beta.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Documentation technique Papillon
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              papillon-ed-core
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="teal" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="teal" data-md-color-scheme="default" id="__palette_0" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to system preference" class="md-option" data-md-color-accent="teal" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="teal" data-md-color-scheme="slate" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_0" hidden="" title="Switch to system preference">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Rechercher" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Rechercher" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Recherche" class="md-search__options">
+<button aria-label="Effacer" class="md-search__icon md-icon" tabindex="-1" title="Effacer" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/PapillonApp/docs" title="Aller au dépôt">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    PapillonApp/docs
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Onglets" class="md-tabs" data-md-component="tabs">
+<div class="md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../..">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../design/intro/">
+          
+  
+  Designer
+
+        </a>
+</li>
+<li class="md-tabs__item md-tabs__item--active">
+<a class="md-tabs__link" href="../../../intro/">
+          
+  
+  Développer
+
+        </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../../../contribute/intro/">
+          
+  
+  Contribuer
+
+        </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Documentation technique Papillon" class="md-nav__button md-logo" data-md-component="logo" href="../../../.." title="Documentation technique Papillon">
+<img alt="logo" src="../../../../assets/beta.png"/>
+</a>
+    Documentation technique Papillon
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/PapillonApp/docs" title="Aller au dépôt">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    PapillonApp/docs
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../..">
+<span class="md-ellipsis">
+    Accueil
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Designer
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+            Designer
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../design/intro/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Charte Graphique
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_2">
+<span class="md-nav__icon md-icon"></span>
+            Charte Graphique
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../design/color/">
+<span class="md-ellipsis">
+    Couleurs
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../design/font/">
+<span class="md-ellipsis">
+    Polices d'écriture
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Ressources externe
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_2_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_2_3">
+<span class="md-nav__icon md-icon"></span>
+            Ressources externe
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../../assets/design/Charte%20Graphique%20-%20Papillon%20(sept.%202023).pdf">
+<span class="md-ellipsis">
+    Charte grapique (PDF)
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="https://www.figma.com/file/EZ9HbmMmCywyCxp3OuvofF/Product-design-Papillon?type=design&amp;node-id=316%3A470&amp;mode=design&amp;t=gEZXuZLlWRlCkLNn-1">
+<span class="md-ellipsis">
+    Figma (Public)
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+<span class="md-ellipsis">
+    Développer
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+            Développer
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../intro/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+<span class="md-ellipsis">
+    Fonctionnement de l'app
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+            Fonctionnement de l'app
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../ent/">
+<span class="md-ellipsis">
+    ENT
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--section md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+<span class="md-ellipsis">
+    Environement de développement
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+            Environement de développement
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../app/ios/">
+<span class="md-ellipsis">
+    Développement iOS
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../app/android/">
+<span class="md-ellipsis">
+    Développement Android
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../app/eas/">
+<span class="md-ellipsis">
+    Développement via EAS
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+<span class="md-ellipsis">
+    API utilisées pour Papillon
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+            API utilisées pour Papillon
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../pawnote/">
+<span class="md-ellipsis">
+    Pawnote (compatible Pronote)
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    EcoleDirecte
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_4_2_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_4_2">
+<span class="md-nav__icon md-icon"></span>
+            EcoleDirecte
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../api/">
+<span class="md-ellipsis">
+    API
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+<span class="md-ellipsis">
+    papillon-ed-core
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+<span class="md-ellipsis">
+    papillon-ed-core
+  </span>
+</a>
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sommaire">
+<span class="md-ellipsis">
+      Sommaire
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Turboself
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_4_3_label" class="md-nav" data-md-level="3">
+<label class="md-nav__title" for="__nav_3_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Turboself
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ts/api/">
+<span class="md-ellipsis">
+    API
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../ts/papillon/">
+<span class="md-ellipsis">
+    papillon-turboself-core
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../papillon/">
+<span class="md-ellipsis">
+    API Papillon
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-ellipsis">
+    Contribuer
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+            Contribuer
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../contribute/intro/">
+<span class="md-ellipsis">
+    Introduction
+  </span>
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+<span class="md-ellipsis">
+    Tester les nouveautés
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+            Tester les nouveautés
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../contribute/beta/">
+<span class="md-ellipsis">
+    Programme bêta
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../contribute/reporting-issues/">
+<span class="md-ellipsis">
+    Rapporter des problèmes
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+<span class="md-ellipsis">
+    Soumettre vos modifications
+  </span>
+<span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+            Soumettre vos modifications
+          </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../contribute/pull-request/">
+<span class="md-ellipsis">
+    Pull Request
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../../contribute/final-step/">
+<span class="md-ellipsis">
+    Parution dans l'app finale
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table des matières" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sommaire">
+<span class="md-ellipsis">
+      Sommaire
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/PapillonApp/docs/edit/main/docs/development/api/ed/papillon.md" title="Editer cette page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"></path></svg>
+</a>
+<h1 id="papillon-ed-core-documentation">Papillon ED Core - Documentation</h1>
+<p><code>papillon-ed-core</code> est le module qui permet la connexion entre <em>Ecoledirecte</em> et Papillon.
+Il contient des morceaux de code réutilisable qui permettent de récupérer les données scolaires. C'est l'intermédiaire entre <em>Ecoledirecte</em> et <code>IndexDataInstance</code>, qui permet l'affichage des données dans Papillon.</p>
+<div class="admonition github">
+<p class="admonition-title">Github</p>
+<p>Le répo du module est disponible sur <a href="https://github.com/PapillonApp/Papillon-ED-Core/" target="_blank">Github <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"></path><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"></path></svg></span></a>.</p>
+</div>
+<div class="admonition info">
+<p>EcoleDirecte est une marque déposée de la société <a href="https://www.aplim.fr/" target="_blank">Aplim <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"></path><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"></path></svg></span></a>. Papillon n'est pas affilié à EcoleDirecte et à Aplim.</p>
+</div>
+<h2 id="sommaire">Sommaire</h2>
+<ul>
+<li><a href="#guide-de-lutilisateur">Guide de l'utilisateur</a><ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#utilisation">Utilisation</a></li>
+<li><a href="#références">Références</a></li>
+</ul>
+</li>
+<li><a href="#guide-du-développeur">Guide du développeur</a><ul>
+<li><a href="#installation-1">Installation</a></li>
+<li><a href="#structure">Structure</a></li>
+<li><a href="#scripts">Scripts</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="guide-de-lutilisateur">Guide de l'utilisateur</h1>
+<p>Ce guide vous permet de comprendre comment fonctionne ce module et comment vous pouvez l'utiliser.</p>
+<p>Ce projet est développé en <em><strong>Typescript</strong></em>, il est compatible avec toutes les technologies <strong>Javascript</strong> et fonctionne avec <strong>npm 18</strong> !</p>
+<h2 id="installation">Installation</h2>
+<div class="admonition npm">
+<p class="admonition-title">Node Package Manager</p>
+<p>Le module est disponible sur <a href="https://www.npmjs.com/package/@papillonapp/ed-core" target="_blank">npmjs.com <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 2.25a.75.75 0 0 1 .75-.75h5.5a.75.75 0 0 1 .75.75v5.5a.75.75 0 0 1-1.5 0V4.06l-6.22 6.22a.75.75 0 1 1-1.06-1.06L19.94 3h-3.69a.75.75 0 0 1-.75-.75Z"></path><path d="M2.5 4.25c0-.966.784-1.75 1.75-1.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.25.25 0 0 0-.25.25v15.5c0 .138.112.25.25.25h15.5a.25.25 0 0 0 .25-.25v-8.5a.75.75 0 0 1 1.5 0v8.5a1.75 1.75 0 0 1-1.75 1.75H4.25a1.75 1.75 0 0 1-1.75-1.75V4.25Z"></path></svg></span></a> sous le nom de <code>@papillonapp/ed-core</code>.</p>
+</div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a>npm<span class="w"> </span>i<span class="w"> </span>@papillonapp/ed-core
+</span></code></pre></div>
+<h2 id="utilisation">Utilisation</h2>
+<p><em>Ce module utilise des fonctions asynchrones pour fonctionner.</em></p>
+<p><strong>1. Importer le module</strong>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-1-1"><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">EDCore</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@papillonapp/ed-core"</span><span class="p">;</span>
+</span></code></pre></div></p>
+<p><strong>2. Initialiser le module</strong>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-2-1"><a href="#__codelineno-2-1" id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">ED</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">EDCore</span><span class="p">()</span>
+</span></code></pre></div></p>
+<p><strong>3. S'authentifier</strong></p>
+<p>Merci de vous référer à la section <a href="#authentification">authentification</a>.</p>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-3-1"><a href="#__codelineno-3-1" id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">ED</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s2">"username"</span><span class="p">,</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w"> </span><span class="s2">"uuidv4"</span><span class="p">)</span>
+</span></code></pre></div>
+<blockquote>
+<p>[TIP]
+Pour générer un <strong>UUIDv4</strong>, vous pouvez utiliser le module <code>uuid</code>, par défaut installé:
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-4-1"><a href="#__codelineno-4-1" id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">v4</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">uuidv4</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'uuid'</span><span class="p">;</span>
+</span><span id="__span-4-2"><a href="#__codelineno-4-2" id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">uuid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">uuidv4</span><span class="p">()</span>
+</span><span id="__span-4-3"><a href="#__codelineno-4-3" id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="k">await</span><span class="w"> </span><span class="nx">ED</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s2">"username"</span><span class="p">,</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w"> </span><span class="nx">uuid</span><span class="p">)</span>
+</span></code></pre></div></p>
+</blockquote>
+<p><strong>4. Visitez la documentation</strong></p>
+<p>Désormais connecté, il vous faudra lire la <a href="#références">documentation des références</a> pour comprendre et utiliser chaque fonctionnalité.</p>
+<p>Des exemples sont aussi écrits dans <code>examples/</code>. Ajoutez vos identifiants dans <code>examples/login.ts</code> et tester les fonctionnalités avec <code>ts-node examples/&lt;fichier&gt;.ts</code></p>
+<p>Il existe aussi des documentations plus précises sur certaines fonctionnalités :
+- <a href="#commandes">Commandes</a>
+- <a href="#téléchargements">Téléchargements</a></p>
+<h2 id="authentification">Authentification</h2>
+<p>Cette section est dédiée à l'authentification, et vous permettra de comprendre plus précisément les différents modes d'authentification et leurs différences...</p>
+<p>L'authentification est accessible ainsi :
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-5-1"><a href="#__codelineno-5-1" id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nx">ED</span><span class="p">.</span><span class="nx">auth</span>
+</span></code></pre></div></p>
+<p>Vous pouvez vous authentifier de plusieurs manières :
+- <del><a href="">Classique</a>; équivalent à une connexion depuis un navigateur.</del> (abandonné)
+- <a href="#permanante">Mobile ou permanante</a>; équivalent à une authentification depuis l'application mobile Ecoledirecte.
+- <a href="#token">Token</a>; déconseillée, vous vous connectez avec un token Ecoledirecte, vous devez donc assurer le renouvellement de celui-ci vous-même.</p>
+<blockquote>
+<p>[!CAUTION]
+Authentification à facteurs ! Depuis Avril 2024, Ecoledirecte a mis en place une authentification à facteurs, avec un QCM pour sécuriser les connexions... Veuillez lire <a href="#à-double-facteurs">À double facteurs</a></p>
+</blockquote>
+<h3 id="permanante">Permanante</h3>
+<p>Depuis la version <code>0.2.7</code>, la connexion <strong>permanante</strong>, permettant de renouveler le token est utilisée par défaut par <code>ed-core</code>.</p>
+<p>Elle correspond à une authentification depuis l'application Ecoledirecte mobile. Vous aurez besoin de générer un <strong>UUIDv4</strong>, qui sera l'identifiant unique de votre "session" et permettra le renouvellement du token.</p>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-6-1"><a href="#__codelineno-6-1" id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">v4</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">uuidv4</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'uuid'</span><span class="p">;</span>
+</span><span id="__span-6-2"><a href="#__codelineno-6-2" id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">EDCore</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">"@papillonapp/ed-core"</span><span class="p">;</span>
+</span><span id="__span-6-3"><a href="#__codelineno-6-3" id="__codelineno-6-3" name="__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a href="#__codelineno-6-4" id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">uuid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">uuidv4</span><span class="p">()</span>
+</span><span id="__span-6-5"><a href="#__codelineno-6-5" id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="k">await</span><span class="w"> </span><span class="nx">ED</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s2">"username"</span><span class="p">,</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w"> </span><span class="nx">uuid</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Quand une erreur de code <code>12</code> apparait, c'est que la <a href="#à-double-facteurs">double authentification</a> est nécessaire.</p>
+<h3 id="token">Token</h3>
+<p>L'authentification par token permet de se connecter à Ecoledirecte avec un token <strong>généré par vos soins</strong>.</p>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-7-1"><a href="#__codelineno-7-1" id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">userId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mo">0000</span>
+</span><span id="__span-7-2"><a href="#__codelineno-7-2" id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nx">ED</span><span class="p">.</span><span class="nx">setToken</span><span class="p">(</span><span class="s1">'token'</span><span class="p">,</span><span class="w"> </span><span class="nx">userId</span><span class="p">)</span>
+</span></code></pre></div>
+<p>L'identifiant de l'utilisateur est nécessaire.</p>
+<h3 id="a-double-facteurs">À double facteurs</h3>
+<p>Quand une erreur de code <code>12</code> est renvoyée, vous devez répondre à des questions pour vous authentifier...</p>
+<p><em>Il est conseillé de lire <a href="examples/login.ts"><code>examples/login.ts</code></a> pour voir une implémentation de cette double authentification</em></p>
+<ol>
+<li>Récupérer le jeton de la double authentification
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-8-1"><a href="#__codelineno-8-1" id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">ED</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">get2FAToken</span><span class="p">(</span><span class="s2">"username"</span><span class="p">,</span><span class="w"> </span><span class="s2">"password"</span><span class="p">)</span>
+</span></code></pre></div></li>
+<li>Récupérer le questionnaire
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-9-1"><a href="#__codelineno-9-1" id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">QCM</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">ED</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">get2FA</span><span class="p">(</span><span class="nx">token</span><span class="p">)</span>
+</span><span id="__span-9-2"><a href="#__codelineno-9-2" id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="nx">QCM</span><span class="p">.</span><span class="nx">question</span><span class="w"> </span><span class="c1">// La question</span>
+</span><span id="__span-9-3"><a href="#__codelineno-9-3" id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="nx">QCM</span><span class="p">.</span><span class="nx">propositions</span><span class="w"> </span><span class="c1">// Les réponses possibles</span>
+</span></code></pre></div></li>
+<li>Envoyer la réponse
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-10-1"><a href="#__codelineno-10-1" id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">authFactors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">ED</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">resolve2FA</span><span class="p">(</span><span class="s2">"La réponse"</span><span class="p">)</span><span class="w"> </span><span class="c1">// Renvoie un objet utilisé pour s'authentifier</span>
+</span></code></pre></div></li>
+<li>S'authentifier avec les facteurs
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-11-1"><a href="#__codelineno-11-1" id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="k">await</span><span class="w"> </span><span class="nx">ED</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s2">"username"</span><span class="p">,</span><span class="w"> </span><span class="s2">"password"</span><span class="p">,</span><span class="w"> </span><span class="s2">"uuid"</span><span class="p">,</span><span class="w"> </span><span class="nx">authFactors</span><span class="p">)</span>
+</span></code></pre></div></li>
+</ol>
+<h2 id="commandes">Commandes</h2>
+<blockquote>
+<p>[!WARNING]
+Le module de commande est encore instable !</p>
+</blockquote>
+<p>Ce module est accessible ainsi :
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-12-1"><a href="#__codelineno-12-1" id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="nx">ED</span><span class="p">.</span><span class="nx">orders</span>
+</span></code></pre></div></p>
+<p>Une commande s'effectue ainsi:
+1. Séléction du point de passage
+2. Séléction des articles et envoi de la commande</p>
+<ul>
+<li>
+<p>Pour récupérer les anciennes commandes et les "points de passage" (lieux ; cafétéria, food truck);
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-13-1"><a href="#__codelineno-13-1" id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="nx">ED</span><span class="p">.</span><span class="nx">orders</span><span class="p">.</span><span class="nx">fetchOrders</span><span class="p">()</span>
+</span></code></pre></div>
+<em>Renvoie <a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/orders.ts#L58">ordersResData</a></em></p>
+</li>
+<li>
+<p>Pour initier une commande (correspond séléction d'un point de passage);
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-14-1"><a href="#__codelineno-14-1" id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="nx">ED</span><span class="p">.</span><span class="nx">orders</span><span class="p">.</span><span class="nx">startOrder</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"2024-01-01"</span><span class="p">)</span>
+</span></code></pre></div>
+<em>Renvoie <a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/orders.ts#L19">startOrderResData</a></em></p>
+</li>
+<li>
+<p>Pour envoyer, passer une commande;
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-15-1"><a href="#__codelineno-15-1" id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">articles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-15-2"><a href="#__codelineno-15-2" id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">  </span><span class="p">{</span>
+</span><span id="__span-15-3"><a href="#__codelineno-15-3" id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">    </span><span class="nx">code</span><span class="o">:</span><span class="w"> </span><span class="s2">"BEI-POM"</span><span class="p">,</span>
+</span><span id="__span-15-4"><a href="#__codelineno-15-4" id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="nx">libelle</span><span class="o">:</span><span class="w"> </span><span class="s2">"Beignet Pomme"</span><span class="p">,</span>
+</span><span id="__span-15-5"><a href="#__codelineno-15-5" id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s2">"string;"</span><span class="p">,</span>
+</span><span id="__span-15-6"><a href="#__codelineno-15-6" id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">    </span><span class="nx">estFormule</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="p">,</span>
+</span><span id="__span-15-7"><a href="#__codelineno-15-7" id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">    </span><span class="nx">etat</span><span class="o">:</span><span class="w"> </span><span class="kt">0</span><span class="p">,</span>
+</span><span id="__span-15-8"><a href="#__codelineno-15-8" id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">    </span><span class="nx">img</span><span class="o">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+</span><span id="__span-15-9"><a href="#__codelineno-15-9" id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">    </span><span class="nx">montant</span><span class="o">:</span><span class="w"> </span><span class="kt">1.5</span><span class="p">,</span>
+</span><span id="__span-15-10"><a href="#__codelineno-15-10" id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">    </span><span class="nx">quantite</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+</span><span id="__span-15-11"><a href="#__codelineno-15-11" id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">    </span><span class="nx">quantiteMax</span><span class="o">:</span><span class="w"> </span><span class="kt">3</span><span class="p">,</span>
+</span><span id="__span-15-12"><a href="#__codelineno-15-12" id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">    </span><span class="nx">estObligatoire</span><span class="o">:</span><span class="w"> </span><span class="kt">false</span><span class="p">,</span>
+</span><span id="__span-15-13"><a href="#__codelineno-15-13" id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">    </span><span class="nx">ordre</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span>
+</span><span id="__span-15-14"><a href="#__codelineno-15-14" id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-15-15"><a href="#__codelineno-15-15" id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="p">]</span>
+</span><span id="__span-15-16"><a href="#__codelineno-15-16" id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="nx">ED</span><span class="p">.</span><span class="nx">orders</span><span class="p">.</span><span class="nx">order</span><span class="p">(</span><span class="nx">articles</span><span class="p">,</span><span class="w"> </span><span class="s2">"12:00"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2024-01-01"</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span>
+</span></code></pre></div>
+<em>Renvoie <a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/orders.ts#L150">orderPlacedResData</a></em></p>
+</li>
+<li>
+<p>Pour supprimer une commande;
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-16-1"><a href="#__codelineno-16-1" id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="nx">ED</span><span class="p">.</span><span class="nx">orders</span><span class="p">.</span><span class="nx">deleteOrder</span><span class="p">(</span><span class="mf">100</span><span class="p">)</span>
+</span></code></pre></div>
+<em>Renvoie une réponse vide</em></p>
+</li>
+</ul>
+<h2 id="telechargements">Téléchargements</h2>
+<p>À plusieurs endroits vous pourrez être amené à devoir télécharger des documents (exemple: documents administratifs renvoyés par <code>ED.documents</code>).</p>
+<p>Le module <code>ED.downloads</code> vous permet donc de récupérer des objets de ces documents:
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-17-1"><a href="#__codelineno-17-1" id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="nx">ED</span><span class="p">.</span><span class="nx">downloads</span><span class="p">.</span><span class="nx">getFileBlob</span><span class="p">(</span><span class="mf">1235</span><span class="p">,</span><span class="w"> </span><span class="s2">"ADMINISTRATIF"</span><span class="p">)</span>
+</span></code></pre></div>
+<em>Ceci renvoie le blob du document administratif à l'identifiant <code>1235</code></em></p>
+<p>Exemple avec une année:
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-18-1"><a href="#__codelineno-18-1" id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="nx">ED</span><span class="p">.</span><span class="nx">downloads</span><span class="p">.</span><span class="nx">getFileBlob</span><span class="p">(</span><span class="mf">1235</span><span class="p">,</span><span class="w"> </span><span class="s2">"ADMINISTRATIF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2022-2023"</span><span class="p">)</span>
+</span></code></pre></div>
+<em>Ceci renvoie le blob du document administratif de l'année <code>2022-2023</code> à l'identifiant <code>1235</code></em></p>
+<p>Exemple avec base64:
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-19-1"><a href="#__codelineno-19-1" id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="nx">ED</span><span class="p">.</span><span class="nx">downloads</span><span class="p">.</span><span class="nx">getFileBase64</span><span class="p">(</span><span class="mf">1235</span><span class="p">,</span><span class="w"> </span><span class="s2">"ADMINISTRATIF"</span><span class="p">,</span><span class="w"> </span><span class="s2">"2022-2023"</span><span class="p">)</span>
+</span></code></pre></div>
+<em>Ceci renvoie le fichier sous format base64 (pour le técharger par exemple)</em></p>
+<p>Voici tous les types de documents supportés:
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-20-1"><a href="#__codelineno-20-1" id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kr">type</span><span class="w"> </span><span class="nx">fileType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"CLOUD"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"FICHIER_CDT"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"PIECE_JOINTE"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"FICHIER_MENU_RESTAURATION"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"ADMINISTRATIF"</span><span class="p">;</span>
+</span></code></pre></div>
+- "CLOUD"; l'argument <code>fileId</code> sera <strong>le chemin complet</strong> du document dans le cloud.
+- "FICHIER_CDT"; télécharger un fichier du Cahier De Texte.
+- "PIECE_JOINTE"; télécharger une pièce jointe (si le message provient d'une année antérieur, l'argument <code>year</code> devra contenir l'année).
+- "FICHIER_MENU_RESTAURATION"; télécharger un menu (voir <strong><code>Menu</code></strong> dans <a href="#getcantine"><code>getCantine.ts</code></a>).
+- "ADMINISTRATIF"; télécharger un fichier administratif (si le document provient d'une année antérieur, l'argument <code>year</code> devra contenir l'année).</p>
+<h2 id="references">Références</h2>
+<blockquote>
+<p>[!NOTE]
+Des exemples sont disponibles dans <code>exemples/</code></p>
+</blockquote>
+<p>Les références sont données ainsi:</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nom</td>
+<td><code>undefined \| string</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Certains types ont des liens hypertextes vers la référence du type.</li>
+<li>Certains liens renvoient vers le fichier de définition du type.</li>
+<li>Le signe <em>?</em> désigne que la valeur peut être non-définie !</li>
+<li>Si la propriété est une fonction, le type est <code>(arg: type) =&gt; type</code>.</li>
+<li>Si la fonction est <code>async</code>, elle renvoie une <code>Promise&lt;type&gt;</code></li>
+</ul>
+<h3 id="edcore">EDCore</h3>
+<p>La classe principale du module.</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>homeworks</td>
+<td><a href="#GetHomeworks"><code>GetHomeworks</code></a></td>
+<td>Gestion des devoirs</td>
+</tr>
+<tr>
+<td>grades</td>
+<td><a href="#GetGrades"><code>GetGrades</code></a></td>
+<td>Gestion des notes</td>
+</tr>
+<tr>
+<td>timetable</td>
+<td><a href="#GetTimetable"><code>GetTimetable</code></a></td>
+<td>Gestion de l'EDT</td>
+</tr>
+<tr>
+<td>schoolLife</td>
+<td><a href="#GetSchoolLife"><code>GetSchoolLife</code></a></td>
+<td>Gestion de la vie scolaire</td>
+</tr>
+<tr>
+<td>cantine</td>
+<td><a href="#GetCantine"><code>GetCantine</code></a></td>
+<td>Gestion de la cantine</td>
+</tr>
+<tr>
+<td>digitalManuals</td>
+<td><a href="#GetDigitalManuals"><code>GetDigitalManuals</code></a></td>
+<td>Gestion des manuels numériques</td>
+</tr>
+<tr>
+<td>messaging</td>
+<td><a href="#GetMessaging"><code>GetMessaging</code></a></td>
+<td>Gestion des messages</td>
+</tr>
+<tr>
+<td>timeline</td>
+<td><a href="#GetTimeline"><code>GetTimeline</code></a></td>
+<td>Gestion des timeline</td>
+</tr>
+<tr>
+<td>documents</td>
+<td><a href="#GetDocuments"><code>GetDocuments</code></a></td>
+<td>Gestion des document administratifs</td>
+</tr>
+<tr>
+<td>forms</td>
+<td><a href="#GetForms"><code>GetForms</code></a></td>
+<td>Gestion des formulaires</td>
+</tr>
+<tr>
+<td>workspaces</td>
+<td><a href="#GetWorkspaces"><code>GetWorkspaces</code></a></td>
+<td>Gestion des espaces de travail</td>
+</tr>
+<tr>
+<td>communicationBook</td>
+<td><a href="#GetCommunicationBook"><code>GetCommunicationBook</code></a></td>
+<td>Gestion du carnet de correspondance</td>
+</tr>
+<tr>
+<td>cloud</td>
+<td><a href="#GetCloud"><code>GetCloud</code></a></td>
+<td>Gestion du cloud</td>
+</tr>
+<tr>
+<td>orders</td>
+<td><a href="#GetOrders"><code>GetOrders</code></a></td>
+<td>Gestion des commandes</td>
+</tr>
+<tr>
+<td>esidoc</td>
+<td><a href="#GetEsidoc"><code>GetOrders</code></a></td>
+<td>Gestion du module Esidoc</td>
+</tr>
+<tr>
+<td>downloads</td>
+<td><a href="#GetDownloads"><code>GetDownloads</code></a></td>
+<td>Gestion des téléchargements</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>auth</td>
+<td><a href="#Auth"><code>Auth</code></a></td>
+<td>Gestion de l'authentification</td>
+</tr>
+<tr>
+<td>request</td>
+<td><a href="#Request"><code>Request</code></a></td>
+<td>Gestion du requêtage</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>_token</td>
+<td><code>string</code> | <code>undefined</code></td>
+<td>Token</td>
+</tr>
+<tr>
+<td>isLoggedIn</td>
+<td><code>boolean</code></td>
+<td>L'utilisateur est-il connecté</td>
+</tr>
+<tr>
+<td>settings?</td>
+<td><a href="src/utils/types/accounts.ts#L3"><code>accountParameters</code></a> | <code>undefined</code></td>
+<td>Paramètres de l'utilisateur</td>
+</tr>
+<tr>
+<td>student</td>
+<td><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/login/accounts/index.ts#L11"><code>account</code></a> | <a href="src/utils/types/accounts.ts#L16"><code>BlankAccount</code></a></td>
+<td>Profil de l'utilisateur</td>
+</tr>
+<tr>
+<td>school?</td>
+<td><a href="src/utils/types/establishments.ts#L1"><code>EstablishmentInfo</code></a></td>
+<td>Informations de l'établissement</td>
+</tr>
+<tr>
+<td>modules?</td>
+<td><code>Array&lt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/login/accounts/index.ts#L19"><code>accountModule</code></a>)<code>&gt;</code></td>
+<td>Modules activés</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/session.ts"><code>src/session.ts</code></a></em></p>
+<h3 id="gethomeworks">GetHomeworks</h3>
+<p>La classe de gestion des devoirs.</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fetch()</td>
+<td><code>async () =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/textbook.ts#L77"><code>textbookResData</code></a></td>
+<td>Récupérer les devoirs</td>
+</tr>
+<tr>
+<td>getByDay()</td>
+<td><code>async (day: string, removeHTMLTags: boolean) =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/textbook.ts#L14"><code>textbookResDateData</code></a></td>
+<td>Récupérer les devoirs du jour <code>day</code> (day est formaté <code>YYYY-MM-DD</code>). <code>removeHTMLTags</code> permet de renvoyer le contenu des devoirs sans balises HTML.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getHomeworks.ts"><code>src/fetch/getHomeworks.ts</code></a></em></p>
+<h3 id="getgrades">GetGrades</h3>
+<p>La classe de gestion des notes.</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fetch()</td>
+<td><code>async () =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/grades.ts#L37"><code>gradesResData</code></a></td>
+<td>Récupérer les notes</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getGrades.ts"><code>src/fetch/getGrades.ts</code></a></em></p>
+<h3 id="gettimetable">GetTimetable</h3>
+<p>La classe de gestion de l'EDT. Les jours sont formatés <code>YYYY-MM-DD</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fetchByDay()</td>
+<td><code>async (day: string) =&gt;</code><a href="src/utils/types/timetable.ts#L3"><code>timetableCourseList</code></a></td>
+<td>Récupérer l'EDT du jour <code>day</code></td>
+</tr>
+<tr>
+<td>fetchByDate()</td>
+<td><code>async (starteDate: string, endDate: string) =&gt;</code><a href="src/utils/types/timetable.ts#L3"><code>timetableCourseList</code></a></td>
+<td>Récupérer l'EDT des jours <code>startDate</code> à <code>endDate</code></td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getTimetable.ts"><code>src/fetch/getTimetable.ts</code></a></em></p>
+<h3 id="getschoollife">GetSchoolLife</h3>
+<p>La classe de gestion de la vie scolaire</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fetch()</td>
+<td><code>async () =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/schoolLife.ts#L5"><code>schoolLifeRes</code></a></td>
+<td>Récupérer tous les évenements de vie scolaire</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getSchoolLife.ts"><code>src/fetch/getSchoolLife.ts</code></a></em></p>
+<h3 id="getcantine">GetCantine</h3>
+<p>La classe de gestion des modules de cantine.</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getBarcode()</td>
+<td><code>() =&gt; string</code></td>
+<td>Renvoie la valeur du code-barre du badge</td>
+</tr>
+<tr>
+<td>getReservations()</td>
+<td><code>() =&gt;</code> <a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/login/accounts/student/modules.ts#L179"><code>modStudReservations.params</code></a></td>
+<td>Renvoie les paramètres module de réservation</td>
+</tr>
+<tr>
+<td>fetchSchoolMenu()</td>
+<td><code>() =&gt; Array&lt;</code><a href="src/fetch/getCantine.ts#L7"><code>Menu</code></a><code>&gt;</code></td>
+<td>Renvoie la liste des menus</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getCantine.ts"><code>src/fetch/getCantine.ts</code></a></em></p>
+<h3 id="getdigitalmanuals">GetDigitalManuals</h3>
+<p>La classe de gestion des manuels scolaires.</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fetch()</td>
+<td><code>async () =&gt;</code> <a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/manuals.ts#L5"><code>manualsRes</code></a></td>
+<td>Récupérer les manuels scolaires</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getDigitalManuals.ts"><code>src/fetch/getDigitalManuals.ts</code></a></em></p>
+<h3 id="getmessaging">GetMessaging</h3>
+<p>La classe de gestion de la messagerie.</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fetchReceivedMessages()</td>
+<td><code>async () =&gt;</code> <a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/global/mailbox.ts#L13"><code>mailboxResData</code></a></td>
+<td>Récupérer les messages reçus (<code>data.messages.received</code> sera rempli, les autres vides)</td>
+</tr>
+<tr>
+<td>fetchSentMessages()</td>
+<td><code>async () =&gt;</code> <a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/global/mailbox.ts#L13"><code>mailboxResData</code></a></td>
+<td>Récupérer les messages envoyés (<code>data.messages.sent</code> sera rempli, les autres vides)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getMessaging.ts"><code>src/fetch/getMessaging.ts</code></a></em></p>
+<h3 id="gettimeline">GetTimeline</h3>
+<p>La classe de gestion des timeline.</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fetch()</td>
+<td><code>async () =&gt; Array&lt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/timeline.ts#L13"><code>studTlElem</code></a><code>&gt;</code></td>
+<td>Récupérer la timeline personnelle.</td>
+</tr>
+<tr>
+<td>fetchCommonTimeline()</td>
+<td><code>async () =&gt;</code> <a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/timeline.ts#L34"><code>studCommonTlResData</code></a></td>
+<td>Récupérer la timeline commune</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getTimeline.ts"><code>src/fetch/getTimeline.ts</code></a></em></p>
+<h3 id="getdocuments">GetDocuments</h3>
+<p>La classe de gestion des documents administratifs.</p>
+<blockquote>
+<p>[!CAUTION]
+Non testé, si vous pouvez tester, merci de nous contacter</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fetch()</td>
+<td><code>async (archive: string) =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/documents.ts#L13"><code>studentDocsResData</code></a></td>
+<td>Récupérer les documents administratifs. <code>archive</code> est une année scolaire <code>YYYY-YYY</code> (eg. <code>2023-2024</code>).</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getDocuments.ts"><code>src/fetch/getDocuments.ts</code></a></em></p>
+<h3 id="getforms">GetForms</h3>
+<p>La classe de gestion des formulaires.</p>
+<blockquote>
+<p>[!CAUTION]
+Non testé, si vous pouvez tester, merci de nous contacter</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fetch()</td>
+<td><code>async (annee: string) =&gt; Array&lt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/forms.ts#L14"><code>form</code></a><code>&gt;</code></td>
+<td>Récupérer les formulaires de l'année. <code>annee</code> est une année scolaire <code>YYYY-YYY</code> (eg. <code>2023-2024</code>).</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getForms.ts"><code>src/fetch/getForms.ts</code></a></em></p>
+<h3 id="getworkspaces">GetWorkspaces</h3>
+<p>La classe de gestion des espaces de travail.</p>
+<blockquote>
+<p>[!CAUTION]
+Non testé, si vous pouvez tester, merci de nous contacter</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fetch()</td>
+<td><code>async () =&gt; Array&lt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/workspaces.ts#L23"><code>workspace</code></a><code>&gt;</code></td>
+<td>Récupérer les espaces de travail.</td>
+</tr>
+<tr>
+<td>get()</td>
+<td><code>async (id: string) =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/workspaces.ts#L23"><code>workspace</code></a></td>
+<td>Récupérer l'espace de travail avec l'identifiant <code>id</code>.</td>
+</tr>
+<tr>
+<td>getDiary()</td>
+<td><code>async (espaceId: string) =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/workspaces.ts#L54"><code>diaryResData</code></a></td>
+<td>Récupérer l'agenda (les évènements) de l'espace de travail avec l'identifiant <code>espaceId</code>.</td>
+</tr>
+<tr>
+<td>getTopics()</td>
+<td><code>async (espaceId: string) =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/workspaces.ts#L67"><code>topicsResData</code></a></td>
+<td>Récupérer les discussions de l'espace de travail avec l'identifiant <code>espaceId</code>.</td>
+</tr>
+<tr>
+<td>getMembers()</td>
+<td><code>async (espaceId: string) =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/workspaces.ts#L85"><code>workspace</code></a></td>
+<td>Récupérer les membres de l'espace de travail avec l'identifiant <code>espaceId</code>.</td>
+</tr>
+<tr>
+<td>join()</td>
+<td><code>async (espace:</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/workspaces.ts#L23"><code>workspace</code></a><code>) =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/failure.ts#L11"><code>membersResData</code></a></td>
+<td>Rejoindre l'espace de travail <code>espace</code>.</td>
+</tr>
+<tr>
+<td>leave()</td>
+<td><code>async (espace: number) =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/failure.ts#L11"><code>emptyRes</code></a></td>
+<td>Quitter l'espace de travail avec l'identifiant <code>id</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getWorkspaces.ts"><code>src/fetch/getWorkspaces.ts</code></a></em></p>
+<h3 id="getcommunicationbook">GetCommunicationBook</h3>
+<p>La classe de gestion du carnet de liaison.</p>
+<blockquote>
+<p>[!CAUTION]
+Non testé, si vous pouvez tester, merci de nous contacter</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fetch()</td>
+<td><code>async () =&gt; Array&lt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/communicationBook.ts#L13"><code>communicationBookResData</code></a><code>&gt;</code></td>
+<td>Récupérer les événements du carnet de liaison.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getCommunicationBook.ts"><code>src/fetch/getCommunicationBook.ts</code></a></em></p>
+<h3 id="getcloud">GetCloud</h3>
+<p>La classe de gestion du cloud.</p>
+<blockquote>
+<p>[!CAUTION]
+Non testé, si vous pouvez tester, merci de nous contacter</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fetch()</td>
+<td><code>async () =&gt; Array&lt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/global/cloud.ts#L13"><code>cloudResFolder</code></a><code>&gt;</code></td>
+<td>Récupérer les fichiers du cloud.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getCloud.ts"><code>src/fetch/getCloud.ts</code></a></em></p>
+<h3 id="getorders">GetOrders</h3>
+<p>La classe de gestion des commandes.</p>
+<blockquote>
+<p>[!WARNING]
+Module instable.</p>
+</blockquote>
+<p><strong>Point de passage</strong> signifie le lieux où la commande est passée (cafétéria par exemple). Il possède un <code>id</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isEnabled()</td>
+<td><code>() =&gt; boolean</code></td>
+<td>Permet de savoir si le module est activé.</td>
+</tr>
+<tr>
+<td>fetchOrders()</td>
+<td><code>async () =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/orders.ts#L58"><code>ordersResData</code></a><code>\| undefined</code></td>
+<td>Récupérer les points de passages et commandes passées.</td>
+</tr>
+<tr>
+<td>startOrder()</td>
+<td><code>async (placeId: number, date: string) =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/orders.ts#L19"><code>startOrderResData</code></a></td>
+<td>Récupérer les informations du point de passage <code>placeId</code> à la date <code>date</code>.</td>
+</tr>
+<tr>
+<td>order()</td>
+<td><code>async (articles: Array&lt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/orders.ts#L101"><code>detailedArticle</code></a><code>&gt;, hour: string, date: string, placeId: number) =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/students/orders.ts#L150"><code>orderPlacedResData</code></a></td>
+<td>Passe une commande des article <code>articles</code>, pour <code>date</code>, <code>heure</code> au point de passage <code>placeId</code>.</td>
+</tr>
+<tr>
+<td>deleteOrder()</td>
+<td><code>async (orderId: number) =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/failure.ts#L11"><code>emptyRes</code></a></td>
+<td>Annule la commande à l'identifiant <code>orderId</code>.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getOrders.ts"><code>src/fetch/getOrders.ts</code></a></em></p>
+<h3 id="getesidoc">GetEsidoc</h3>
+<p>La classe de gestion du module Esidoc.</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isEnabled()</td>
+<td><code>() =&gt; boolean</code></td>
+<td>Permet de savoir si le module est activé.</td>
+</tr>
+<tr>
+<td>getParams()</td>
+<td><code>async () =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/login/accounts/student/modules.ts#L215"><code>modStudEsidoc.params.tabParams</code></a><code>\| undefined</code></td>
+<td>Récupérer les paramètres d'Esidoc.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getEsidoc.ts"><code>src/fetch/getEsidoc.ts</code></a></em></p>
+<h3 id="getdownloads">GetDownloads</h3>
+<p>La classe de gestion des téléchargements.</p>
+<h4 id="filetype">fileType</h4>
+<div class="language-typescript highlight"><pre><span></span><code><span id="__span-21-1"><a href="#__codelineno-21-1" id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kr">type</span><span class="w"> </span><span class="nx">fileType</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"CLOUD"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"FICHIER_CDT"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"PIECE_JOINTE"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"FICHIER_MENU_RESTAURATION"</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">"ADMINISTRATIF"</span><span class="p">;</span>
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getFileBlob()</td>
+<td><code>async (fileId: number \| string, fileType:</code><a href="#filetype"><code>fileType</code></a><code>) =&gt; Blob</code></td>
+<td>Récupère le blob du fichier <code>fileId</code> (voir <a href="#téléchargements">Télécharger des fichiers</a>).</td>
+</tr>
+<tr>
+<td>getFileBase64()</td>
+<td><code>async (fileId: number \| string, fileType:</code><a href="#filetype"><code>fileType</code></a><code>) =&gt; string</code></td>
+<td>Récupère le fichier <code>fileId</code> (voir <a href="#téléchargements">Télécharger des fichiers</a>) sous forme base64.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/fetch/getDownloads.ts"><code>src/fetch/getDownloads.ts</code></a></em></p>
+<h3 id="auth">Auth</h3>
+<p>La classe de gestion de l'authentification et de l'utilisateur.</p>
+<p><em>Voir <a href="#authentification">s'authentifier avec ed-core</a></em></p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>login()</td>
+<td><code>async (username: string, password: string, uuid: string, fa?: object) =&gt; void</code></td>
+<td>Se connecte à Ecoledirecte avec des identifiants. <code>uuid</code> est un UUIDv4 utilisé pour reconnaitre l'appareil et regénérger un token. Lisez le guide pour savoir comment le générer. <code>fa</code> est l'objet contenant les facteurs d'authentification de <code>resolve2FA()</code></td>
+</tr>
+<tr>
+<td>renewToken()</td>
+<td><code>async (username: string, uuid: string, accessToken: string) =&gt; void</code></td>
+<td>Régénère un token à l'aide du nom d'utilisateur, de l'<code>uuid</code> et de l'<code>accessToken</code> et remplace automatiquement le token actuel.</td>
+</tr>
+<tr>
+<td>setToken()</td>
+<td><code>(token: string, id: number) =&gt; boolean</code></td>
+<td>Se connecte à Ecoledirecte avec un token.</td>
+</tr>
+<tr>
+<td>get2FAToken()</td>
+<td><code>async (username: string, password: string) =&gt; string</code></td>
+<td>Renvoie le jeton nécessaire à la récupération du QCM 2FA.</td>
+</tr>
+<tr>
+<td>get2FA()</td>
+<td><code>async (token: string) =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/login/doubleauth.ts#L12"><code>doubleauthResData</code></a></td>
+<td>Récupère le questionnaire 2FA avec le token de <code>get2FAToken()</code>.</td>
+</tr>
+<tr>
+<td>resolve2FA()</td>
+<td><code>async (answer: string) =&gt;</code><a href="https://github.com/camarm-dev/ecoledirecte-api-types/blob/main/v3/responses/login/doubleauth.ts#L19"><code>doubleauthValidationResData</code></a></td>
+<td>Renvoie les facteurs permettant l'uthentification.</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/auth.ts"><code>src/auth.ts</code></a></em></p>
+<h3 id="request">Request</h3>
+<p>La classe de gestion des requêtes.</p>
+<table>
+<thead>
+<tr>
+<th>Propriété</th>
+<th>Type</th>
+<th>Commentaire</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>post()</td>
+<td><code>async (url: string, body: string, params?: string, ignoreErrors: boolean = false) =&gt; object</code></td>
+<td>Exécute la requête à l'API ecoledirect (path: <code>url</code>, body: <code>body</code>, les données utiles transférées à Ecoledirecte , paramètres d'url <code>params</code> et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer <code>ignoreErrors</code> à <code>true</code>) avec comme paramètre <strong>verbe=get</strong>. Renvoie la réponse sous forme d'un object <strong>JSON</strong></td>
+</tr>
+<tr>
+<td>get()</td>
+<td><code>async (url: string, body: string, params?: string, ignoreErrors: boolean = false) =&gt; object</code></td>
+<td>Exécute la requête à l'API ecoledirect (path: <code>url</code>, body: <code>body</code>, les données utiles transférées à Ecoledirecte , paramètres d'url <code>params</code> et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer <code>ignoreErrors</code> à <code>true</code>) avec comme paramètre <strong>verbe=post</strong>. Renvoie la réponse sous forme d'un object <strong>JSON</strong></td>
+</tr>
+<tr>
+<td>delete()</td>
+<td><code>async (url: string, body: string, params?: string, ignoreErrors: boolean = false) =&gt; object</code></td>
+<td>Exécute la requête à l'API ecoledirect (path: <code>url</code>, body: <code>body</code>, les données utiles transférées à Ecoledirecte , paramètres d'url <code>params</code> et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer <code>ignoreErrors</code> à <code>true</code>) avec comme paramètre <strong>verbe=delete</strong>. Renvoie la réponse sous forme d'un object <strong>JSON</strong></td>
+</tr>
+<tr>
+<td>put()</td>
+<td><code>async (url: string, body: string, params?: string, ignoreErrors: boolean = false) =&gt; object</code></td>
+<td>Exécute la requête à l'API ecoledirect (path: <code>url</code>, body: <code>body</code>, les données utiles transférées à Ecoledirecte , paramètres d'url <code>params</code> et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer <code>ignoreErrors</code> à <code>true</code>) avec comme paramètre <strong>verbe=put</strong>. Renvoie la réponse sous forme d'un object <strong>JSON</strong></td>
+</tr>
+<tr>
+<td>request()</td>
+<td><code>async (url: string, body: string, ignoreErrors: boolean = false) =&gt; object</code></td>
+<td>Exécute une requête (url: <code>url</code>, body: <code>body</code> et pour obtenir tout les réponses, même les erreurs Ecoledirecte, passer <code>ignoreErrors</code> à <code>true</code>). Renvoie la réponse sous forme d'un object <strong>JSON</strong></td>
+</tr>
+<tr>
+<td>blob()</td>
+<td><code>async (url: string, body: string, completeUrl: boolean = false, method: "GET"  \| "POST" = "GET") =&gt; Blob</code></td>
+<td>Exécute la requête et renvoie un objet Blob. <code>completeUrl</code> sur <code>true</code> indiquera que <code>url</code> est la cible complète, pas un chemin de <code>https://api.ecoledirecte.com</code></td>
+</tr>
+</tbody>
+</table>
+<p><em>Ouvrir <a href="src/Request.ts"><code>src/Request.ts</code></a></em></p>
+<hr/>
+<h1 id="guide-du-developpeur">Guide du développeur</h1>
+<p>Ce guide vous permet de comprendre comment ce module est développé et donc d'y contribuer !</p>
+<p>Ce projet est développé en <em><strong>Typescript</strong></em>. Vous devez maitriser ce languages ainsi que le développement de modules <em>NodeJs</em> pour commencer.</p>
+<h2 id="installation_1">Installation</h2>
+<blockquote>
+<p>[!NOTE]
+Si vous souhaitez contribuer ou modifier le code, veuillez <em>fork</em> le dépot et cloner votre copie de celui-ci.</p>
+</blockquote>
+<p><strong>1. Cloner ce dépôt</strong>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-22-1"><a href="#__codelineno-22-1" id="__codelineno-22-1" name="__codelineno-22-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PapillonApp/Papillon-ED-Core
+</span></code></pre></div></p>
+<p><strong>2. Installer les dépendances</strong>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-23-1"><a href="#__codelineno-23-1" id="__codelineno-23-1" name="__codelineno-23-1"></a>npm<span class="w"> </span>install
+</span></code></pre></div></p>
+<p><strong>3. Récupérer les submodules</strong>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-24-1"><a href="#__codelineno-24-1" id="__codelineno-24-1" name="__codelineno-24-1"></a>git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--init<span class="w"> </span>--recursive
+</span></code></pre></div></p>
+<blockquote>
+<p>[!NOTE]
+Pour mettre à jour le submodule, exécutez
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-25-1"><a href="#__codelineno-25-1" id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="nb">cd</span><span class="w"> </span>src/types<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>pull
+</span></code></pre></div></p>
+</blockquote>
+<p>Et voilà, vous êtes prêts !</p>
+<h2 id="structure">Structure</h2>
+<p>Le module est structuré de la manière suivante :
+- <code>src/fetch</code> : Contient les fonctions de récupération des données de l'API d'EcoleDirecte
+- <code>src/session.ts</code> : Contient les fonctions de gestion de la session
+- <code>src/auth.ts</code> : Contient les fonctions d'authentification
+- <code>src/errors.ts</code> : Contient les erreurs pouvant être retournées par le module. <em>Les erreurs doivent suivre la même structure pour chaque module.</em>
+- <code>src/types</code>: Submodule git des types des réponses ED. (réadaptation de <a href="https://github.com/camarm-dev">Armand CAMPONOVO</a>, travail original <a href="https://github.com/ab2r">ab2r</a>)
+- <code>src/utils/types</code>: Contient les types des <code>data</code> requêtes, et des types utiles à ce module.</p>
+<h2 id="scripts">Scripts</h2>
+<p><strong>Linter: eslint</strong>
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-26-1"><a href="#__codelineno-26-1" id="__codelineno-26-1" name="__codelineno-26-1"></a>npm<span class="w"> </span>run<span class="w"> </span>lint
+</span></code></pre></div>
+<em>Vous pouvez aussi exécuter <code>npm run lint:fix</code> pour régler les problèmes de formatage automatiquement.</em></p>
+<p><strong>Build: tsc</strong></p>
+<p>Les fichiers transpilés sont généré à leur emplacement. Ce script <em>lint</em> et <em>build</em> la base de code.
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-27-1"><a href="#__codelineno-27-1" id="__codelineno-27-1" name="__codelineno-27-1"></a>npm<span class="w"> </span>run<span class="w"> </span>build
+</span></code></pre></div></p>
+<aside class="md-source-file">
+<span class="md-source-file__fact">
+<span class="md-icon" title="Dernière mise à jour">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
+</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago"><span class="timeago" datetime="2024-04-28T17:53:39+00:00" locale="fr"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date">2024-04-28</span>
+</span>
+</aside>
+</article>
+</div>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Pied de page" class="md-footer__inner md-grid">
+<a aria-label="Précédent: API" class="md-footer__link md-footer__link--prev" href="../api/">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Précédent
+              </span>
+<div class="md-ellipsis">
+                API
+              </div>
+</div>
+</a>
+<a aria-label="Suivant: API" class="md-footer__link md-footer__link--next" href="../../ts/api/">
+<div class="md-footer__title">
+<span class="md-footer__direction">
+                Suivant
+              </span>
+<div class="md-ellipsis">
+                API
+              </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://github.com/PapillonApp/Papillon" rel="noopener" target="_blank" title="github.com">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</a>
+<a class="md-social__link" href="https://www.instagram.com/thepapillonapp/" rel="noopener" target="_blank" title="www.instagram.com">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+</a>
+<a class="md-social__link" href="https://discord.com/invite/ywkBZx2jFB" rel="noopener" target="_blank" title="discord.com">
+<svg viewbox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485.065 485.065 0 0 0 404.081 32.03a1.816 1.816 0 0 0-1.923.91 337.461 337.461 0 0 0-14.9 30.6 447.848 447.848 0 0 0-134.426 0 309.541 309.541 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.689 483.689 0 0 0-119.688 37.107 1.712 1.712 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.016 2.016 0 0 0 .765 1.375 487.666 487.666 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348.2 348.2 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321.173 321.173 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251.047 251.047 0 0 0 9.109-7.137 1.819 1.819 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.812 1.812 0 0 1 1.924.233 234.533 234.533 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.407 301.407 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391.055 391.055 0 0 0 30.014 48.815 1.864 1.864 0 0 0 2.063.7A486.048 486.048 0 0 0 610.7 405.729a1.882 1.882 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541ZM222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241Zm195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241Z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-progress" data-md-component="progress" role="progressbar"></div>
+<script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.footer", "content.action.edit", "content.code.copy", "content.code.select", "content.code.annotate", "navigation.sections"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+<script src="../../../../assets/javascripts/bundle.dd8806f2.min.js"></script>
+<script src="../../../../js/timeago.min.js"></script>
+<script src="../../../../js/timeago_mkdocs_material.js"></script>
+<script>document$.subscribe(() => {
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        
+            const dark_scheme_name = "slate"
+            
+            window.scheme = document.body.getAttribute("data-md-color-scheme")
+            const options = {
+                attributeFilter: ['data-md-color-scheme'],
+            };
+            function color_scheme_callback(mutations) {
+                for (let mutation of mutations) {
+                    if (mutation.attributeName === "data-md-color-scheme") {
+                        scheme = document.body.getAttribute("data-md-color-scheme")
+                        var iframe_list = document.getElementsByClassName("swagger-ui-iframe")
+                        for(var i = 0; i < iframe_list.length; i++) {
+                            var ele = iframe_list.item(i);
+                            if (ele) {
+                                if (scheme === dark_scheme_name) {
+                                    ele.contentWindow.enable_dark_mode();
+                                } else {
+                                    ele.contentWindow.disable_dark_mode();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            observer = new MutationObserver(color_scheme_callback);
+            observer.observe(document.body, options);
+            })</script></body>
+</html>

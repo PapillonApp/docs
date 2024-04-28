@@ -1,0 +1,195 @@
+openapi: 3.0.0
+info:
+  title: Turboself API
+servers:
+  - url: https://api-rest-prod.incb.fr
+tags:
+  - name: Authentification
+  - name: Acquisition d'informations (Fetch)
+  - name: Action
+  
+components:
+  securitySchemes:
+    bearerAuth:            # arbitrary name for the security scheme
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+paths:
+  /api/v1/auth/login:
+    post:
+      summary: Se connecter à son compte Turbself
+      tags:
+        - "Authentification"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '201':
+          description: Connexion réussi
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                  userId:
+                    type: integer
+                  hoteId:
+                    type: integer
+      
+  /api/v1/etablissements:
+    get:
+      summary: Rechercher des établissements
+      parameters:
+        - name: q
+          in: query
+          required: true
+          description: Nom de l'établissement à chercher
+          schema:
+            type: string
+        - name: limit
+          in: query
+          required: true
+          description: Limite d'établissements à afficher
+          schema:
+            type: integer
+      tags:
+        - "Accisition d'informations (Fetch)"
+      responses:
+        '200':
+          description: Liste des établissements
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    code2p5:
+                      type: integer
+                    nom:
+                      type: string
+                    versionTS:
+                      type: string
+  
+  /api/v1/hotes/{hoteId}:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Information sur l'établissement
+      parameters:
+        - name: hoteId
+          in: path
+          required: true
+          description: Id de l'établissement
+          schema:
+            type: integer
+      tags:
+        - "Accisition d'informations (Fetch)"
+      responses:
+        '200':
+          description: Information sur l'établissement
+    
+  /api/v1/hotes/{hoteId}/resa-soir:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Autorisation réservation du soir
+      parameters:
+        - name: hoteId
+          in: path
+          required: true
+          description: Id de l'établissement
+          schema:
+            type: integer
+      tags:
+        - "Accisition d'informations (Fetch)"
+      responses:
+        '200':
+          description: État autorisation réservation du soir
+
+  /api/v1/reservations/hotes/{hoteId}/semaines:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Information sur les réservations
+      parameters:
+        - name: hoteId
+          in: path
+          required: true
+          description: Id de l'établissement
+          schema:
+            type: integer
+        - name: date
+          in: query
+          required: true
+          description: Date format DD-MM-YYYY
+          schema:
+            type: string
+      tags:
+        - "Accisition d'informations (Fetch)"
+      responses:
+        '200':
+          description: Information sur le solde
+
+  /api/v2/hotes/{hoteId}/accueil:
+      get:
+        security:
+          - bearerAuth: []
+        summary: Information sur le solde
+        parameters:
+          - name: hoteId
+            in: path
+            required: true
+            description: Id de l'établissement
+            schema:
+              type: integer
+        tags:
+          - "Accisition d'informations (Fetch)"
+        responses:
+          '200':
+            description: Information sur le solde
+
+  /api/v2/hotes/{hoteId}/reservations-jours:
+    post:
+      security:
+            - bearerAuth: []
+      tags:
+        - "Action"
+      summary: Réserver un repas
+      parameters:
+        - name: hoteId
+          in: path
+          required: true
+          description: Id de l'établissement
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                dayOfWeek:
+                  type: integer
+                dayReserv:
+                  type: string
+                web:
+                  type: object
+                  properties:
+                    id:
+                      type: integer (weekId) #week id
+          responses:
+            '200':
+              description: Information sur le solde
