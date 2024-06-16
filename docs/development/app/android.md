@@ -38,12 +38,6 @@ Une fois le repo cloné, installez simplement les packages npm liés :
 npm i
 ```
 
-Il sera aussi nécessaire d'avoir [**Expo CLI**](https://docs.expo.dev/more/expo-cli/){target=_blank} :
-
-```
-npm install -g expo-cli
-```
-
 ## **Développement**
 
 Pour lancer l'application en mode développement, vous devez installer l'application de développement (un mini Expo Go qui permet de charger l'application depuis votre PC avec un live reload)

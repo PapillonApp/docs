@@ -47,12 +47,6 @@
     npm i
     ```
 
-    Il sera aussi nécessaire d'avoir [**Expo CLI**](https://docs.expo.dev/more/expo-cli/) :
-
-    ```
-    npm install -g expo-cli
-    ```
-
     Vous devrez aussi installer les dépendances de [**Cocoapods**](https://cocoapods.org/) dans le dossier *`/ios`*:
 
     ```
