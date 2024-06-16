@@ -36,10 +36,10 @@ Une fois le repo cloné, installez simplement les packages npm liés :
 npm i
 ```
 
-Il sera aussi nécessaire d'avoir [**Expo CLI**](https://docs.expo.dev/more/expo-cli/){target=\_blank} ainsi que [**EAS CLI**](https://docs.expo.dev/build/setup/){target=\_blank} :
+Il sera aussi nécessaire d'avoir [**EAS CLI**](https://docs.expo.dev/build/setup/){target=\_blank} :
 
 ```
-npm install -g expo-cli eas-cli
+npm install -g eas-cli
 ```
 
 ## **Développement**
